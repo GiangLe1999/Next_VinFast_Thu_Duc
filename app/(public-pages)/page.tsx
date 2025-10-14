@@ -41,9 +41,9 @@ const QuoteSection = dynamicImport(
   () => import("@/components/home-page/quote-section")
 );
 
-const GoogleMaps = dynamicImport(
-  () => import("@/components/home-page/google-maps")
-);
+// const GoogleMaps = dynamicImport(
+//   () => import("@/components/home-page/google-maps")
+// );
 
 export const generateMetadata = () => {
   return {
@@ -76,7 +76,7 @@ export default async function Home() {
           <ReasonsSection />
           <QuoteSection />
           <PostsSection />
-          <GoogleMaps />
+          {/* <GoogleMaps /> */}
         </div>
       </main>
 

@@ -217,7 +217,7 @@ export const homeOptions: homeOptionType[] = [
 export const footerCol1: string[] = [
   "Chuyên cung cấp dòng xe VinFast các loại",
   "Xe 4 chỗ VinFast VF 5, 5 chỗ VinFast VF 6 và VF 7, 5 chỗ gầm cao VinFast VF 8, 7 chỗ VinFast VF 9",
-  "Địa chỉ : 2699 Trần Hưng Đạo, P. Mỹ Thạnh, Thành phố Long Xuyên, An Giang",
+  // "Địa chỉ : 2699 Trần Hưng Đạo, P. Mỹ Thạnh, Thành phố Long Xuyên, An Giang",
 ];
 
 type footerItemType = { title: string; link: string };
