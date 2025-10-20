@@ -51,6 +51,12 @@ export const orgSchema = {
           name: "VF 8",
           description: "SUV điện hạng D",
           category: "Ô tô điện",
+          offers: {
+            "@type": "Offer",
+            priceCurrency: "VND",
+            availability: "https://schema.org/InStock",
+            url: "https://vinfastangiang.com.vn/vf8",
+          },
         },
       },
       {
@@ -60,6 +66,12 @@ export const orgSchema = {
           name: "VF 9",
           description: "SUV điện hạng E",
           category: "Ô tô điện",
+          offers: {
+            "@type": "Offer",
+            priceCurrency: "VND",
+            availability: "https://schema.org/InStock",
+            url: "https://vinfastangiang.com.vn/vf9",
+          },
         },
       },
       {
@@ -69,6 +81,12 @@ export const orgSchema = {
           name: "VF 5",
           description: "SUV điện hạng A",
           category: "Ô tô điện",
+          offers: {
+            "@type": "Offer",
+            priceCurrency: "VND",
+            availability: "https://schema.org/InStock",
+            url: "https://vinfastangiang.com.vn/vf5",
+          },
         },
       },
     ],
