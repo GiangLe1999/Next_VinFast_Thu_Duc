@@ -40,34 +40,36 @@ export const orgSchema = {
     "@type": "State",
     name: "An Giang",
   },
-  makesOffer: [
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Product",
-        name: "Xe điện VinFast",
-        category: "Ô tô điện",
-      },
-    },
-  ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Catalog sản phẩm VinFast",
     itemListElement: [
       {
-        "@type": "OfferCatalog",
-        name: "VF 8",
-        description: "SUV điện hạng D",
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Product",
+          name: "VF 8",
+          description: "SUV điện hạng D",
+          category: "Ô tô điện",
+        },
       },
       {
-        "@type": "OfferCatalog",
-        name: "VF 9",
-        description: "SUV điện hạng E",
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Product",
+          name: "VF 9",
+          description: "SUV điện hạng E",
+          category: "Ô tô điện",
+        },
       },
       {
-        "@type": "OfferCatalog",
-        name: "VF 5",
-        description: "SUV điện hạng A",
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Product",
+          name: "VF 5",
+          description: "SUV điện hạng A",
+          category: "Ô tô điện",
+        },
       },
     ],
   },
