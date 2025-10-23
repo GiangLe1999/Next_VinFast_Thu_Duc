@@ -57,7 +57,7 @@ const PromotionSection = () => {
             VinFast mang đến chính sách trả góp linh hoạt, giúp khách hàng dễ
             dàng sở hữu xe mà không cần thanh toán toàn bộ chi phí ban đầu. Với
             sự hợp tác cùng các ngân hàng hàng đầu, khách hàng có thể vay lên
-            đến <strong className="text-primary">85% giá trị xe</strong>, thời
+            đến <strong className="text-primary">90% giá trị xe</strong>, thời
             gian trả góp lên đến 8 năm, kèm theo lãi suất ưu đãi chỉ từ 0% trong
             năm đầu tiên.
           </p>

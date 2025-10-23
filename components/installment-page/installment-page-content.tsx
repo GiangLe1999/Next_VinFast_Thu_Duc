@@ -86,7 +86,7 @@ const InstallmentPageContent: FC<Props> = ({ carNameArr }) => {
               </p>
               <h3>Lợi ích khi mua xe trả góp</h3>
               <ol>
-                <li>Số tiền vay lên đến 95% giá trị xe.</li>
+                <li>Số tiền vay lên đến 90% giá trị xe.</li>
                 <li>Thời gian vay lên đến 7 năm.</li>
                 <li>Tài trợ vay mua xe ô tô mới và xe ô tô đã qua sử dụng.</li>
                 <li>
@@ -195,7 +195,7 @@ const InstallmentPageContent: FC<Props> = ({ carNameArr }) => {
               </tr>
             </table>
             <p>
-              Hỗ trợ tư vẫn mua xe VinFast trả góp tới 85% giá trị xe, thời gian
+              Hỗ trợ tư vẫn mua xe VinFast trả góp tới 90% giá trị xe, thời gian
               vay tối đa 7 năm. Thủ tục đơn giản nhanh gọn, thời gian thẩm duyệt
               trong vòng 24h, kể cả khách hàng ở tỉnh, bao đậu hồ sơ khó. Vui
               lòng liên hệ để được tư vấn chính xác.

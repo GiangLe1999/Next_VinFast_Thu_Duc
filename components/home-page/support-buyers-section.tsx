@@ -9,7 +9,7 @@ const SupportBuyersSection = () => {
       <div className="flex items-center xl:justify-between justify-center text-white container gap-x-20 gap-y-10 flex-wrap">
         <div>
           <h3 className="font-bold sm:text-3xl text-2xl text-center xl:text-right">
-            HỖ TRỢ MUA XE VINFAST TRẢ GÓP ĐẾN 85%
+            HỖ TRỢ MUA XE VINFAST TRẢ GÓP ĐẾN 90%
           </h3>
           <h4 className="sm:text-lg text-base mt-2 text-center xl:text-right">
             LÃI SUẤT THẤP - THỦ TỤC NHANH CHÓNG

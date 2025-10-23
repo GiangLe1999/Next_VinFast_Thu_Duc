@@ -19,7 +19,7 @@ interface Props {
   setShowInterestTable: Dispatch<SetStateAction<boolean>>;
 }
 
-const percentArr = [0, 10, 20, 30, 40, 50, 60, 70, 80];
+const percentArr = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90];
 
 const unitClasses = "w-1/3 block text-xs text-right";
 

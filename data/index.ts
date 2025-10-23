@@ -204,7 +204,7 @@ export const homeOptions: homeOptionType[] = [
     title: "mua xe trả góp",
     link: linkConstants.installment,
     icon: FaChartPie,
-    des: "Trả góp đến <strong>85% giá trị xe</strong>, lãi suất chỉ <strong>0%/tháng</strong>",
+    des: "Trả góp đến <strong>90% giá trị xe</strong>, lãi suất chỉ <strong>0%/tháng</strong>",
   },
   {
     title: "đăng ký lái thử",
