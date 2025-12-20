@@ -56,19 +56,23 @@ export const navItems: {
     icon: FaInfoCircle,
   },
   {
-    title: "Giá xe vinfast",
+    title: "Sản phẩm",
     link: linkConstants.quote,
     isParent: true,
   },
   {
-    title: "Mua xe",
-    link: "/#",
+    title: "Trạm sạc & Bảo hành",
+    link: "/test",
     isParent: true,
   },
   {
-    title: "Dịch vụ",
-    link: "/#",
-    isParent: true,
+    title: "Khuyến mãi",
+    link: linkConstants.uudai,
+  },
+  {
+    title: "Đăng ký lái thử",
+    link: linkConstants.testDrive,
+    icon: FaBlog,
   },
   {
     title: "Tin tức",
@@ -106,6 +110,7 @@ export const adminNavItems: {
 
 type navCarItemType = {
   img: string;
+  logo: string;
   name: string;
   price: string;
   link: string;
@@ -114,68 +119,79 @@ type navCarItemType = {
 export const navCarMenu: navCarItemType[] = [
   {
     img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1748923603/An%20Giang%20Vinfast/hq3pgiavb4nt9rhtofkv.webp",
+    logo: "/images/logo/VF3.png",
     name: "VinFast EC Van",
     price: "285",
     link: "ec-van",
   },
   {
     img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1742913595/Suoi%20Tien%20Vinfast/lqtpfqfjoshxj0oodwld.webp",
+    logo: "/images/logo/VF3.png",
     name: "VinFast Minio Green",
     price: "269",
     link: "minio-green",
   },
   {
     img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1742914255/Suoi%20Tien%20Vinfast/nkzkvk5pg8pwrn8ipd1x.png",
+    logo: "/images/logo/VF3.png",
     name: "VinFast Herio Green",
     price: "499",
     link: "herio-green",
   },
   {
     img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1742914783/Suoi%20Tien%20Vinfast/qgmi4toorl0k6sxfxxor.png",
+    logo: "/images/logo/VF3.png",
     name: "VinFast Nerio Green",
     price: "710",
     link: "nerio-green",
   },
   {
     img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1742915568/Suoi%20Tien%20Vinfast/aadm3o6yzbcffy2cier1.png",
+    logo: "/images/logo/VF3.png",
     name: "VinFast Limo Green",
     price: "749",
     link: "limo-green",
   },
   {
     img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1740191819/Suoi%20Tien%20Vinfast/airek9me2u7sszbqwsd7.jpg",
+    logo: "/images/logo/VF3.png",
     name: "VinFast VF3",
     price: "299",
     link: "vf3",
   },
   {
     img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1740213021/Suoi%20Tien%20Vinfast/ab4jerelgiwhckcbknam.webp",
+    logo: "/images/logo/VF5.png",
     name: "VinFast VF5",
     price: "529",
     link: "vf5",
   },
   {
     img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1740214584/Suoi%20Tien%20Vinfast/ke7xwcyrxqnsryxnhla0.webp",
+    logo: "/images/logo/VF6.png",
     name: "VinFast VF6",
     price: "694",
     link: "vf6",
   },
   {
     img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1740240220/Suoi%20Tien%20Vinfast/x88b0dix3dojiwtiygy1.png",
+    logo: "/images/logo/VF7.png",
     name: "VinFast VF7",
     price: "799",
     link: "vf7",
   },
   {
     img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1740216994/Suoi%20Tien%20Vinfast/uk573tijp6c9o6qmqn7d.webp",
+    logo: "/images/logo/VF8.png",
     name: "VinFast VF8",
-    price: "1019",
+    price: "1.019",
     link: "vf8",
   },
   {
     img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1740219323/Suoi%20Tien%20Vinfast/sqfnwwdqze8jrz6qhwlg.webp",
+    logo: "/images/logo/VF9.png",
     name: "VinFast VF9",
-    price: "1499",
+    price: "1.499",
     link: "vf9",
   },
 ];
@@ -240,6 +256,7 @@ export const footerCol3: footerItemType[] = [
   { title: "Tính phí lăn bánh", link: linkConstants.finalPrice },
   { title: "Thủ tục trả góp", link: linkConstants.installment },
   { title: "Đăng ký lái thử", link: linkConstants.testDrive },
+  { title: "Phụ tùng & Phụ kiện", link: linkConstants.accessories },
 ];
 
 export const footerCol32: footerItemType[] = [

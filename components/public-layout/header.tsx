@@ -7,36 +7,29 @@ import { usePathname } from "next/navigation";
 import { BsHeadset } from "react-icons/bs";
 import { BiChevronDown } from "react-icons/bi";
 import { navItems } from "@/data";
-import BuyCarMenu from "./buy-car-menu";
 import NavCarMenu from "./nav-car-menu";
 import ServiceMenu from "./service-menu";
 import ContainNextImage from "../contain-next-image";
 
-const buyCarTitle = "mua xe";
-const carMenuTitle = "giá xe vinfast";
-const serviceTitle = "dịch vụ";
+const carMenuTitle = "Sản phẩm";
+const serviceTitle = "Trạm sạc & Bảo hành";
 const commonClasses =
   "relative font-semibold text-white px-4 py-2 max-[414px]:px-2 hover:bg-white hover:text-primary rounded-sm transition";
 
 const Header = () => {
   const pathname = usePathname();
   const [showCarMenu, setShowCarMenu] = useState(false);
-  const [showBuyMenu, setShowBuyMenu] = useState(false);
   const [showServiceMenu, setShowServiceMenu] = useState(false);
 
   const parentHoverHandler = (title: string) => {
     if (title === carMenuTitle) {
       setShowCarMenu(true);
-    } else if (title === buyCarTitle) {
-      setShowBuyMenu(true);
     } else if (title === serviceTitle) {
       setShowServiceMenu(true);
     }
 
     if (showCarMenu === true && title !== carMenuTitle) {
       setShowCarMenu(false);
-    } else if (showBuyMenu === true && title !== buyCarTitle) {
-      setShowBuyMenu(false);
     } else if (showServiceMenu === true && title !== serviceTitle) {
       setShowServiceMenu(false);
     }
@@ -44,7 +37,6 @@ const Header = () => {
 
   const parentUnHoverHandler = (): void => {
     setShowCarMenu(false);
-    setShowBuyMenu(false);
     setShowServiceMenu(false);
   };
 
@@ -65,7 +57,7 @@ const Header = () => {
             />
           </Link>
 
-          <h2 className="text-xl text-gray-800 font-bold max-[500px]:hidden">
+          <h2 className="text-xl font-bold max-[500px]:hidden">
             <Link href="/">VinFast Thủ Đức</Link>
           </h2>
 
@@ -92,24 +84,25 @@ const Header = () => {
           onMouseLeave={parentUnHoverHandler}
         >
           {navItems.map((item, index) => {
-            if (item.title === buyCarTitle) {
+            if (item.title === serviceTitle) {
               return (
                 <div
                   key={index}
                   className={`${commonClasses} ${
-                    pathname === item.link && "bg-white !text-primary"
+                    pathname === item.link &&
+                    "font-semibold bg-white !text-primary"
                   }`}
                   onMouseEnter={() => parentHoverHandler(item.title)}
                 >
-                  <span className="font-bold flex gap-2 items-center max-[500px]:text-sm">
+                  <span className="flex gap-2 items-center max-[500px]:text-sm">
                     {item.title}
                     <BiChevronDown
                       size={20}
                       className="-mr-2 max-[413px]:hidden"
                     />
                   </span>
-                  {item.title === buyCarTitle && (
-                    <BuyCarMenu showBuyMenu={showBuyMenu} />
+                  {item.title === serviceTitle && (
+                    <ServiceMenu showServiceMenu={showServiceMenu} />
                   )}
                 </div>
               );
@@ -124,10 +117,6 @@ const Header = () => {
                 } ${pathname === item.link && "bg-white !text-primary"} ${
                   showCarMenu &&
                   item.title === carMenuTitle &&
-                  "bg-white !text-primary"
-                } ${
-                  showServiceMenu &&
-                  item.title === serviceTitle &&
                   "bg-white !text-primary"
                 }`}
                 onMouseEnter={() => parentHoverHandler(item.title)}
@@ -146,13 +135,11 @@ const Header = () => {
               </Link>
             );
           })}
-
           <NavCarMenu
             showCarMenu={showCarMenu}
             setShowCarMenu={setShowCarMenu}
             parentUnHoverHandler={parentUnHoverHandler}
           />
-          <ServiceMenu showServiceMenu={showServiceMenu} />
         </nav>
       </div>
     </>
