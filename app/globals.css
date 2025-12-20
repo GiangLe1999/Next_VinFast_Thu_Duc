@@ -136,7 +136,7 @@ html {
 }
 
 .cal-price-title {
-  @apply border-b border-primary text-primary font-bold text-xl;
+  @apply border-b border-primary text-primary font-bold text-xl pb-2;
 }
 
 .form-input-wrapper {
