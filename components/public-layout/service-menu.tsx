@@ -21,15 +21,14 @@ const ServiceMenu: FC<Props> = ({ showServiceMenu }) => {
         </Link>
       </li>
       <li>
-        <li>
-          <Link
-            href=""
-            className="block text-left py-3 px-2 hover:text-white hover:bg-primary rounded-sm border-t transition duration-400"
-          >
-            Pin & Trạm sạc Xe máy điện
-          </Link>
-        </li>
-        <li></li>
+        <Link
+          href=""
+          className="block text-left py-3 px-2 hover:text-white hover:bg-primary rounded-sm border-t transition duration-400"
+        >
+          Pin & Trạm sạc Xe máy điện
+        </Link>
+      </li>
+      <li>
         <Link
           href=""
           className="block text-left py-3 px-2 hover:text-white hover:bg-primary rounded-sm border-t transition duration-400"

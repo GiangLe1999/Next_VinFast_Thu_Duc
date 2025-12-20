@@ -12,7 +12,7 @@ interface Props {
 const PriceTableSection: FC<Props> = ({ cars }) => {
   return (
     <section className="h-full flex flex-col">
-      <div className="container pt-24 pb-20">
+      <div className="container pt-4 pb-20">
         <div className="mb-4">
           <p className="text-textColor text-center font-bold text-sm mb-2 uppercase tracking-wide">
             Cập nhật mới nhất
@@ -44,7 +44,7 @@ const PriceTableSection: FC<Props> = ({ cars }) => {
                   <div className="col-span-5 md:col-span-4 flex flex-col md:flex-row items-start md:items-center gap-3">
                     <Link
                       href={`/${car.slug}`}
-                      className="block relative w-20 md:w-28 aspect-video shrink-0 rounded-lg overflow-hidden border border-gray-100 bg-white group-hover:shadow-md transition-all"
+                      className="block relative w-20 md:w-28 aspect-video shrink-0 rounded-lg overflow-hidden border border-gray-100 bg-white"
                     >
                       <ContainNextImage src={car.avatar.url} alt={car.name} />
                     </Link>
@@ -56,7 +56,7 @@ const PriceTableSection: FC<Props> = ({ cars }) => {
                         VinFast {car.name}
                       </Link>
                       <span className="text-[10px] md:text-xs text-gray-500 bg-gray-100 px-2 py-0.5 rounded-full w-fit mt-1 hidden md:block">
-                        Đời 2025
+                        Dòng xe điện
                       </span>
                     </div>
                   </div>

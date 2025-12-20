@@ -13,12 +13,14 @@ const CarsTabsSection: FC<Props> = ({ cars }) => {
     "electric"
   );
 
+  console.log(cars);
+
   // Define data for each tab
   // Tab 1: Dòng xe điện (Corresponding to CarsSection logic -> slice(4))
-  const electricCars = cars?.slice(4) || [];
+  const electricCars = cars?.slice(5) || [];
 
   // Tab 2: Dòng xe dịch vụ (Corresponding to CarsSection2 logic -> slice(0, 4))
-  const serviceCars = cars?.slice(0, 4) || [];
+  const serviceCars = cars?.slice(0, 5) || [];
 
   const currentCars = activeTab === "electric" ? electricCars : serviceCars;
 

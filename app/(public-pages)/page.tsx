@@ -13,9 +13,9 @@ const CarsTabsSection = dynamicImport(
   () => import("@/components/home-page/cars-tabs-section")
 );
 
-const SupportBuyersSection = dynamicImport(
-  () => import("@/components/home-page/support-buyers-section")
-);
+// const SupportBuyersSection = dynamicImport(
+//   () => import("@/components/home-page/support-buyers-section")
+// );
 
 const PriceTableSection = dynamicImport(
   () => import("@/components/home-page/price-table-section")
@@ -33,9 +33,9 @@ const QuoteSection = dynamicImport(
   () => import("@/components/home-page/quote-section")
 );
 
-// const GoogleMaps = dynamicImport(
-//   () => import("@/components/home-page/google-maps")
-// );
+const GoogleMaps = dynamicImport(
+  () => import("@/components/home-page/google-maps")
+);
 
 export const generateMetadata = () => {
   return {
@@ -59,12 +59,12 @@ export default async function Home() {
           <MainOptions />
           <PromotionSection />
           <CarsTabsSection cars={cars} />
-          <SupportBuyersSection />
           <PriceTableSection cars={cars} />
           <ReasonsSection />
           <PostsSection />
           <QuoteSection />
-          {/* <GoogleMaps /> */}
+          {/* <SupportBuyersSection /> */}
+          <GoogleMaps />
         </div>
       </main>
 

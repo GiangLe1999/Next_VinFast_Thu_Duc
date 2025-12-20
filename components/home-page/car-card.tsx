@@ -18,11 +18,11 @@ const CarCard: FC<Props> = ({ car }) => {
       </div>
 
       <div className="p-4">
-        <h4 className="text-lg font-bold text-gray-800 hover:text-primary transition text-center">
+        <h4 className="text-lg font-bold text-gray-800 text-center">
           VINFAST {car.name.toUpperCase()}
         </h4>
         <div className="mt-1 text-center">
-          <span className="font-bold text-primary">
+          <span className="font-bold text-red-700">
             Giá từ: {formatPrice(car?.priceFrom)}
             <u>đ</u>
           </span>

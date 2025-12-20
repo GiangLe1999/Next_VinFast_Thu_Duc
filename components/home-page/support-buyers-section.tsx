@@ -18,9 +18,9 @@ const SupportBuyersSection = () => {
         </div>
         <Link
           href="tel:0822220088"
-          className="flex items-center gap-x-2 py-3 px-6 shadow-lg bg-white text-primary sm:text-2xl text-lg font-bold !gap-2 !rounded-md sm:w-fit w-full"
+          className="flex items-center gap-x-2 py-3 px-6 shadow-lg bg-white text-red-600 sm:text-2xl text-lg font-bold !gap-2 !rounded-md sm:w-fit w-full"
         >
-          <FaPhoneAlt className="w-5 h-5" />
+          <FaPhoneAlt className="w-5 h-5 mt-[2px]" />
           0938 295 905
         </Link>
       </div>
