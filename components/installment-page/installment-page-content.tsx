@@ -1,8 +1,8 @@
 import FirstBanner from "../first-banner";
 
 import { FaLayerGroup, FaAtlassian, FaUser } from "react-icons/fa";
-import CarPriceSection from "../car-page/CarPriceSection";
 import { FC } from "react";
+import CarPriceSection from "../car-page/CarPriceSectionForInstallmentPage1";
 
 interface Props {
   carNameArr: any;

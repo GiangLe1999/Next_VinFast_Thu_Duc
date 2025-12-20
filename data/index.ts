@@ -214,7 +214,7 @@ export const homeOptions: homeOptionType[] = [
     title: "tính phí lăn bánh",
     link: linkConstants.finalPrice,
     icon: FaCalculator,
-    des: "Giá các phiên bản xe VinFast cùng các khoản phí chi tiết tại <strong>VinFast Thủ Đức</strong>",
+    des: "Giá các phiên bản xe VinFast cùng các khoản phí chi tiết tại <strong>VinFast Quận 2</strong>",
   },
   {
     title: "mua xe trả góp",
@@ -226,14 +226,14 @@ export const homeOptions: homeOptionType[] = [
     title: "đăng ký lái thử",
     link: linkConstants.testDrive,
     icon: FaCarAlt,
-    des: "Đến với <strong>VinFast Thủ Đức</strong> để được lái thử những mẫu xe VinFast mới nhất",
+    des: "Đến với <strong>VinFast Quận 2</strong> để được lái thử những mẫu xe VinFast mới nhất",
   },
 ];
 
 export const footerCol1: string[] = [
   "Chuyên cung cấp dòng xe VinFast các loại",
   "Xe 4 chỗ VinFast VF 5, 5 chỗ VinFast VF 6 và VF 7, 5 chỗ gầm cao VinFast VF 8, 7 chỗ VinFast VF 9",
-  // "Địa chỉ : 2699 Trần Hưng Đạo, P. Mỹ Thạnh, Thành phố Long Xuyên, An Giang",
+  "Địa chỉ : 70 Lương Định Của, Phường An Khánh, Thủ Đức, TP. Hồ Chí Minh, Việt Nam",
 ];
 
 type footerItemType = { title: string; link: string };

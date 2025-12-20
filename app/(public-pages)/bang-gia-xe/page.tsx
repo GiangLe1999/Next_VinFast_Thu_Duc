@@ -4,9 +4,9 @@ import { getAllCarsForHomepage } from "@/queries/car.query";
 
 export const generateMetadata = () => {
   return {
-    title: "Bảng Giá Xe VinFast 2025 Cập Nhật Tại VinFast Thủ Đức",
+    title: "Bảng Giá Xe VinFast 2025 Cập Nhật Tại VinFast Quận 2",
     description:
-      "Cập nhật bảng giá xe VinFast 2025 mới nhất tại VinFast Thủ Đức. Thông tin chi tiết về các dòng xe, giá bán, ưu đãi và chương trình khuyến mãi hấp dẫn.",
+      "Cập nhật bảng giá xe VinFast 2025 mới nhất tại VinFast Quận 2. Thông tin chi tiết về các dòng xe, giá bán, ưu đãi và chương trình khuyến mãi hấp dẫn.",
     alternates: {
       canonical: `${process.env.NEXT_PUBLIC_BASE_URL}${linkConstants.quote}`,
     },

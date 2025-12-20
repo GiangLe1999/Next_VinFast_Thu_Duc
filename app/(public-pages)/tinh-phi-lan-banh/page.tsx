@@ -7,7 +7,7 @@ export const generateMetadata = () => {
   return {
     title: "Tính Phí Lăn Bánh Xe VinFast 2025 - Cập Nhật Chi Tiết Mới Nhất",
     description:
-      "Công cụ tính phí lăn bánh xe VinFast giúp bạn ước tính chi phí chính xác bao gồm giá xe, thuế, phí trước bạ, đăng ký, bảo hiểm,... Cập nhật mới nhất tại VinFast Thủ Đức.",
+      "Công cụ tính phí lăn bánh xe VinFast giúp bạn ước tính chi phí chính xác bao gồm giá xe, thuế, phí trước bạ, đăng ký, bảo hiểm,... Cập nhật mới nhất tại VinFast Quận 2.",
     alternates: {
       canonical: `${process.env.NEXT_PUBLIC_BASE_URL}${linkConstants.finalPrice}`,
     },

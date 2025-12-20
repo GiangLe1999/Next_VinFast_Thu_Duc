@@ -33,7 +33,7 @@ export const linkConstants = {
 };
 
 export const pageConstants = {
-  siteTitle: "VinFast Thủ Đức | Đại Lý Chính Hãng Của VinFast",
+  siteTitle: "VinFast Quận 2 | Đại Lý Chính Hãng Của VinFast",
   siteDescription:
-    "VinFast Thủ Đức cung cấp thông tin chính xác nhất về giá cả, tính năng, thông số kỹ thuật của các dòng xe VinFast như VF3, VF5, VF6, VF7, VF8, VF9.",
+    "VinFast Quận 2 cung cấp thông tin chính xác nhất về giá cả, tính năng, thông số kỹ thuật của các dòng xe VinFast như VF3, VF5, VF6, VF7, VF8, VF9.",
 };

@@ -2,8 +2,8 @@ import dynamicImport from "next/dynamic";
 import CarPromotionSection from "@/components/car-page/CarPromotionSection";
 
 import CarImageGallery from "@/components/car-page/CarImageGallery";
-import CarPriceSection from "@/components/car-page/CarPriceSection";
 import { getAllCarsForAdmin, getCarBySlug } from "@/queries/car.query";
+import CarPriceSection from "@/components/car-page/CarPriceSection";
 
 const SalerCard = dynamicImport(
   () => import("@/components/car-page/SalerCard")
@@ -75,7 +75,6 @@ export default async function Page({
               </div>
 
               <CarPriceSection
-                name={car.name}
                 lines={car.carLines}
                 registration={car.registration}
               />

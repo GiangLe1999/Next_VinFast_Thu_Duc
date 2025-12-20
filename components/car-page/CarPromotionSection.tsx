@@ -18,7 +18,7 @@ const PromotionSection: FC<Props> = ({ content, name }) => {
         VinFast {name}
       </h1>
 
-      <div className="prose prose-ul:space-y-1 prose-strong:text-primary text-[15px]">
+      <div className="prose prose-ul:space-y-1 prose-strong:text-red-700 text-[15px]">
         {parse(content)}
       </div>
 
@@ -28,7 +28,7 @@ const PromotionSection: FC<Props> = ({ content, name }) => {
           content="Đăng ký lái thử"
           icon={FaEdit}
           iconSize={16}
-          to={linkConstants.requireQuotation}
+          to={linkConstants.testDrive}
         />
       </div>
     </div>

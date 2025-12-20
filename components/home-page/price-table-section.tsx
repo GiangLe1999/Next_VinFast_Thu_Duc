@@ -56,7 +56,7 @@ const PriceTableSection: FC<Props> = ({ cars }) => {
                         VinFast {car.name}
                       </Link>
                       <span className="text-[10px] md:text-xs text-gray-500 bg-gray-100 px-2 py-0.5 rounded-full w-fit mt-1 hidden md:block">
-                        Dòng xe điện
+                        {index < 5 ? "Dòng xe dịch vụ" : "Dòng xe điện"}
                       </span>
                     </div>
                   </div>

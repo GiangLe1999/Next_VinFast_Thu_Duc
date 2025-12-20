@@ -6,7 +6,7 @@ export const generateMetadata = () => {
   return {
     title: "Tin Tức VinFast - Cập Nhật Mới Nhất Về Xe & Công Nghệ",
     description:
-      "Tổng hợp tin tức mới nhất về VinFast: xe điện, công nghệ, chính sách bán hàng, chương trình khuyến mãi và sự kiện nổi bật. Cập nhật liên tục tại VinFast Thủ Đức.",
+      "Tổng hợp tin tức mới nhất về VinFast: xe điện, công nghệ, chính sách bán hàng, chương trình khuyến mãi và sự kiện nổi bật. Cập nhật liên tục tại VinFast Quận 2.",
     alternates: {
       canonical: `${process.env.NEXT_PUBLIC_BASE_URL}${linkConstants.news}`,
     },

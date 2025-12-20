@@ -31,7 +31,7 @@ const CarsTabsSection: FC<Props> = ({ cars }) => {
           <p className="text-textColor text-center font-bold text-sm mb-2 uppercase">
             CÁC DÒNG XE TẠI
           </p>
-          <SectionTitle title="VinFast Thủ Đức" />
+          <SectionTitle title="VinFast Quận 2" />
         </div>
 
         {/* Tabs */}

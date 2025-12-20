@@ -10,7 +10,7 @@ const ReasonsSection = () => {
       <p className="text-textColor text-center font-bold text-sm mb-2">
         TẠI SAO NÊN MUA XE TẠI
       </p>
-      <SectionTitle title="VinFast Thủ Đức" />
+      <SectionTitle title="VinFast Quận 2" />
 
       <div className="grid grid-cols-2 mt-12 gap-6 max-[1100px]:grid-cols-1">
         <ul className="space-y-5 text-sm leading-7">
@@ -19,7 +19,7 @@ const ReasonsSection = () => {
               <BsTagsFill size={16} /> Giá cả ưu đãi - Giao xe sớm
             </p>
             <p>
-              VinFast Thủ Đức luôn cam kết mang lại mức giá ưu đãi nhất cho quý
+              VinFast Quận 2 luôn cam kết mang lại mức giá ưu đãi nhất cho quý
               khách với thời gian giao xe nhanh nhất trong 1 ngày.
             </p>
           </li>
@@ -29,7 +29,7 @@ const ReasonsSection = () => {
               <SiAdguard size={16} /> Bảo hành theo tiêu chuẩn toàn quốc
             </p>
             <p>
-              Anh chị sẽ yên tâm khi mua xe tại VinFast Thủ Đức, vì chúng tôi
+              Anh chị sẽ yên tâm khi mua xe tại VinFast Quận 2, vì chúng tôi
               luôn bảo hành, bảo dưỡng và sửa chữa theo tiêu chuẩn chất lượng
               của VinFast trên toàn quốc. BẢO HÀNH ĐẾN 5 NĂM.
             </p>

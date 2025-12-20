@@ -15,6 +15,7 @@ interface Props {
   setChoseCarName: Dispatch<SetStateAction<string>>;
   choseProvince: string;
   setChoseProvince: Dispatch<SetStateAction<string>>;
+  isProductPage?: boolean;
 }
 
 const FinalPriceFrom: FC<Props> = ({
@@ -31,6 +32,7 @@ const FinalPriceFrom: FC<Props> = ({
   setChoseCarName,
   choseProvince,
   setChoseProvince,
+  isProductPage,
 }) => {
   const currentRegistrationFee = (registration * currentListPrice) / 100;
 
@@ -47,7 +49,7 @@ const FinalPriceFrom: FC<Props> = ({
     bhTNDS;
 
   return (
-    <div className="cal-price-wrapper h-fit">
+    <div className={`${isProductPage ? "" : "cal-price-wrapper"} h-fit`}>
       <h4 className="cal-price-title">TÍNH PHÍ LĂN BÁNH</h4>
 
       <form className="pt-4 pb-2 text-textColor">

@@ -10,7 +10,7 @@ const SalerCard = () => {
         <div className="w-full aspect-square relative">
           <NextImage
             src="/images/gioi-thieu/saler-card-vinfast-an-giang.png"
-            alt="Phòng kinh doanh VinFast Thủ Đức"
+            alt="Phòng kinh doanh VinFast Quận 2"
           />
         </div>
 

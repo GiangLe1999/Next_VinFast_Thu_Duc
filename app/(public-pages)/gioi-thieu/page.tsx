@@ -8,9 +8,9 @@ const CustomerCarousel = dynamicImport(
 
 export const generateMetadata = () => {
   return {
-    title: "Về Chúng Tôi - VinFast Thủ Đức | Đại Lý VinFast Chính Hãng",
+    title: "Về Chúng Tôi - VinFast Quận 2 | Đại Lý VinFast Chính Hãng",
     description:
-      "Tìm hiểu về VinFast Thủ Đức - đại lý ủy quyền chính hãng của VinFast. Cung cấp các dòng xe điện, dịch vụ bảo hành, bảo dưỡng, và hỗ trợ khách hàng chuyên nghiệp.",
+      "Tìm hiểu về VinFast Quận 2 - đại lý ủy quyền chính hãng của VinFast. Cung cấp các dòng xe điện, dịch vụ bảo hành, bảo dưỡng, và hỗ trợ khách hàng chuyên nghiệp.",
     alternates: {
       canonical: `${process.env.NEXT_PUBLIC_BASE_URL}${linkConstants.introduce}`,
     },
@@ -22,7 +22,7 @@ const page = () => {
     <div>
       <FirstBanner
         heading="VỀ CHÚNG TÔI"
-        subHeading="VinFast Thủ Đức"
+        subHeading="VinFast Quận 2"
         bgImg="/images/first-banners/bang-gia-xe-vinfast.webp"
         bgClasses="!bg-cover"
       />
@@ -31,11 +31,11 @@ const page = () => {
         <div className="introduce-section">
           <div>
             <p>Chào mừng đến với</p>
-            <h2>VinFast Thủ Đức</h2>
+            <h2>VinFast Quận 2</h2>
             <ul>
               <li>
                 Được xây dựng trên diện tích gần 2000 m² với tổng số vốn đầu tư
-                161 tỉ đồng, showroom VinFast Thủ Đức mang phong cách thiết kế
+                161 tỉ đồng, showroom VinFast Quận 2 mang phong cách thiết kế
                 hiện đại, trẻ trung và tiện nghi.
               </li>
               <li>
@@ -51,7 +51,7 @@ const page = () => {
               </li>
               <li>
                 Không chỉ cung cấp những sản phẩm chất lượng cao với thiết kế
-                đột phá, VinFast Thủ Đức còn có đội ngũ tư vấn viên chuyên
+                đột phá, VinFast Quận 2 còn có đội ngũ tư vấn viên chuyên
                 nghiệp, giàu kinh nghiệm, sẵn sàng hỗ trợ khách hàng lựa chọn
                 mẫu xe phù hợp nhất.
               </li>
@@ -61,7 +61,7 @@ const page = () => {
           <div className="introduce-section-img">
             <NextImage
               src="/images/gioi-thieu/vinfast-an-giang.webp"
-              alt="VinFast Thủ Đức"
+              alt="VinFast Quận 2"
             />
           </div>
         </div>
@@ -70,7 +70,7 @@ const page = () => {
           <div className="introduce-section-img left">
             <NextImage
               src="/images/gioi-thieu/khong-gian-vinfast-an-giang.webp"
-              alt="Không gian VinFast Thủ Đức"
+              alt="Không gian VinFast Quận 2"
             />
           </div>
 
@@ -91,7 +91,7 @@ const page = () => {
                 Quý khách hàng.
               </li>
               <li>
-                Với những ưu thế vượt trội, VinFast Thủ Đức luôn được khách hàng
+                Với những ưu thế vượt trội, VinFast Quận 2 luôn được khách hàng
                 tin tưởng, là một trong những showroom có lượng khách hàng trung
                 thành lớn, đồng thời nằm trong nhóm showroom có doanh số ấn
                 tượng trong hệ thống VinFast trên cả nước.
@@ -102,14 +102,14 @@ const page = () => {
         <div className="introduce-section">
           <div>
             <p>Những lợi ích mà</p>
-            <h2>VinFast Thủ Đức mang lại</h2>
+            <h2>VinFast Quận 2 mang lại</h2>
             <ul>
               <li>
                 <span>Công nghệ hiện đại: </span>
-                Xưởng dịch vụ-sửa chữa của VinFast Thủ Đức được trang bị máy
-                móc, thiết bị công nghệ hiện đại đáp ứng các như cầu bảo hành,
-                bảo dưỡng, sửa chữa và dịch vụ đồng-sơn xe mới… Công suất phục
-                vụ sửa chữa tối đa của xưởng lên đến hàng trăm lượt xe mỗi ngày.
+                Xưởng dịch vụ-sửa chữa của VinFast Quận 2 được trang bị máy móc,
+                thiết bị công nghệ hiện đại đáp ứng các như cầu bảo hành, bảo
+                dưỡng, sửa chữa và dịch vụ đồng-sơn xe mới… Công suất phục vụ
+                sửa chữa tối đa của xưởng lên đến hàng trăm lượt xe mỗi ngày.
               </li>
 
               <li>
@@ -119,7 +119,7 @@ const page = () => {
                 Quý khách hàng.
               </li>
               <li>
-                <span>Đầy đủ các dòng xe: </span>Showroom VinFast Thủ Đức trưng
+                <span>Đầy đủ các dòng xe: </span>Showroom VinFast Quận 2 trưng
                 bày đầy đủ các dòng xe VinFast hiện đại như VF3, VFe34, VF5,
                 VF7, VF8, VF9 cùng các mẫu xe điện thông minh. Quý khách hàng sẽ
                 được tư vấn và trải nghiệm thực tế các dòng xe chính hãng do
@@ -129,7 +129,7 @@ const page = () => {
               <li>
                 <span>Hết lòng vì khách hàng: </span>
                 Không chỉ có những sản phẩm tối ưu với thiết kế độc đáo,
-                showroom VinFast Thủ Đức còn có đội ngũ bán hàng chuyên nghiệp,
+                showroom VinFast Quận 2 còn có đội ngũ bán hàng chuyên nghiệp,
                 có kiến thức sâu rộng và thái độ phục vụ ân cần, chu đáo, giúp
                 khách hàng chọn được mẫu xe ưng ý nhất.
               </li>
@@ -139,7 +139,7 @@ const page = () => {
           <div className="introduce-section-img">
             <NextImage
               src="/images/gioi-thieu/phong-kinh-doanh-vinfast-an-giang.webp"
-              alt="Phong kinh doanh VinFast Thủ Đức"
+              alt="Phong kinh doanh VinFast Quận 2"
             />
           </div>
         </div>
@@ -150,7 +150,7 @@ const page = () => {
               Một số hình ảnh khác
             </p>
             <p className="font-bold text-3xl uppercase text-center mb-3">
-              Tại VinFast Thủ Đức
+              Tại VinFast Quận 2
             </p>
           </h2>
           <CustomerCarousel />

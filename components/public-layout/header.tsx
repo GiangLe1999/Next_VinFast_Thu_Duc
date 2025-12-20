@@ -58,7 +58,7 @@ const Header = () => {
           </Link>
 
           <h2 className="text-xl font-bold max-[500px]:hidden">
-            <Link href="/">VinFast Thủ Đức</Link>
+            <Link href="/">VinFast Quận 2</Link>
           </h2>
 
           <a

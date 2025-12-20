@@ -16,7 +16,7 @@ const Footer = () => {
         {/* Column1 */}
         <div className="w-1/3 pr-3 max-[1017px]:w-[50%] max-[717px]:w-full">
           {/* General info */}
-          <p className="footer-title">VinFast Thủ Đức</p>
+          <p className="footer-title">VinFast Quận 2</p>
           <ul>
             {footerCol1.map((item, index) => (
               <li className="footer-item hover:font-normal" key={index}>
@@ -47,7 +47,7 @@ const Footer = () => {
               <div className="footer-icon">
                 <NextImage
                   src="/images/home/facebook.jpg"
-                  alt="VinFast Thủ Đức Facebook"
+                  alt="VinFast Quận 2 Facebook"
                 />
               </div>
             </a>
@@ -60,7 +60,7 @@ const Footer = () => {
               <div className="footer-icon">
                 <NextImage
                   src="/images/home/youtube.png"
-                  alt="VinFast Thủ Đức Youtube"
+                  alt="VinFast Quận 2 Youtube"
                 />
               </div>
             </Link>
@@ -73,7 +73,7 @@ const Footer = () => {
               <div className="footer-icon">
                 <NextImage
                   src="/images/home/tiktok.png"
-                  alt="VinFast Thủ Đức TikTok"
+                  alt="VinFast Quận 2 TikTok"
                 />
               </div>
             </Link>
@@ -123,7 +123,7 @@ const Footer = () => {
       <div className="border-t border-gray-700/70 py-1">
         <div className="container text-[#999999] text-xs flex items-center justify-center">
           <span className="my-2 text-center">
-            © {new Date().getFullYear()} VinFast Thủ Đức - All rights reserved
+            © {new Date().getFullYear()} VinFast Quận 2 - All rights reserved
           </span>
 
           {/* <span>

@@ -35,7 +35,7 @@ const CarImageGallery: FC<Props> = ({ colors, price }) => {
         {carImages.map((image, index) => (
           <div
             key={image.url}
-            className="relative w-full cursor-pointer main-image-ratio"
+            className="relative w-full cursor-pointer aspect-[16/8]"
           >
             <ContainNextImage
               key={image.url}
