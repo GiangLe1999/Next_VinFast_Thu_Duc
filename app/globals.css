@@ -589,3 +589,15 @@ figure.image figcaption {
 .pagination .page-item.disabled .page-link {
   @apply !text-[#9f9f9f];
 }
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.animate-fadeInUp {
+  animation: fadeInUp 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

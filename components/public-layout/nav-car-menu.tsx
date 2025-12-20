@@ -2,21 +2,29 @@
 
 import { navCarMenu } from "@/data";
 import { FC, SetStateAction, Dispatch } from "react";
-import Link from "next/link";
 import Image from "next/image";
 import { AiFillCloseSquare } from "react-icons/ai";
+import { useRouter } from "next/navigation";
 
 interface Props {
   showCarMenu: boolean;
   setShowCarMenu: Dispatch<SetStateAction<boolean>>;
-  parentUnHoverHandler: () => void;
+  setShowServiceMenu: Dispatch<SetStateAction<boolean>>;
 }
 
 const NavCarMenu: FC<Props> = ({
   showCarMenu,
-  parentUnHoverHandler,
   setShowCarMenu,
+  setShowServiceMenu,
 }) => {
+  const router = useRouter();
+
+  const onClickChild = (link: string) => {
+    setShowCarMenu(false);
+    setShowServiceMenu(false);
+    router.push(link);
+  };
+
   return (
     <div
       className={`absolute w-full top-full left-0 z-50 bg-white p-5 grid grid-cols-5 gap-y-6 gap-x-2 rounded-sm shadow-md transition origin-top max-[822px]:grid-cols-4 max-[638px]:grid-cols-3 max-[638px]:pt-8 ${
@@ -24,11 +32,10 @@ const NavCarMenu: FC<Props> = ({
       }`}
     >
       {navCarMenu.map((car, index) => (
-        <Link
-          href={"/" + car.link}
+        <div
           key={index}
-          className="text-center hover:scale-110 transition-transform duration-500"
-          onClick={parentUnHoverHandler}
+          className="text-center cursor-pointer hover:scale-110 transition-transform duration-500"
+          onClick={() => onClickChild(car.link)}
         >
           <Image
             src={car.logo}
@@ -50,7 +57,7 @@ const NavCarMenu: FC<Props> = ({
           <p className="text-sm font-semibold">
             Từ <span className="font-black">{car.price}.000.000</span> VNĐ
           </p>
-        </Link>
+        </div>
       ))}
 
       <button

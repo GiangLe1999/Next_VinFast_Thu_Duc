@@ -138,7 +138,7 @@ const Header = () => {
           <NavCarMenu
             showCarMenu={showCarMenu}
             setShowCarMenu={setShowCarMenu}
-            parentUnHoverHandler={parentUnHoverHandler}
+            setShowServiceMenu={setShowServiceMenu}
           />
         </nav>
       </div>

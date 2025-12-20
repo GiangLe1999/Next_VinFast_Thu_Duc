@@ -26,7 +26,6 @@ const CarsTabsSection: FC<Props> = ({ cars }) => {
     <section id="cars-section">
       <div className="container pt-10 pb-20">
         <div className="mb-8 text-center">
-          {/* We can keep a general title or just use the tabs as the main selector */}
           <p className="text-textColor text-center font-bold text-sm mb-2 uppercase">
             CÁC DÒNG XE TẠI
           </p>
@@ -37,7 +36,7 @@ const CarsTabsSection: FC<Props> = ({ cars }) => {
         <div className="flex justify-center items-center gap-4 mb-8">
           <button
             onClick={() => setActiveTab("electric")}
-            className={`px-6 py-2 rounded-xl font-bold transition-all duration-300 ${
+            className={`px-6 py-2 rounded-lg font-bold transition-all duration-500 ${
               activeTab === "electric"
                 ? "bg-primary text-white shadow-lg scale-105"
                 : "bg-gray-100 text-gray-600 hover:bg-gray-200"
@@ -47,7 +46,7 @@ const CarsTabsSection: FC<Props> = ({ cars }) => {
           </button>
           <button
             onClick={() => setActiveTab("service")}
-            className={`px-6 py-2 rounded-xl font-bold transition-all duration-300 ${
+            className={`px-6 py-2 rounded-lg font-bold transition-all duration-500 ${
               activeTab === "service"
                 ? "bg-primary text-white shadow-lg scale-105"
                 : "bg-gray-100 text-gray-600 hover:bg-gray-200"
@@ -57,16 +56,11 @@ const CarsTabsSection: FC<Props> = ({ cars }) => {
           </button>
         </div>
 
-        {/* Content with Fade Transition */}
+        {/* Content with Animation */}
         <div className="relative min-h-[400px]">
-          {/* 
-                Simple key-based remounting can trigger animations if we use CSS animation.
-                Or we can just render the grid. 
-                For "smooth effect", opacity transition is good.
-             */}
           <div
             key={activeTab}
-            className="grid grid-cols-3 gap-6 py-4 max-[982px]:grid-cols-2 max-[680px]:grid-cols-1 animate-fadeIn"
+            className="grid grid-cols-3 gap-6 py-4 max-[982px]:grid-cols-2 max-[680px]:grid-cols-1 animate-fadeInUp"
           >
             {currentCars.map((car) => (
               <CarCard car={car} key={car._id} />
