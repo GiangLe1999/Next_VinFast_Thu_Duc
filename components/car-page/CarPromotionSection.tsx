@@ -18,14 +18,14 @@ const PromotionSection: FC<Props> = ({ content, name }) => {
         VinFast {name}
       </h1>
 
-      <div className="prose prose-ul:space-y-1 prose-strong:text-tertiary text-[15px]">
+      <div className="prose prose-ul:space-y-1 prose-strong:text-primary text-[15px]">
         {parse(content)}
       </div>
 
       <div>
         <BtnWithIcon
-          customClasses="bg-tertiary w-full font-bold text-sm text-white mt-4"
-          content="NHẬN BÁO GIÁ NGAY"
+          customClasses="bg-primary w-full font-bold text-white mt-4"
+          content="Đăng ký lái thử"
           icon={FaEdit}
           iconSize={16}
           to={linkConstants.requireQuotation}

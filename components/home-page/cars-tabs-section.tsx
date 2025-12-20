@@ -24,7 +24,7 @@ const CarsTabsSection: FC<Props> = ({ cars }) => {
 
   return (
     <section id="cars-section">
-      <div className="container pt-10 pb-20">
+      <div className="container py-10">
         <div className="mb-8 text-center">
           <p className="text-textColor text-center font-bold text-sm mb-2 uppercase">
             CÁC DÒNG XE TẠI

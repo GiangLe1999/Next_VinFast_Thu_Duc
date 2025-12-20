@@ -6,7 +6,7 @@ import BtnWithIcon from "../btn-with-icon";
 const SalerCard = () => {
   return (
     <div className="w-[20%] sticky top-14 max-h-screen max-[1100px]:w-0">
-      <div className="bg-secondary rounded-md overflow-hidden">
+      <div className="rounded-lg overflow-hidden border shadow-md">
         <div className="w-full aspect-square relative">
           <NextImage
             src="/images/gioi-thieu/saler-card-vinfast-an-giang.png"
@@ -15,7 +15,7 @@ const SalerCard = () => {
         </div>
 
         <div className="text-white pt-3 pb-8 px-6">
-          <p className="text-center font-bold text-base my-3">
+          <p className="text-center font-bold text-base my-3 text-gray-800">
             PHÒNG KINH DOANH
           </p>
 
@@ -28,8 +28,8 @@ const SalerCard = () => {
           />
 
           <BtnWithIcon
-            customClasses="bg-tertiary w-full font-bold text-sm"
-            content="BÁO GIÁ NHANH"
+            customClasses="bg-red-700 w-full font-bold text-sm"
+            content="Báo giá nhanh"
             icon={MdMail}
             iconSize={16}
             to={linkConstants.requireQuotation}

@@ -2,9 +2,9 @@
 
 import { FC, useEffect, useState } from "react";
 import FinalPriceForm from "./FinalPriceForm";
-import CalInterestForm from "./CalInterestForm";
+// import CalInterestForm from "./CalInterestForm";
 import { formatPrice } from "@/lib/formatData";
-import InterestDetailTable from "./InterestDetailTable";
+// import InterestDetailTable from "./InterestDetailTable";
 import { getCarRegistrationData } from "@/queries/car.query";
 import { useFetchCarLines } from "@/hooks/useFetchCarLines";
 
@@ -24,17 +24,17 @@ const CarPriceSection: FC<Props> = ({
   carNameArr,
 }) => {
   const [choseCarLine, setChoseCarLine] = useState("");
-  const [chosePercent, setChosePercent] = useState("0");
-  const [choseLength, setChoseLength] = useState("5");
-  const [choseInterest, setChoseInterest] = useState("7");
-  const [choseKind, setChoseKind] = useState("descend");
+  // const [chosePercent, setChosePercent] = useState("0");
+  // const [choseLength, setChoseLength] = useState("5");
+  // const [choseInterest, setChoseInterest] = useState("7");
+  // const [choseKind, setChoseKind] = useState("descend");
   const [choseCarName, setChoseCarName] = useState("");
   const [choseCarData, setChoseCarData] = useState({
     registration: 0,
   });
   const [choseProvince, setChoseProvince] = useState("ag");
 
-  const [showInterestTable, setShowInterestTable] = useState(false);
+  // const [showInterestTable, setShowInterestTable] = useState(false);
 
   let currentLine = lines?.find((line) => line.name === choseCarLine) as any;
 
@@ -49,38 +49,38 @@ const CarPriceSection: FC<Props> = ({
     currentListPrice = currentLine?.price;
   }
 
-  const borrowedMoney = (Number(chosePercent) * currentListPrice) / 100 || 0;
+  // const borrowedMoney = (Number(chosePercent) * currentListPrice) / 100 || 0;
 
-  const originalPaidMonthly = borrowedMoney / (Number(choseLength) * 12);
+  // const originalPaidMonthly = borrowedMoney / (Number(choseLength) * 12);
 
-  const lengthArr = Array.from(
-    { length: Number(choseLength) * 12 },
-    (_, i) => i + 1
-  );
+  // const lengthArr = Array.from(
+  //   { length: Number(choseLength) * 12 },
+  //   (_, i) => i + 1
+  // );
 
-  let interestTotal = 0;
-  const interestArr: any[] = [];
-  const remainArr: any[] = [borrowedMoney];
-  if (choseKind === "descend") {
-    for (let i = 0; i < lengthArr.length; i++) {
-      const interestMonthly = Math.round(
-        (remainArr[i] * (Number(choseInterest) / 100)) / 12
-      );
-      interestArr.push(interestMonthly);
-      remainArr[i + 1] = remainArr[i] - originalPaidMonthly;
-    }
-    interestTotal = interestArr.reduce((acc, cur) => acc + cur, interestTotal);
-  } else if (choseKind === "linear") {
-    interestTotal =
-      ((originalPaidMonthly * Number(choseInterest)) / 100) *
-      Number(choseLength) *
-      12;
+  // let interestTotal = 0;
+  // const interestArr: any[] = [];
+  // const remainArr: any[] = [borrowedMoney];
+  // if (choseKind === "descend") {
+  //   for (let i = 0; i < lengthArr.length; i++) {
+  //     const interestMonthly = Math.round(
+  //       (remainArr[i] * (Number(choseInterest) / 100)) / 12
+  //     );
+  //     interestArr.push(interestMonthly);
+  //     remainArr[i + 1] = remainArr[i] - originalPaidMonthly;
+  //   }
+  //   interestTotal = interestArr.reduce((acc, cur) => acc + cur, interestTotal);
+  // } else if (choseKind === "linear") {
+  //   interestTotal =
+  //     ((originalPaidMonthly * Number(choseInterest)) / 100) *
+  //     Number(choseLength) *
+  //     12;
 
-    for (let i = 0; i < lengthArr.length; i++) {
-      remainArr[i + 1] = remainArr[i] - originalPaidMonthly;
-      interestArr.push((originalPaidMonthly * Number(choseInterest)) / 100);
-    }
-  }
+  //   for (let i = 0; i < lengthArr.length; i++) {
+  //     remainArr[i + 1] = remainArr[i] - originalPaidMonthly;
+  //     interestArr.push((originalPaidMonthly * Number(choseInterest)) / 100);
+  //   }
+  // }
 
   const fetchCarDataByName = async () => {
     const carData = (await getCarRegistrationData(choseCarName)) as any;
@@ -130,7 +130,7 @@ const CarPriceSection: FC<Props> = ({
         </>
       )}
 
-      <div className="grid grid-cols-2 gap-6 max-[890px]:grid-cols-1">
+      <div>
         {/* Table 2 */}
         <FinalPriceForm
           lines={isInstallmentPage ? carLines : lines}
@@ -152,7 +152,7 @@ const CarPriceSection: FC<Props> = ({
         />
 
         {/* Table 3 */}
-        <CalInterestForm
+        {/* <CalInterestForm
           chosePercent={chosePercent}
           setChosePercent={setChosePercent}
           choseLength={choseLength}
@@ -166,17 +166,17 @@ const CarPriceSection: FC<Props> = ({
           interestTotal={interestTotal}
           showInterestTable={showInterestTable}
           setShowInterestTable={setShowInterestTable}
-        />
+        /> */}
       </div>
 
-      {showInterestTable && (
+      {/* {showInterestTable && (
         <InterestDetailTable
           interestArr={interestArr}
           remainArr={remainArr}
           originalPaidMonthly={originalPaidMonthly}
           lengthArr={lengthArr}
         />
-      )}
+      )} */}
     </section>
   );
 };

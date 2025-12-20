@@ -17,7 +17,7 @@ const PostsSection = () => {
   });
 
   return (
-    <section className="container pt-28 pb-[75px]">
+    <section className="container pt-10 pb-20">
       <p className="text-textColor text-center font-bold text-sm mb-2">
         CẬP NHẬT
       </p>

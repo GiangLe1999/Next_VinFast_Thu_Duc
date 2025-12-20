@@ -120,13 +120,13 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="border-t border-[#999999] py-1">
-        <div className="container text-[#999999] text-xs flex items-center justify-between">
-          <span className="uppercase my-2 text-center">
+      <div className="border-t border-gray-700/70 py-1">
+        <div className="container text-[#999999] text-xs flex items-center justify-center">
+          <span className="my-2 text-center">
             © {new Date().getFullYear()} VinFast Thủ Đức - All rights reserved
           </span>
 
-          <span>
+          {/* <span>
             Được thiết kế & bảo trì bởi&nbsp;
             <a
               href="https://github.com/GiangLe1999"
@@ -136,7 +136,7 @@ const Footer = () => {
             >
               Giang Le
             </a>
-          </span>
+          </span> */}
         </div>
       </div>
     </footer>

@@ -1,12 +1,12 @@
 import SectionTitle from "./section-title";
 import NextImage from "../next-image";
-import CustomerSwiper from "./customer-swiper";
+// import CustomerSwiper from "./customer-swiper";
 import { BsFillGiftFill, BsTagsFill, BsChatHeartFill } from "react-icons/bs";
 import { SiAdguard } from "react-icons/si";
 
 const ReasonsSection = () => {
   return (
-    <section className="container pt-6 pb-24">
+    <section className="container pt-10 pb-20">
       <p className="text-textColor text-center font-bold text-sm mb-2">
         TẠI SAO NÊN MUA XE TẠI
       </p>
@@ -65,7 +65,7 @@ const ReasonsSection = () => {
         </div>
       </div>
 
-      <CustomerSwiper />
+      {/* <CustomerSwiper /> */}
     </section>
   );
 };

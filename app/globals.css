@@ -124,7 +124,7 @@ html {
 }
 
 .price-table thead {
-  @apply bg-tertiary text-white font-bold;
+  @apply bg-primary text-white font-bold;
 }
 
 .interest-table td {
@@ -136,7 +136,7 @@ html {
 }
 
 .cal-price-title {
-  @apply border-b border-tertiary text-tertiary font-bold text-xl;
+  @apply border-b border-primary text-primary font-bold text-xl;
 }
 
 .form-input-wrapper {
@@ -600,4 +600,22 @@ figure.image figcaption {
 }
 .animate-fadeInUp {
   animation: fadeInUp 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+strong {
+  @apply !font-bold;
 }
