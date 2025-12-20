@@ -50,7 +50,7 @@ const FinalPriceFrom: FC<Props> = ({
 
   return (
     <div className={`${isProductPage ? "" : "cal-price-wrapper"} h-fit`}>
-      <h4 className="cal-price-title">TÍNH PHÍ LĂN BÁNH</h4>
+      <h4 className="cal-price-title mb-3">TÍNH PHÍ LĂN BÁNH</h4>
 
       <form className="pt-4 pb-2 text-textColor">
         {/* Place */}

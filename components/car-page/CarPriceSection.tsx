@@ -41,37 +41,59 @@ const CarPriceSection: FC<Props> = ({
   }, [choseCarName]);
 
   return (
-    <section className="space-y-6">
+    <section className="space-y-8">
       <div className="cal-price-wrapper">
         {!isInstallmentPage && (
-          <>
-            <h2 className="cal-price-title">PHIÊN BẢN</h2>
-            {lines?.map((line, index) => (
-              <tr key={index}>
-                <td>{line.name}</td>
-                <td className="text-right font-bold">
-                  {formatPrice(line.price)} VNĐ
-                </td>
-              </tr>
-            ))}
-          </>
+          <div className="mb-10">
+            <h2 className="cal-price-title mb-6">BẢNG GIÁ NIÊM YẾT</h2>
+
+            <div className="bg-white overflow-hidden">
+              <div className="border-b border-gray-200 pb-3 flex justify-between items-center text-sm font-semibold text-gray-400">
+                <span>Phiên bản</span>
+                <span>Giá từ</span>
+              </div>
+
+              <div className="divide-y">
+                {lines?.map((line, index) => (
+                  <div
+                    key={index}
+                    className="flex justify-between items-center py-4"
+                  >
+                    <div>
+                      <span className="text-gray-700 text-sm md:text-base">
+                        {line.name}
+                      </span>
+                    </div>
+
+                    <div>
+                      <span className="flex items-center font-bold text-gray-500 text-base md:text-lg">
+                        {formatPrice(line.price)}VNĐ
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         )}
 
-        {/* Table 2 */}
-        <FinalPriceForm
-          lines={lines}
-          choseCarLine={choseCarLine}
-          setChoseCarLine={setChoseCarLine}
-          registration={registration as number}
-          currentLine={currentLine}
-          currentListPrice={currentListPrice}
-          carNameArr={carNameArr}
-          choseCarName={choseCarName}
-          setChoseCarName={setChoseCarName}
-          choseProvince={choseProvince}
-          setChoseProvince={setChoseProvince}
-          isProductPage
-        />
+        {/* Calculation Form Section */}
+        <div className="bg-white">
+          <FinalPriceForm
+            lines={lines}
+            choseCarLine={choseCarLine}
+            setChoseCarLine={setChoseCarLine}
+            registration={registration as number}
+            currentLine={currentLine}
+            currentListPrice={currentListPrice}
+            carNameArr={carNameArr}
+            choseCarName={choseCarName}
+            setChoseCarName={setChoseCarName}
+            choseProvince={choseProvince}
+            setChoseProvince={setChoseProvince}
+            isProductPage
+          />
+        </div>
       </div>
     </section>
   );
