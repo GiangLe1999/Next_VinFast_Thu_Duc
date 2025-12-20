@@ -4,9 +4,9 @@ import { linkConstants } from "@/data/constants";
 
 export const generateMetadata = () => {
   return {
-    title: "Đăng Ký Báo Giá Xe VinFast 2025 - VinFast An Giang",
+    title: "Đăng Ký Báo Giá Xe VinFast 2025 - VinFast Thủ Đức",
     description:
-      "Đăng ký ngay để nhận báo giá xe VinFast 2025 mới nhất tại VinFast An Giang. Nhận thông tin chi tiết về giá bán, ưu đãi và chương trình khuyến mãi độc quyền.",
+      "Đăng ký ngay để nhận báo giá xe VinFast 2025 mới nhất tại VinFast Thủ Đức. Nhận thông tin chi tiết về giá bán, ưu đãi và chương trình khuyến mãi độc quyền.",
     alternates: {
       canonical: `${process.env.NEXT_PUBLIC_BASE_URL}${linkConstants.requireQuotation}`,
     },

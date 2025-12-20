@@ -16,7 +16,7 @@ const buyCarTitle = "mua xe";
 const carMenuTitle = "giá xe vinfast";
 const serviceTitle = "dịch vụ";
 const commonClasses =
-  "relative uppercase text-sm text-white px-4 py-2 max-[414px]:px-2 hover:bg-secondary rounded-sm transition";
+  "relative font-semibold text-white px-4 py-2 max-[414px]:px-2 hover:bg-white hover:text-primary rounded-sm transition";
 
 const Header = () => {
   const pathname = usePathname();
@@ -55,7 +55,7 @@ const Header = () => {
   return (
     <>
       {/* Top Header */}
-      <div className="bg-secondary text-white py-3">
+      <div className="py-3">
         <div className="container flex items-center justify-between">
           <Link href="/" className="relative w-36 h-8 block">
             <ContainNextImage
@@ -65,21 +65,21 @@ const Header = () => {
             />
           </Link>
 
-          <h2 className="text-lg font-bold max-[500px]:hidden">
-            <Link href="/">VINFAST AN GIANG</Link>
+          <h2 className="text-xl text-gray-800 font-bold max-[500px]:hidden">
+            <Link href="/">VinFast Thủ Đức</Link>
           </h2>
 
           <a
-            href="tel:0822220088"
-            className="flex items-center gap-2 font-medium hover:scale-[1.1] transition"
+            href="tel:0938295905"
+            className="flex items-center gap-2 hover:scale-105 duration-500 will-change-transform transform-gpu"
           >
-            <div className="bg-primary rounded-full w-8 h-8 grid place-items-center">
-              <BsHeadset />
+            <div className="bg-primary text-white rounded-full w-9 h-9 grid place-items-center">
+              <BsHeadset className="w-5 h-5" />
             </div>
 
-            <div className="text-xs">
-              <p>HOTLINE</p>
-              <p>0822 220 088</p>
+            <div className="font-semibold">
+              <p className="text-xs text-gray-700 mb-[1px]">Hotline:</p>
+              <p className="text-base">0938 295 905</p>
             </div>
           </a>
         </div>
@@ -88,7 +88,7 @@ const Header = () => {
       {/* Sticky Header */}
       <div className="bg-primary text-center sticky top-0 z-50">
         <nav
-          className="container flex gap-2 items-center justify-center h-10 relative transition max-[500px]:justify-between max-[500px]:gap-0"
+          className="container flex gap-4 items-center justify-center h-12 relative transition max-[500px]:justify-between max-[500px]:gap-0"
           onMouseLeave={parentUnHoverHandler}
         >
           {navItems.map((item, index) => {
@@ -97,7 +97,7 @@ const Header = () => {
                 <div
                   key={index}
                   className={`${commonClasses} ${
-                    pathname === item.link && "bg-secondary"
+                    pathname === item.link && "bg-white !text-primary"
                   }`}
                   onMouseEnter={() => parentHoverHandler(item.title)}
                 >
@@ -121,12 +121,14 @@ const Header = () => {
                 href={item.link}
                 className={`${commonClasses} ${
                   !item.isParent && "max-[844px]:hidden"
-                } ${pathname === item.link && "bg-secondary"} ${
-                  showCarMenu && item.title === carMenuTitle && "bg-secondary"
+                } ${pathname === item.link && "bg-white !text-primary"} ${
+                  showCarMenu &&
+                  item.title === carMenuTitle &&
+                  "bg-white !text-primary"
                 } ${
                   showServiceMenu &&
                   item.title === serviceTitle &&
-                  "bg-secondary"
+                  "bg-white !text-primary"
                 }`}
                 onMouseEnter={() => parentHoverHandler(item.title)}
               >

@@ -11,7 +11,7 @@ const VideosSection = () => {
       <p className="text-textColor text-center font-bold text-sm mb-2">
         THEO DÕI
       </p>
-      <SectionTitle title="VINFAST AN GIANG" />
+      <SectionTitle title="VinFast Thủ Đức" />
 
       <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-6 justify-center items-center">
         {socialItems.map((item, index) => (

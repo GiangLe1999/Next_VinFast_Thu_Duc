@@ -6,7 +6,7 @@ const GoogleMaps = () => {
       loading="lazy"
       allowFullScreen
       referrerPolicy="no-referrer-when-downgrade"
-      title="Vị trí VinFast An Giang"
+      title="Vị trí VinFast Thủ Đức"
     ></iframe>
   );
 };

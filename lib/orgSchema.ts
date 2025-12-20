@@ -1,7 +1,7 @@
 export const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Ô tô VinFast An Giang",
+  name: "Ô tô VinFast Thủ Đức",
   alternateName: "VinFast Showroom An Giang",
   url: "https://vinfastangiang.com.vn",
   logo: "https://vinfast.vn/wp-content/uploads/2023/01/vinfast-logo.svg",

@@ -1,17 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Providers from "@/components/contexts/providers";
-import { Mulish } from "next/font/google";
 import { pageConstants } from "@/data/constants";
 import Script from "next/script";
 import JsonLd from "@/components/jsonld";
 import { orgSchema } from "@/lib/orgSchema";
-
-const mulish = Mulish({
-  subsets: ["latin", "vietnamese"],
-  weight: ["400", "500", "600", "700"],
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: pageConstants.siteTitle,
@@ -28,7 +21,7 @@ export default function RootLayout({
       <head>
         <JsonLd data={orgSchema} />
       </head>
-      <body className={`${mulish.className} antialiased`}>
+      <body className="font-sans antialiased">
         {/* Google Tag Manager */}
         <Script
           id="gtm-script"

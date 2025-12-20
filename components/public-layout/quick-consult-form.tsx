@@ -125,7 +125,7 @@ const QuickConsultForm = () => {
           <input
             type="number"
             id="phone"
-            placeholder="0822 220 088"
+            placeholder="0938 295 905"
             className="w-full py-[10px] px-4 rounded-md bg-[#f5f5f5] outline-none border"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}

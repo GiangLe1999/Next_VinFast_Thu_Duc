@@ -6,7 +6,7 @@ export const generateMetadata = () => {
   return {
     title: "Thủ Tục Trả Góp Xe VinFast - Hướng Dẫn Chi Tiết",
     description:
-      "Tìm hiểu thủ tục trả góp xe VinFast tại VinFast An Giang. Hỗ trợ vay ngân hàng, lãi suất ưu đãi, hồ sơ đơn giản, duyệt nhanh chóng.",
+      "Tìm hiểu thủ tục trả góp xe VinFast tại VinFast Thủ Đức. Hỗ trợ vay ngân hàng, lãi suất ưu đãi, hồ sơ đơn giản, duyệt nhanh chóng.",
     alternates: {
       canonical: `${process.env.NEXT_PUBLIC_BASE_URL}${linkConstants.installment}`,
     },

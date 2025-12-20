@@ -46,37 +46,37 @@ export const navItems: {
   icon?: IconType;
 }[] = [
   {
-    title: "trang chủ",
+    title: "Trang chủ",
     link: linkConstants.home,
     icon: FaHome,
   },
   {
-    title: "giới thiệu",
+    title: "Giới thiệu",
     link: linkConstants.introduce,
     icon: FaInfoCircle,
   },
   {
-    title: "giá xe vinfast",
+    title: "Giá xe vinfast",
     link: linkConstants.quote,
     isParent: true,
   },
   {
-    title: "mua xe",
+    title: "Mua xe",
     link: "/#",
     isParent: true,
   },
   {
-    title: "dịch vụ",
+    title: "Dịch vụ",
     link: "/#",
     isParent: true,
   },
   {
-    title: "tin tức",
+    title: "Tin tức",
     link: linkConstants.news,
     icon: FaBlog,
   },
   {
-    title: "liên hệ",
+    title: "Liên hệ",
     link: linkConstants.contact,
     icon: BiSolidContact,
   },
@@ -198,7 +198,7 @@ export const homeOptions: homeOptionType[] = [
     title: "tính phí lăn bánh",
     link: linkConstants.finalPrice,
     icon: FaCalculator,
-    des: "Giá các phiên bản xe VinFast cùng các khoản phí chi tiết tại <strong>VinFast An Giang</strong>",
+    des: "Giá các phiên bản xe VinFast cùng các khoản phí chi tiết tại <strong>VinFast Thủ Đức</strong>",
   },
   {
     title: "mua xe trả góp",
@@ -210,7 +210,7 @@ export const homeOptions: homeOptionType[] = [
     title: "đăng ký lái thử",
     link: linkConstants.testDrive,
     icon: FaCarAlt,
-    des: "Đến với <strong>VinFast An Giang</strong> để được lái thử những mẫu xe VinFast mới nhất",
+    des: "Đến với <strong>VinFast Thủ Đức</strong> để được lái thử những mẫu xe VinFast mới nhất",
   },
 ];
 
@@ -256,7 +256,7 @@ export const footerCol32: footerItemType[] = [
 ];
 
 export const footerCol4: { title: string; link: string; icon: IconType }[] = [
-  { title: "Hotline: 0822 220 088", link: "tel:0822220088", icon: MdPhone },
+  { title: "Hotline: 0938 295 905", link: "tel:0822220088", icon: MdPhone },
   {
     title: "vinfast3sangiang@gmail.com",
     link: "mailto:vinfast3sangiang@gmail.com",

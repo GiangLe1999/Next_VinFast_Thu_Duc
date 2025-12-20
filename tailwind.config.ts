@@ -9,11 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#025eda",
+        primary: "#1464F4",
         secondary: "#2b2b2b",
         tertiary: "#025eda",
         lightBg: "#F8FAFC",
         textColor: "#54595f",
+      },
+      fontFamily: {
+        sans: ["Muli", "sans-serif"],
       },
       typography: {
         DEFAULT: {

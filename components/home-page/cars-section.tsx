@@ -13,7 +13,7 @@ const CarsSection: FC<Props> = ({ cars }) => {
         <p className="text-textColor text-center font-bold text-sm mb-2">
           DÒNG XE KHÁC TẠI
         </p>
-        <SectionTitle title="VINFAST AN GIANG" />
+        <SectionTitle title="VinFast Thủ Đức" />
 
         <div className="mt-6 grid grid-cols-3 gap-6 py-8 max-[982px]:grid-cols-2 max-[680px]:grid-cols-1">
           {cars?.slice(4)?.map((car) => (

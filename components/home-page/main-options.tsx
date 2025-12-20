@@ -12,7 +12,7 @@ const MainOptions = () => {
           <Link
             key={index}
             href={option.link}
-            className="bg-white p-4 w-full flex flex-col items-center justify-center gap-2 rounded-md hover:scale-105 shadow-md hover:shadow-lg border transition"
+            className="bg-white p-4 w-full flex flex-col items-center justify-center gap-2 rounded-md hover:scale-105 shadow-md hover:shadow-lg border transition duration-500 will-change-transform transform-gpu"
           >
             {option.icon({ size: 30, color: "#025eda" })}
             <p className="uppercase text-sm font-bold text-primary mt-2">
