@@ -132,14 +132,14 @@ export const navCarMenu: navCarItemType[] = [
     link: "minio-green",
   },
   {
-    img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1742914255/Suoi%20Tien%20Vinfast/nkzkvk5pg8pwrn8ipd1x.png",
+    img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1766250324/An%20Giang%20Vinfast/ewu0rnp6lk1iiprvmmtx.png",
     logo: "/images/logo/VF3.png",
     name: "VinFast Herio Green",
     price: "499",
     link: "herio-green",
   },
   {
-    img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1742914783/Suoi%20Tien%20Vinfast/qgmi4toorl0k6sxfxxor.png",
+    img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1766247411/An%20Giang%20Vinfast/hpu8janquhro4mqmzktd.png",
     logo: "/images/logo/VF3.png",
     name: "VinFast Nerio Green",
     price: "710",
@@ -273,7 +273,7 @@ export const footerCol32: footerItemType[] = [
 ];
 
 export const footerCol4: { title: string; link: string; icon: IconType }[] = [
-  { title: "Hotline: 0938 295 905", link: "tel:0822220088", icon: MdPhone },
+  { title: "Hotline: 0938 295 905", link: "tel:0938295905", icon: MdPhone },
   {
     title: "yennhi96.le@gmail.com",
     link: "mailto:yennhi96.le@gmail.com",
@@ -305,7 +305,7 @@ export const socialItems = [
   {
     img: "/images/home/facebook.jpg",
     alt: "Facebook Icon",
-    href: "https://www.facebook.com/people/VinFast-An-Giang-0822220088/61557426075220/",
+    href: "https://www.facebook.com/profile.php?id=61564349647261#",
     title: "Facebook",
   },
   {
@@ -323,7 +323,7 @@ export const socialItems = [
   {
     img: "/images/home/zalo.png",
     alt: "Zalo Icon",
-    href: "https://zalo.me/0822220088",
+    href: "https://zalo.me/0938295905",
     title: "Zalo",
   },
 ];

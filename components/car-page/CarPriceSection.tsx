@@ -23,7 +23,7 @@ const CarPriceSection: FC<Props> = ({
   const [, setChoseCarData] = useState({
     registration: 0,
   });
-  const [choseProvince, setChoseProvince] = useState("ag");
+  const [choseProvince, setChoseProvince] = useState("hcm");
 
   const currentLine = lines?.find((line) => line.name === choseCarLine) as any;
 

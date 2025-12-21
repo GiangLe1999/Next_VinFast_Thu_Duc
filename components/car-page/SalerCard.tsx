@@ -20,7 +20,7 @@ const SalerCard = () => {
           </p>
 
           <BtnWithIcon
-            href="tel:0822220088"
+            href="tel:0938295905"
             customClasses="bg-primary w-full mb-4 font-bold text-sm"
             content="0938 295 905"
             icon={MdPhone}

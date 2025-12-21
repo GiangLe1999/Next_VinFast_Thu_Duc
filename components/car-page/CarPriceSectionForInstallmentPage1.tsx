@@ -32,7 +32,7 @@ const CarPriceSection: FC<Props> = ({
   const [choseCarData, setChoseCarData] = useState({
     registration: 0,
   });
-  const [choseProvince, setChoseProvince] = useState("ag");
+  const [choseProvince, setChoseProvince] = useState("hcm");
 
   const [showInterestTable, setShowInterestTable] = useState(false);
 

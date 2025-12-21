@@ -16,7 +16,7 @@ const BatteryChargingContent = () => {
 
         {/* 1. CHÍNH SÁCH THUÊ PIN */}
         <section className="mb-16">
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-8">
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 md:p-8">
             <div className="mb-8">
               <h2 className="cal-price-title mb-5">Lợi ích của thuê pin</h2>
               <ul className="grid md:grid-cols-2 gap-4">
@@ -27,7 +27,7 @@ const BatteryChargingContent = () => {
                 ].map((item, idx) => (
                   <li
                     key={idx}
-                    className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg"
+                    className="flex items-start gap-3 p-4 bg-gray-100 rounded-lg"
                   >
                     <FaCheckCircle className="text-primary mt-1 shrink-0" />
                     <span className="text-gray-700 text-sm">{item}</span>
@@ -75,7 +75,7 @@ const BatteryChargingContent = () => {
                       VF 3
                     </td>
                     <td className="p-3 border border-gray-200">
-                      <div className="flex justify-between py-1 border-b border-gray-100">
+                      <div className="flex justify-between py-1 border-b border-gray-200">
                         <span>Dưới 1.500 km:</span>{" "}
                         <span className="font-bold">900.000</span>
                       </div>

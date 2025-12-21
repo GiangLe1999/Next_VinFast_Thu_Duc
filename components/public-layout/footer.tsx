@@ -40,7 +40,7 @@ const Footer = () => {
           </ul>
           <div className="flex item-center gap-2 my-3">
             <a
-              href="https://www.facebook.com/people/VinFast-An-Giang-0822220088/61557426075220/"
+              href="https://www.facebook.com/profile.php?id=61564349647261#"
               target="_blank"
               rel="noopener noreferrer nofollow"
             >
@@ -64,7 +64,7 @@ const Footer = () => {
                 />
               </div>
             </Link>
-
+            {/* 
             <Link
               href="https://www.tiktok.com/@tran..viet"
               target="_blank"
@@ -76,7 +76,7 @@ const Footer = () => {
                   alt="VinFast Quận 2 TikTok"
                 />
               </div>
-            </Link>
+            </Link> */}
           </div>
         </div>
 

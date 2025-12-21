@@ -1,10 +1,10 @@
-import dynamicImport from "next/dynamic";
+// import dynamicImport from "next/dynamic";
 import FirstBanner from "@/components/first-banner";
 import NextImage from "@/components/next-image";
 import { linkConstants } from "@/data/constants";
-const CustomerCarousel = dynamicImport(
-  () => import("@/components/home-page/customer-swiper")
-);
+// const CustomerCarousel = dynamicImport(
+//   () => import("@/components/home-page/customer-swiper")
+// );
 
 export const generateMetadata = () => {
   return {
@@ -60,7 +60,7 @@ const page = () => {
 
           <div className="introduce-section-img">
             <NextImage
-              src="/images/gioi-thieu/vinfast-an-giang.webp"
+              src="/images/gioi-thieu/vinfast-quan-2.webp"
               alt="VinFast Quận 2"
             />
           </div>
@@ -69,7 +69,7 @@ const page = () => {
         <div className="introduce-section introduce-reverse">
           <div className="introduce-section-img left">
             <NextImage
-              src="/images/gioi-thieu/khong-gian-vinfast-an-giang.webp"
+              src="/images/gioi-thieu/khong-gian-vinfast-quan-2.webp"
               alt="Không gian VinFast Quận 2"
             />
           </div>
@@ -138,13 +138,13 @@ const page = () => {
 
           <div className="introduce-section-img">
             <NextImage
-              src="/images/gioi-thieu/phong-kinh-doanh-vinfast-an-giang.webp"
+              src="/images/gioi-thieu/phong-kinh-doanh-vinfast-quan-2.webp"
               alt="Phong kinh doanh VinFast Quận 2"
             />
           </div>
         </div>
 
-        <div className="mt-6">
+        {/* <div className="mt-6">
           <h2>
             <p className="text-primary font-bold text-xl text-center mb-2">
               Một số hình ảnh khác
@@ -154,7 +154,7 @@ const page = () => {
             </p>
           </h2>
           <CustomerCarousel />
-        </div>
+        </div> */}
       </div>
     </div>
   );

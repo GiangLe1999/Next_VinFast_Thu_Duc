@@ -95,7 +95,7 @@ const FilterBar: FC<Props> = ({
               </span>
 
               <a
-                href="https://www.facebook.com/people/VinFast-An-Giang-0822220088/61557426075220/"
+                href="https://www.facebook.com/profile.php?id=61564349647261#"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
               >

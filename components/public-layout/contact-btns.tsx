@@ -35,7 +35,7 @@ const ContactBtns = () => {
     <div className="fixed max-[844px]:bottom-16 bottom-3 left-4 flex flex-col gap-2 z-50">
       <div className={`${common} bg-tertiary`}>
         <a
-          href="https://zalo.me/0822220088"
+          href="https://zalo.me/0938295905"
           target="_blank"
           rel="noopener noreferrer"
           className="relative w-full h-auto z-50 grid place-items-center group"
@@ -54,7 +54,7 @@ const ContactBtns = () => {
       </div>
 
       <a
-        href="tel:0822220088"
+        href="tel:0938295905"
         className={`${common} bg-red-700`}
         aria-label="Hotline button"
         onClick={handlePhoneClick}

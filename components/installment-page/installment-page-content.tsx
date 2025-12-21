@@ -157,42 +157,46 @@ const InstallmentPageContent: FC<Props> = ({ carNameArr }) => {
               dụ:
             </p>
             <table className="price-table w-full">
-              <tr>
-                <td>
-                  <strong>Tên xe</strong>
-                </td>
-                <td>
-                  <strong>VinFast VF3 (Thuê pin) 2025</strong>
-                </td>
-              </tr>
-              <tr>
-                <td>Giá niêm yết</td>
-                <td>240.000.000₫</td>
-              </tr>
-              <tr>
-                <td>Giá lăn bánh tại TP. HCM</td>
-                <td>262.380.700₫</td>
-              </tr>
-              <tr>
-                <td>Giá lăn bánh tại Hà Nội</td>
-                <td>262.380.700₫</td>
-              </tr>
-              <tr>
-                <td>Giá lăn bánh tại các tỉnh khác</td>
-                <td>243.380.700₫</td>
-              </tr>
-              <tr>
-                <td>Thanh toán trước từ 20%</td>
-                <td>48.676.140₫</td>
-              </tr>
-              <tr>
-                <td>Số tiền còn lại</td>
-                <td>194.704.560₫</td>
-              </tr>
-              <tr>
-                <td>Số tiền trả mỗi tháng (7 năm)</td>
-                <td>2.314.340₫</td>
-              </tr>
+              <thead>
+                <tr>
+                  <td>
+                    <strong>Tên xe</strong>
+                  </td>
+                  <td>
+                    <strong>VinFast VF3 (Thuê pin) 2025</strong>
+                  </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Giá niêm yết</td>
+                  <td>240.000.000₫</td>
+                </tr>
+                <tr>
+                  <td>Giá lăn bánh tại TP. HCM</td>
+                  <td>262.380.700₫</td>
+                </tr>
+                <tr>
+                  <td>Giá lăn bánh tại Hà Nội</td>
+                  <td>262.380.700₫</td>
+                </tr>
+                <tr>
+                  <td>Giá lăn bánh tại các tỉnh khác</td>
+                  <td>243.380.700₫</td>
+                </tr>
+                <tr>
+                  <td>Thanh toán trước từ 20%</td>
+                  <td>48.676.140₫</td>
+                </tr>
+                <tr>
+                  <td>Số tiền còn lại</td>
+                  <td>194.704.560₫</td>
+                </tr>
+                <tr>
+                  <td>Số tiền trả mỗi tháng (7 năm)</td>
+                  <td>2.314.340₫</td>
+                </tr>
+              </tbody>
             </table>
             <p>
               Hỗ trợ tư vẫn mua xe VinFast trả góp tới 90% giá trị xe, thời gian
