@@ -59,8 +59,8 @@ const Header = () => {
         onClose={() => setShowMobileMenu(false)}
       />
 
-      {/* Top Header */}
-      <div className="py-3">
+      {/* Top Header - Fixed on Mobile, Static on Desktop */}
+      <div className="fixed top-0 left-0 right-0 w-full lg:static z-40 bg-white shadow-md lg:shadow-none py-2 md:py-3 transition-all">
         <div className="container flex items-center justify-between">
           <div className="flex items-center gap-4">
             <button
@@ -101,6 +101,9 @@ const Header = () => {
           </a>
         </div>
       </div>
+
+      {/* Spacer to prevent content overlap on mobile due to fixed header */}
+      <div className="h-[50px] lg:hidden"></div>
 
       {/* Sticky Header (Desktop Only) */}
       <div className="bg-primary text-center sticky top-0 z-50 shadow-md hidden lg:block">

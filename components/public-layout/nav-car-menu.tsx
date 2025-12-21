@@ -5,7 +5,6 @@ import { FC, SetStateAction, Dispatch } from "react";
 import Image from "next/image";
 import { AiFillCloseSquare } from "react-icons/ai";
 import { useRouter } from "next/navigation";
-import { formatPrice } from "@/lib/formatData";
 
 interface Props {
   showCarMenu: boolean;
@@ -37,16 +36,15 @@ const NavCarMenu: FC<Props> = ({
       {navCarMenu.map((car, index) => (
         <div
           key={index}
-          className="text-center cursor-pointer hover:bg-gray-50 p-2 rounded-lg transition-all group"
+          className="text-center cursor-pointer hover:bg-gray-50 hover:-translate-y-2 duration-500 p-2 rounded-lg transition-all group"
           onClick={() => onClickChild(car.link)}
         >
-          <div className="relative h-4 md:h-5 mb-2 mx-auto w-full">
+          <div className="relative h-4 md:h-5 mb-2 mx-auto w-[20%]">
             <Image
               src={car.logo}
               alt={`Logo ${car.name}`}
               style={{ objectFit: "contain" }}
               fill
-              className="group-hover:scale-105 transition-transform"
             />
           </div>
           <div className="relative w-full aspect-video mb-2 mx-auto">
@@ -55,12 +53,13 @@ const NavCarMenu: FC<Props> = ({
               fill={true}
               src={car.img}
               alt={car.name}
-              className="group-hover:scale-105 transition-transform duration-500"
             />
           </div>
 
           <p className="text-xs md:text-sm font-semibold text-gray-800">
-            Từ <span className="font-bold text-primary">{car.price}.000.000</span> VNĐ
+            Từ{" "}
+            <span className="font-bold text-primary">{car.price}.000.000</span>{" "}
+            VNĐ
           </p>
         </div>
       ))}
