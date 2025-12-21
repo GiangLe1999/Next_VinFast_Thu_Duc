@@ -31,7 +31,7 @@ const ServiceMenu: FC<Props> = ({ showServiceMenu }) => {
       </li>
       <li>
         <Link
-          href=""
+          href={linkConstants.warranty}
           className="block text-left py-3 px-2 hover:text-white hover:bg-primary rounded-sm border-t transition duration-400"
         >
           Chính sách bảo hành

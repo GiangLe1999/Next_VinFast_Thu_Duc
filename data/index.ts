@@ -67,7 +67,7 @@ export const navItems: {
   },
   {
     title: "Khuyến mãi",
-    link: linkConstants.uudai,
+    link: linkConstants.news,
   },
   {
     title: "Đăng ký lái thử",
