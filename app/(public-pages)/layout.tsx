@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import Header from "@/components/public-layout/header";
 import dynamic from "next/dynamic";
-import MobileBottomNav from "@/components/public-layout/mobile-bottom-nav";
+
 const Footer = dynamic(() => import("@/components/public-layout/footer"));
 const MessengerBtn = dynamic(
   () => import("@/components/public-layout/messenger-btn")
@@ -22,7 +22,6 @@ const PulbicPagesLayout = ({ children }: Props) => {
       <ContactBtns />
       <MessengerBtn />
       <Footer />
-      <MobileBottomNav />
     </>
   );
 };
