@@ -14,6 +14,9 @@ const ContentSection = dynamicImport(
 const CarQuickConsultModal = dynamicImport(
   () => import("@/components/car-quick-consult-modal")
 );
+const RegisterAdviceForm = dynamicImport(
+  () => import("@/components/car-page/register-advice-form")
+);
 
 export async function generateStaticParams() {
   const cars = await getAllCarsForAdmin();
@@ -105,6 +108,7 @@ export default async function Page({
           </div>
         </div>
       </div>
+      <RegisterAdviceForm />
       <CarQuickConsultModal carSlug={slug} />
     </>
   );

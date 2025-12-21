@@ -77,6 +77,9 @@ const QuickConsultListTable = () => {
                   SĐT
                 </th>
                 <th className="border text-left pl-3 min-w-[200px] md:min-w-auto">
+                  Email
+                </th>
+                <th className="border text-left pl-3 min-w-[200px] md:min-w-auto">
                   Dòng xe
                 </th>
                 <th className="border text-left pl-3 min-w-[200px] md:min-w-auto">
@@ -106,6 +109,7 @@ const QuickConsultListTable = () => {
                     </td>
                     <td className="border">{quickConsult?.name}</td>
                     <td className="border">{quickConsult?.phone}</td>
+                    <td className="border">{quickConsult?.email}</td>
                     <td className="border">{quickConsult?.carName}</td>
                     <td className="border">
                       {formatShortDate(quickConsult?.createdAt)}

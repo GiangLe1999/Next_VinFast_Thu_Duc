@@ -11,7 +11,7 @@ export const createQuickConsult = async (data: any) => {
   try {
     await dbConnect();
 
-    const { name, phone, choseCar } = data;
+    const { name, phone, choseCar, email } = data;
 
     // Kiểm tra dữ liệu đầu vào
     if (!name?.trim() || !phone?.trim() || !choseCar?.trim()) {
@@ -19,7 +19,12 @@ export const createQuickConsult = async (data: any) => {
     }
 
     // Tạo dữ liệu cho QuickConsult & Notification
-    const quickConsult = new QuickConsult({ name, phone, carName: choseCar });
+    const quickConsult = new QuickConsult({
+      name,
+      phone,
+      carName: choseCar,
+      email,
+    });
     const notification = new Notification({
       name,
       phone,
@@ -35,6 +40,7 @@ export const createQuickConsult = async (data: any) => {
       <ul>
         <li>Họ tên: <b>${name}</b></li>
         <li>SĐT: <b>${phone}</b></li>
+        <li>Email: <b>${email || "Không có"}</b></li>
         <li>Tên xe: <b>${choseCar}</b></li>
         <li>Về vấn đề: <b>Báo giá</b></li>
         <li>Thời gian gửi form: <b>${formatDateForSendingMail(

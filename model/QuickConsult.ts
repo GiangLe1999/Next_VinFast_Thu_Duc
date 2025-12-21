@@ -14,6 +14,11 @@ const QuickConsultSchema = new mongoose.Schema(
       trim: true,
     },
 
+    email: {
+      type: String,
+      trim: true,
+    },
+
     carName: {
       type: String,
       required: true,
