@@ -20,12 +20,14 @@ const HomeQuickConsultModal = () => {
   const [show, setShow] = useState(false);
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
   const [choseCar, setChoseCar] = useState("");
   const [loading, setLoading] = useState(false);
 
   const resetFormHandler = () => {
     setName("");
     setPhone("");
+    setEmail("");
     setChoseCar("");
     setLoading(false);
   };
@@ -58,7 +60,7 @@ const HomeQuickConsultModal = () => {
       Swal.fire({
         icon: "error",
         title: "Không hợp lệ!",
-        text: "Vui lòng kiểm tra lại thông tin trước khi gửi form.",
+        text: "Vui lòng nhập đầy đủ Họ tên, Số điện thoại và chọn Dòng xe quan tâm.",
         confirmButtonColor: "#C4161C",
       });
       return;
@@ -67,7 +69,12 @@ const HomeQuickConsultModal = () => {
     setLoading(true);
 
     try {
-      const response = await createQuickConsult({ name, phone, choseCar });
+      const response = await createQuickConsult({
+        name,
+        phone,
+        email,
+        choseCar,
+      });
 
       if (response.success) {
         Swal.fire({
@@ -99,13 +106,17 @@ const HomeQuickConsultModal = () => {
     setLoading(false);
   };
 
+  const inputClasses =
+    "w-full py-2.5 px-4 rounded-md bg-[#f5f5f5] outline-none border focus:border-primary focus:bg-white transition-colors";
+
   return (
     <Modal
       open={show}
       onClose={() => setShow(false)}
       center
       classNames={{
-        modal: "customModal !max-w-initial !w-[80vw]",
+        modal:
+          "customModal !max-w-initial !w-[90vw] md:!w-[600px] !p-0 !rounded-md overflow-hidden",
       }}
     >
       <form
@@ -119,76 +130,109 @@ const HomeQuickConsultModal = () => {
           />
         </div>
 
-        <div className="p-8 pt-4 space-y-6">
+        <div className="p-4 md:p-8 pt-4 space-y-4 md:space-y-6">
           <div>
-            <h5 className="text-center text-primary font-bold text-3xl mb-3">
+            <h5 className="text-center text-primary font-bold text-2xl md:text-3xl mb-2">
               Đăng ký nhận báo giá
             </h5>
-            <p className="text-center text-lg mb-3">
+            <p className="text-center text-base md:text-lg text-gray-600 mb-3">
               Vui lòng cung cấp thông tin, chúng tôi sẽ liên hệ Anh/Chị ngay!
             </p>
           </div>
 
           <div className="form-input-wrapper">
             <label htmlFor="name" className="text-sm font-bold mb-1 block">
-              Họ tên *
+              Họ tên <span className="text-red-500">*</span>
             </label>
             <input
               type="text"
               id="name"
               placeholder="Nguyễn Văn A"
-              className="w-full py-[10px] px-4 rounded-md bg-[#f5f5f5] outline-none border"
+              className={inputClasses}
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
           </div>
 
-          <div className="form-input-wrapper">
-            <label htmlFor="phone" className="text-sm font-bold mb-1 block">
-              Số điện thoại *
-            </label>
-            <input
-              type="number"
-              id="phone"
-              placeholder="0938 295 905"
-              className="w-full py-[10px] px-4 rounded-md bg-[#f5f5f5] outline-none border"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-            />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="form-input-wrapper">
+              <label htmlFor="phone" className="text-sm font-bold mb-1 block">
+                Số điện thoại <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                placeholder="0938 295 905"
+                className={inputClasses}
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+              />
+            </div>
+
+            <div className="form-input-wrapper">
+              <label htmlFor="email" className="text-sm font-bold mb-1 block">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                placeholder="example@gmail.com"
+                className={inputClasses}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
           </div>
 
           <div className="form-input-wrapper">
             <label htmlFor="car" className="text-sm font-bold mb-1 block">
-              Dòng xe quan tâm
+              Dòng xe quan tâm <span className="text-red-500">*</span>
             </label>
-            <select
-              id="car"
-              className="w-full py-[10px] px-4 rounded-md bg-[#f5f5f5] outline-none border"
-              value={choseCar}
-              onChange={(e) => setChoseCar(e.target.value)}
-              disabled={isPending}
-            >
-              <option value="">-- Chọn dòng xe -- </option>
-              {cars?.map((car: any, index: number) => (
-                <option value={car.name} key={index}>
-                  {car.name}
-                </option>
-              ))}
-            </select>
+            <div className="relative">
+              <select
+                id="car"
+                className={`${inputClasses} appearance-none cursor-pointer`}
+                value={choseCar}
+                onChange={(e) => setChoseCar(e.target.value)}
+                disabled={isPending}
+              >
+                <option value="">-- Chọn dòng xe -- </option>
+                {cars?.map((car: any, index: number) => (
+                  <option value={car.name} key={index} className="uppercase">
+                    {car.name}
+                  </option>
+                ))}
+              </select>
+              <div className="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none text-gray-500">
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </div>
+            </div>
           </div>
 
           <button
             disabled={loading}
             type="submit"
-            className="bg-secondary rounded-md w-full text-white uppercase py-3 flex items-center justify-center gap-1 hover:scale-[1.01] disabled:opacity-50"
+            className="bg-primary rounded-md w-full text-white uppercase py-3 font-bold flex items-center justify-center gap-2 hover:bg-red-700 hover:shadow-lg disabled:opacity-70 disabled:cursor-not-allowed transition-all duration-300"
           >
             {loading ? (
               <>
                 <ImSpinner3 size={20} className="animate-spin" />
-                Đang gửi
+                Đang gửi...
               </>
             ) : (
-              "Đăng ký"
+              "Đăng ký ngay"
             )}
           </button>
         </div>

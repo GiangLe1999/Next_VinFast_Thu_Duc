@@ -36,7 +36,7 @@ const CarsTabsSection: FC<Props> = ({ cars }) => {
         <div className="flex justify-center items-center gap-4 mb-8">
           <button
             onClick={() => setActiveTab("electric")}
-            className={`px-6 py-2 rounded-lg font-bold transition-all duration-500 ${
+            className={`sm:text-base text-xs sm:px-6 py-2 px-3 rounded-lg font-bold transition-all duration-500 ${
               activeTab === "electric"
                 ? "bg-primary text-white shadow-lg scale-105"
                 : "bg-gray-100 text-gray-600 hover:bg-gray-200"
@@ -46,7 +46,7 @@ const CarsTabsSection: FC<Props> = ({ cars }) => {
           </button>
           <button
             onClick={() => setActiveTab("service")}
-            className={`px-6 py-2 rounded-lg font-bold transition-all duration-500 ${
+            className={`sm:text-base text-xs sm:px-6 py-2 px-3 rounded-lg font-bold transition-all duration-500 ${
               activeTab === "service"
                 ? "bg-primary text-white shadow-lg scale-105"
                 : "bg-gray-100 text-gray-600 hover:bg-gray-200"

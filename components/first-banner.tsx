@@ -10,13 +10,18 @@ interface Props {
 const FirstBanner: FC<Props> = ({ heading, subHeading, bgImg, bgClasses }) => {
   return (
     <div
-      className={`relative flex flex-col justify-center items-center gap-2 text-white aspect-[5] max-[650px]:py-2 ${bgClasses} before:absolute before:inset-0 before:bg-black before:opacity-50`}
-      style={{ background: `url('${bgImg}')`, backgroundRepeat: "no-repeat" }}
+      className={`relative flex flex-col justify-center items-center gap-2 text-white min-h-[180px] md:aspect-[5] py-8 md:py-0 px-4 text-center ${bgClasses} before:absolute before:inset-0 before:bg-black before:opacity-50`}
+      style={{
+        background: `url('${bgImg}')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
     >
-      <h1 className="font-bold uppercase text-3xl relative z-10 max-[650px]:text-xl">
+      <h1 className="font-bold uppercase text-2xl md:text-3xl relative z-10 leading-tight">
         {heading}
       </h1>
-      <span className="text-lg relative z-10 max-w-[80%] text-center max-[650px]:text-base">
+      <span className="text-base md:text-lg relative z-10 max-w-[90%] md:max-w-[80%] opacity-90">
         {subHeading}
       </span>
     </div>

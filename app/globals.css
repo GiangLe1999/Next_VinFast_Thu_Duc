@@ -191,12 +191,12 @@ html {
 }
 
 .postContent h1 {
-  @apply text-primary uppercase text-3xl pb-6 border-b border-dashed border-[#e2e2e2] mb-10;
+  @apply text-primary uppercase text-3xl max-[500px]:text-2xl pb-6 border-b border-dashed border-[#e2e2e2] mb-10 max-[500px]:mb-6;
 }
 
 .postContent h2,
 .postContent h3 {
-  @apply w-fit px-3 py-[9px] text-2xl bg-primary text-white relative max-[500px]:w-full rounded-t-md;
+  @apply w-fit px-3 py-[9px] text-2xl max-[500px]:text-xl bg-primary text-white relative max-[500px]:w-full rounded-t-md;
 }
 
 .postContent h2::after,
@@ -206,7 +206,7 @@ html {
 }
 
 .postContent h3 {
-  @apply bg-secondary text-lg capitalize;
+  @apply bg-secondary text-lg max-[500px]:text-base capitalize;
 }
 
 .postContent h3::after {
@@ -329,7 +329,7 @@ html {
 }
 
 .introduce-section h2 {
-  @apply font-bold text-3xl uppercase text-center mb-3;
+  @apply font-bold text-3xl max-[500px]:text-2xl uppercase text-center mb-3;
 }
 
 .introduce-section ul {
@@ -371,7 +371,7 @@ html {
 }
 
 .installment-block h3 {
-  @apply text-center font-bold uppercase text-primary text-2xl mb-10;
+  @apply text-center font-bold uppercase text-primary text-2xl max-[500px]:text-xl mb-10;
 }
 
 .installment-block ol {

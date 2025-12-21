@@ -12,23 +12,23 @@ const ReasonsSection = () => {
       </p>
       <SectionTitle title="VinFast Quận 2" />
 
-      <div className="grid grid-cols-2 mt-12 gap-6 max-[1100px]:grid-cols-1">
-        <ul className="space-y-5 text-sm leading-7">
+      <div className="grid grid-cols-2 mt-8 md:mt-12 gap-8 max-[1100px]:grid-cols-1">
+        <ul className="space-y-6 text-sm leading-7">
           <li>
-            <p className="flex items-center gap-2 text-primary font-bold text-lg mb-1">
-              <BsTagsFill size={16} /> Giá cả ưu đãi - Giao xe sớm
+            <p className="flex items-center gap-2 text-primary font-bold text-base md:text-lg mb-1">
+              <BsTagsFill size={18} className="shrink-0" /> Giá cả ưu đãi - Giao xe sớm
             </p>
-            <p>
+            <p className="text-gray-600">
               VinFast Quận 2 luôn cam kết mang lại mức giá ưu đãi nhất cho quý
               khách với thời gian giao xe nhanh nhất trong 1 ngày.
             </p>
           </li>
 
           <li>
-            <p className="flex items-center gap-2 text-primary font-bold text-lg mb-1">
-              <SiAdguard size={16} /> Bảo hành theo tiêu chuẩn toàn quốc
+            <p className="flex items-center gap-2 text-primary font-bold text-base md:text-lg mb-1">
+              <SiAdguard size={18} className="shrink-0" /> Bảo hành theo tiêu chuẩn toàn quốc
             </p>
-            <p>
+            <p className="text-gray-600">
               Anh chị sẽ yên tâm khi mua xe tại VinFast Quận 2, vì chúng tôi
               luôn bảo hành, bảo dưỡng và sửa chữa theo tiêu chuẩn chất lượng
               của VinFast trên toàn quốc. BẢO HÀNH ĐẾN 5 NĂM.
@@ -36,20 +36,20 @@ const ReasonsSection = () => {
           </li>
 
           <li>
-            <p className="flex items-center gap-2 text-primary font-bold text-lg mb-1">
-              <BsFillGiftFill size={16} /> Khuyến mãi nhiều nhất
+            <p className="flex items-center gap-2 text-primary font-bold text-base md:text-lg mb-1">
+              <BsFillGiftFill size={18} className="shrink-0" /> Khuyến mãi nhiều nhất
             </p>
-            <p>
+            <p className="text-gray-600">
               Với hoạt động bán hàng sôi nổi, chúng tôi luôn cập nhật sớm nhất
               các chương trình khuyến mãi của hãng và đại lý
             </p>
           </li>
 
           <li>
-            <p className="flex items-center gap-2 text-primary font-bold text-lg mb-1">
-              <BsChatHeartFill size={16} /> Hết lòng vì khác hàng
+            <p className="flex items-center gap-2 text-primary font-bold text-base md:text-lg mb-1">
+              <BsChatHeartFill size={18} className="shrink-0" /> Hết lòng vì khác hàng
             </p>
-            <p>
+            <p className="text-gray-600">
               Đội ngũ tư vấn bán hàng luôn sẵn lòng giúp tư vấn để tìm ra chiếc
               xe ưng ý cho quý khách hàng. Hỗ trợ 24/7 tận tâm, nhiệt tình, có
               trách nhiệm.
@@ -57,7 +57,7 @@ const ReasonsSection = () => {
           </li>
         </ul>
 
-        <div className="relative w-full aspect-[1.52] rounded-md overflow-hidden">
+        <div className="relative w-full aspect-video md:aspect-[1.52] rounded-lg overflow-hidden shadow-md">
           <NextImage
             src="/images/home/tai-sao-nen-mua-vinfast.webp"
             alt="Tại sao nên mua xe VinFast?"

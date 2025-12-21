@@ -21,16 +21,17 @@ const handleMessengerClick = (): void => {
 
 const MessengerBtn = () => {
   return (
-    <div className="fixed max-[844px]:bottom-16 bottom-3 right-4 flex flex-col gap-2 z-50">
+    <div className="fixed bottom-4 right-3 md:right-4 flex flex-col gap-2 z-50">
       <a
         href="https://www.facebook.com/profile.php?id=61564349647261#"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Messenger contact button"
         onClick={handleMessengerClick} // Gọi sự kiện khi nhấn vào liên kết Messenger
+        className="block transition-transform duration-300 hover:scale-110"
       >
         <img
-          className="w-16 h-16"
+          className="w-12 h-12 md:w-16 md:h-16 drop-shadow-lg"
           src="/images/home/messenger.png"
           alt="Messenger icon"
           aria-label="Messenger button"
