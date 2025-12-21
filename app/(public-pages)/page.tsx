@@ -1,6 +1,5 @@
 import MainSwiper from "@/components/home-page/main-swiper";
 import MainOptions from "@/components/home-page/main-options";
-import { pageConstants } from "@/data/constants";
 import { getAllCarsForHomepage } from "@/queries/car.query";
 
 import dynamicImport from "next/dynamic";
