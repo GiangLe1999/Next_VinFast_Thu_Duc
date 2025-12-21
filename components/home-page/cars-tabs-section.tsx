@@ -13,8 +13,6 @@ const CarsTabsSection: FC<Props> = ({ cars }) => {
     "electric"
   );
 
-  console.log(cars);
-
   // Define data for each tab
   // Tab 1: Dòng xe điện (Corresponding to CarsSection logic -> slice(4))
   const electricCars = cars?.slice(5) || [];

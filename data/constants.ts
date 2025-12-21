@@ -30,6 +30,8 @@ export const linkConstants = {
   admin_cars: "/admin/cars",
   create_car: "/admin/cars/create",
   edit_car: "/admin/cars/edit",
+  charge_motorbike: "/pin-va-tram-sac-xe-may-dien",
+  charge_car: "/pin-va-tram-sac-o-to-dien",
 };
 
 export const pageConstants = {

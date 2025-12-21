@@ -1,5 +1,6 @@
 import { FC } from "react";
 import Link from "next/link";
+import { linkConstants } from "@/data/constants";
 
 interface Props {
   showServiceMenu: boolean;
@@ -14,7 +15,7 @@ const ServiceMenu: FC<Props> = ({ showServiceMenu }) => {
     >
       <li>
         <Link
-          href=""
+          href={linkConstants.charge_car}
           className="block text-left py-3 px-2 hover:text-white hover:bg-primary rounded-sm transition duration-400"
         >
           Pin & Trạm sạc Ô tô điện
@@ -22,7 +23,7 @@ const ServiceMenu: FC<Props> = ({ showServiceMenu }) => {
       </li>
       <li>
         <Link
-          href=""
+          href={linkConstants.charge_motorbike}
           className="block text-left py-3 px-2 hover:text-white hover:bg-primary rounded-sm border-t transition duration-400"
         >
           Pin & Trạm sạc Xe máy điện
