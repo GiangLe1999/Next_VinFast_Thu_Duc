@@ -1,30 +1,18 @@
-"use client";
+import { Metadata } from "next";
+import ProtectedLayoutClient from "./protected-layout-client";
 
-import { ReactNode, useState } from "react";
-import AdminHeader from "@/components/admin-layout/admin-header";
-import AdminSidebar from "@/components/admin-layout/admin-sidebar";
-import AdminChilren from "@/components/admin-layout/admin-children";
-import AdminMobileBottomNav from "@/components/admin-layout/admin-mobile-bottom-nav";
-
-interface Props {
-  children: ReactNode;
-}
-
-const AdminPageLayout = ({ children }: Props) => {
-  const [isExpand, setIsExpand] = useState(false);
-
-  return (
-    <>
-      <div className="bg-[#eee] min-h-screen text-[#3c4858]">
-        <div className="md:block hidden">
-          <AdminSidebar isExpand={isExpand} />
-        </div>
-        <AdminHeader isExpand={isExpand} setIsExpand={setIsExpand} />
-        <AdminChilren isExpand={isExpand}>{children}</AdminChilren>
-      </div>
-      <AdminMobileBottomNav />
-    </>
-  );
+export const metadata: Metadata = {
+  title: "Admin Dashboard",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
-export default AdminPageLayout;
+export default function ProtectedLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return <ProtectedLayoutClient>{children}</ProtectedLayoutClient>;
+}

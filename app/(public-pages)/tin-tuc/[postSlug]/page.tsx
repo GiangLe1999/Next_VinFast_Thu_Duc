@@ -36,6 +36,28 @@ export const generateMetadata = async ({
       alternates: {
         canonical: `${process.env.NEXT_PUBLIC_BASE_URL}${linkConstants.news}/${slug}`,
       },
+      openGraph: {
+        title: data?.name,
+        description: data?.description,
+        url: `${process.env.NEXT_PUBLIC_BASE_URL}${linkConstants.news}/${slug}`,
+        images: [
+          {
+            url: data?.thumbnail?.url,
+            width: 1200,
+            height: 630,
+            alt: data?.name,
+          },
+        ],
+        type: "article",
+        publishedTime: data?.createdAt,
+        authors: ["Admin"],
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: data?.name,
+        description: data?.description,
+        images: [data?.thumbnail?.url],
+      },
     };
   } catch (error) {
     console.log(error);

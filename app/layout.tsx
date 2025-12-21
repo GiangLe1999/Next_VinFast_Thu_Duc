@@ -7,8 +7,61 @@ import JsonLd from "@/components/jsonld";
 import { orgSchema } from "@/lib/orgSchema";
 
 export const metadata: Metadata = {
-  title: pageConstants.siteTitle,
+  title: {
+    template: `%s | ${pageConstants.siteTitle}`,
+    default: pageConstants.siteTitle,
+  },
   description: pageConstants.siteDescription,
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_BASE_URL || "https://vinfastquan2.com.vn"
+  ),
+  keywords: [
+    "VinFast",
+    "VinFast Quận 2",
+    "VinFast Thủ Đức",
+    "Giá xe VinFast",
+    "Ô tô điện VinFast",
+    "Xe máy điện VinFast",
+    "VF3",
+    "VF5",
+    "VF6",
+    "VF7",
+    "VF8",
+    "VF9",
+  ],
+  openGraph: {
+    title: pageConstants.siteTitle,
+    description: pageConstants.siteDescription,
+    url: process.env.NEXT_PUBLIC_BASE_URL,
+    siteName: "VinFast Quận 2",
+    images: [
+      {
+        url: "/images/share-link-wide.webp", // Ensure this image exists or use a generic one
+        width: 1200,
+        height: 630,
+        alt: "VinFast Quận 2",
+      },
+    ],
+    locale: "vi_VN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: pageConstants.siteTitle,
+    description: pageConstants.siteDescription,
+    images: ["/images/share-link-wide.webp"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({

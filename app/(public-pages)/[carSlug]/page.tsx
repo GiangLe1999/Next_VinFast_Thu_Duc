@@ -40,6 +40,25 @@ export const generateMetadata = async ({
       alternates: {
         canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/${slug}`,
       },
+      openGraph: {
+        title: `Giá Xe VinFast ${carData?.name} - Mua Xe VinFast Trả Góp Đến 80%`,
+        description: `VinFast ${carData?.name} có giá từ ${carData?.priceFrom} VNĐ. Cập nhật giá xe VinFast ${carData?.name} 2025 kèm thông tin khuyến mãi, thông số kỹ thuật và giá lăn bánh.`,
+        url: `${process.env.NEXT_PUBLIC_BASE_URL}/${slug}`,
+        images: [
+          {
+            url: carData?.avatar?.url,
+            width: 1200,
+            height: 630,
+            alt: `VinFast ${carData?.name}`,
+          },
+        ],
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: `Giá Xe VinFast ${carData?.name} - Mua Xe VinFast Trả Góp Đến 80%`,
+        description: `VinFast ${carData?.name} có giá từ ${carData?.priceFrom} VNĐ. Cập nhật giá xe VinFast ${carData?.name} 2025 kèm thông tin khuyến mãi, thông số kỹ thuật và giá lăn bánh.`,
+        images: [carData?.avatar?.url],
+      },
     };
   } catch (error) {
     console.log(error);

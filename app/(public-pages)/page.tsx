@@ -39,8 +39,6 @@ const GoogleMaps = dynamicImport(
 
 export const generateMetadata = () => {
   return {
-    title: pageConstants.siteTitle,
-    description: pageConstants.siteDescription,
     alternates: {
       canonical: process.env.NEXT_PUBLIC_BASE_URL,
     },
