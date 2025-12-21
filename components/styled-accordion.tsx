@@ -12,9 +12,14 @@ interface ItemsProps {
   header: string;
   children: any;
   initialEntered?: boolean;
+  noNeedPanelPadding?: boolean;
 }
 
-const AccordionItem: FC<ItemsProps> = ({ header, ...rest }) => {
+const AccordionItem: FC<ItemsProps> = ({
+  header,
+  noNeedPanelPadding,
+  ...rest
+}) => {
   return (
     <Item
       {...rest}
@@ -36,7 +41,7 @@ const AccordionItem: FC<ItemsProps> = ({ header, ...rest }) => {
       contentProps={{
         className: "transition-height duration-[500ms]",
       }}
-      panelProps={{ className: "p-4" }}
+      panelProps={{ className: noNeedPanelPadding ? "py-4" : "p-4" }}
     />
   );
 };
@@ -44,9 +49,14 @@ const AccordionItem: FC<ItemsProps> = ({ header, ...rest }) => {
 interface Props {
   data: { header: string; content: ReactNode }[];
   initialOpened: number;
+  noNeedPanelPadding?: boolean;
 }
 
-const StyledAccordion: FC<Props> = ({ data, initialOpened }) => {
+const StyledAccordion: FC<Props> = ({
+  data,
+  initialOpened,
+  noNeedPanelPadding,
+}) => {
   return (
     <div className="my-4 border-t transition text-textColor">
       <Accordion transition allowMultiple transitionTimeout={500}>
@@ -55,6 +65,7 @@ const StyledAccordion: FC<Props> = ({ data, initialOpened }) => {
             header={group.header}
             key={index}
             initialEntered={index === initialOpened}
+            noNeedPanelPadding={noNeedPanelPadding}
           >
             {group.content}
           </AccordionItem>

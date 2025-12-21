@@ -1,11 +1,9 @@
-"use client";
-
 import SectionTitle from "@/components/home-page/section-title";
 import { FaCheckCircle } from "react-icons/fa";
 
 const BatteryChargingContent = () => {
   return (
-    <div className="pb-20 pt-10">
+    <div className="pb-20 pt-14">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
@@ -20,7 +18,7 @@ const BatteryChargingContent = () => {
         <section className="mb-16">
           <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-8">
             <div className="mb-8">
-              <h2 className="cal-price-title mb-4">Lợi ích của thuê pin</h2>
+              <h2 className="cal-price-title mb-5">Lợi ích của thuê pin</h2>
               <ul className="grid md:grid-cols-2 gap-4">
                 {[
                   "Tiết kiệm chi phí sửa chữa, bảo dưỡng pin.",
@@ -48,8 +46,8 @@ const BatteryChargingContent = () => {
               </p>
             </div>
 
-            <div className="overflow-x-auto custom-scrollbar">
-              <h2 className="cal-price-title mb-4">
+            <div className="overflow-x-auto">
+              <h2 className="cal-price-title mb-6">
                 Bảng giá thuê pin (Áp dụng từ 01/01/2025)
               </h2>
               <table className="w-full border-collapse min-w-[800px]">
@@ -172,7 +170,7 @@ const BatteryChargingContent = () => {
             {/* Left Col: Info */}
             <div className="space-y-6">
               <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-                <h2 className="cal-price-title mb-4">Quy hoạch trạm sạc</h2>
+                <h2 className="cal-price-title mb-5">Quy hoạch trạm sạc</h2>
                 <p className="text-gray-600 mb-4 text-justify">
                   Hệ thống trạm sạc VinFast có mặt tại 63/63 tỉnh thành, trên
                   các tuyến quốc lộ, cao tốc, trung tâm thương mại, chung cư, và
@@ -199,7 +197,7 @@ const BatteryChargingContent = () => {
               </div>
 
               <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-                <h2 className="cal-price-title mb-4">
+                <h2 className="cal-price-title mb-5">
                   Chi phí sạc (Cập nhật 19/03/2024)
                 </h2>
                 <div className="space-y-4">
@@ -228,7 +226,7 @@ const BatteryChargingContent = () => {
 
             {/* Right Col: Charger Types */}
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-              <h2 className="cal-price-title mb-4">
+              <h2 className="cal-price-title mb-5">
                 Các loại trụ sạc công cộng
               </h2>
               <div className="space-y-6">
@@ -276,22 +274,6 @@ const BatteryChargingContent = () => {
           </div>
         </section>
       </div>
-
-      <style jsx global>{`
-        .custom-scrollbar::-webkit-scrollbar {
-          height: 8px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-          background: #f1f1f1;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: #d1d5db;
-          border-radius: 4px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-          background: #9ca3af;
-        }
-      `}</style>
     </div>
   );
 };
