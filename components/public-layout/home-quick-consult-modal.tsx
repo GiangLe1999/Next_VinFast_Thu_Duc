@@ -31,7 +31,7 @@ const HomeQuickConsultModal = () => {
   };
 
   const handleScroll = () => {
-    const supportBuyersSection = document.getElementById("support-buyers");
+    const supportBuyersSection = document.getElementById("why-choose-us");
 
     if (!supportBuyersSection) return;
 

@@ -6,7 +6,7 @@ import { SiAdguard } from "react-icons/si";
 
 const ReasonsSection = () => {
   return (
-    <section className="container pt-10 pb-20">
+    <section id="why-choose-us" className="container pt-10 pb-20">
       <p className="text-textColor text-center font-bold text-sm mb-2">
         TẠI SAO NÊN MUA XE TẠI
       </p>
