@@ -5,6 +5,7 @@ import { FC, SetStateAction, Dispatch } from "react";
 import Image from "next/image";
 import { AiFillCloseSquare } from "react-icons/ai";
 import { useRouter } from "next/navigation";
+import { formatPrice } from "@/lib/formatData";
 
 interface Props {
   showCarMenu: boolean;
@@ -22,50 +23,53 @@ const NavCarMenu: FC<Props> = ({
   const onClickChild = (link: string) => {
     setShowCarMenu(false);
     setShowServiceMenu(false);
-    router.push(link);
+    router.push(`/${link}`);
   };
 
   return (
     <div
-      className={`absolute w-full top-full left-0 z-50 bg-white p-5 grid grid-cols-5 gap-y-6 gap-x-2 rounded-sm shadow-md transition origin-top max-[822px]:grid-cols-4 max-[638px]:grid-cols-3 max-[638px]:pt-8 ${
-        showCarMenu ? "scale-3d-1" : "scale-3d-0"
+      className={`absolute w-full top-full left-0 z-50 bg-white p-4 md:p-5 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-4 md:gap-y-6 gap-x-2 rounded-b-md shadow-xl transition-all origin-top duration-300 ease-in-out border-t border-gray-100 ${
+        showCarMenu
+          ? "opacity-100 scale-y-100 visible"
+          : "opacity-0 scale-y-0 invisible"
       }`}
     >
       {navCarMenu.map((car, index) => (
         <div
           key={index}
-          className="text-center cursor-pointer hover:scale-110 transition-transform duration-500"
+          className="text-center cursor-pointer hover:bg-gray-50 p-2 rounded-lg transition-all group"
           onClick={() => onClickChild(car.link)}
         >
-          <Image
-            src={car.logo}
-            alt={`Logo ${car.name}`}
-            style={{ objectFit: "contain" }}
-            width={40}
-            height={11}
-            className="mx-auto mb-2"
-          />
-          <div className="relative w-[90%] aspect-video mb-2 mx-auto">
+          <div className="relative h-4 md:h-5 mb-2 mx-auto w-full">
+            <Image
+              src={car.logo}
+              alt={`Logo ${car.name}`}
+              style={{ objectFit: "contain" }}
+              fill
+              className="group-hover:scale-105 transition-transform"
+            />
+          </div>
+          <div className="relative w-full aspect-video mb-2 mx-auto">
             <Image
               style={{ objectFit: "contain" }}
               fill={true}
               src={car.img}
               alt={car.name}
+              className="group-hover:scale-105 transition-transform duration-500"
             />
           </div>
 
-          <p className="text-sm font-semibold">
-            Từ <span className="font-black">{car.price}.000.000</span> VNĐ
+          <p className="text-xs md:text-sm font-semibold text-gray-800">
+            Từ <span className="font-bold text-primary">{car.price}.000.000</span> VNĐ
           </p>
         </div>
       ))}
 
       <button
         onClick={() => setShowCarMenu(false)}
-        className="text-primary absolute top-2 right-2 flex items-center gap-1 hover:scale-110 transition-transform duration-500"
+        className="text-primary absolute top-2 right-2 flex items-center gap-1 hover:text-red-700 transition-colors md:hidden"
       >
-        <span className="underline font-bold">Đóng</span>
-        <AiFillCloseSquare size={25} />
+        <AiFillCloseSquare size={24} />
       </button>
     </div>
   );
