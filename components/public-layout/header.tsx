@@ -15,7 +15,7 @@ import MobileMenu from "./mobile-menu";
 const carMenuTitle = "Sản phẩm";
 const serviceTitle = "Trạm sạc & Bảo hành";
 const commonClasses =
-  "relative font-semibold text-white px-4 py-2 hover:bg-white hover:text-primary rounded-sm transition cursor-pointer select-none shrink-0";
+  "relative font-semibold text-white px-4 py-2 hover:bg-white hover:text-primary rounded-md transition cursor-pointer select-none shrink-0 flex items-center h-full";
 
 const Header = () => {
   const pathname = usePathname();
@@ -122,7 +122,10 @@ const Header = () => {
               : "text-white";
 
             return (
-              <div key={index} className="shrink-0 relative">
+              <div
+                key={index}
+                className="shrink-0 relative h-10 flex items-center"
+              >
                 {item.title === serviceTitle ? (
                   <div
                     className={`${commonClasses} ${activeClass}`}
@@ -130,7 +133,7 @@ const Header = () => {
                   >
                     <span className="flex gap-1 items-center text-base whitespace-nowrap">
                       {item.title}
-                      <BiChevronDown size={18} className="ml-1" />
+                      <BiChevronDown size={18} className="ml-1 shrink-0" />
                     </span>
                     <ServiceMenu showServiceMenu={showServiceMenu} />
                   </div>
@@ -142,7 +145,7 @@ const Header = () => {
                   >
                     <span className="flex gap-1 items-center text-base whitespace-nowrap">
                       {item.title}
-                      <BiChevronDown size={18} className="ml-1" />
+                      <BiChevronDown size={18} className="ml-1 shrink-0" />
                     </span>
                   </Link>
                 ) : (

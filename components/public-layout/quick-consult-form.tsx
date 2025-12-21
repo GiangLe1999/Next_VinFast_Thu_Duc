@@ -198,7 +198,7 @@ const QuickConsultForm = () => {
         <button
           disabled={loading}
           type="submit"
-          className="bg-secondary rounded-md w-full text-white uppercase py-3 font-bold flex items-center justify-center gap-2 hover:bg-red-700 hover:shadow-lg disabled:opacity-70 disabled:cursor-not-allowed transition-all duration-300"
+          className="bg-primary rounded-md w-full text-white uppercase py-3 font-bold flex items-center justify-center gap-2 hover:bg-red-700 hover:shadow-lg disabled:opacity-70 disabled:cursor-not-allowed transition-all duration-300"
         >
           {loading ? (
             <>

@@ -27,7 +27,7 @@ const NavCarMenu: FC<Props> = ({
 
   return (
     <div
-      className={`absolute w-full top-full left-0 z-50 bg-white p-4 md:p-5 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-4 md:gap-y-6 gap-x-2 rounded-b-md shadow-xl transition-all origin-top duration-300 ease-in-out border-t border-gray-100 ${
+      className={`absolute w-full top-full left-0 z-50 bg-white p-4 md:p-5 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-4 md:gap-y-6 gap-x-2 rounded-md shadow-xl transition-all origin-top duration-300 ease-in-out border-t border-gray-100 ${
         showCarMenu
           ? "opacity-100 scale-y-100 visible"
           : "opacity-0 scale-y-0 invisible"
