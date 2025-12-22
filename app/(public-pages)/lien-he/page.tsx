@@ -24,7 +24,7 @@ const infos = [
   {
     title: "Số điện thoại",
     link: "tel:0938295905",
-    content: "0938 295 905 (Mrs. Nhi)",
+    content: "0938 295 905",
   },
   {
     title: "Email",

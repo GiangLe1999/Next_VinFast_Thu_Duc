@@ -4,7 +4,6 @@ import {
   FaCarAlt,
   FaChartPie,
   FaHome,
-  FaInfoCircle,
   FaBlog,
   FaCar,
 } from "react-icons/fa";
@@ -51,23 +50,9 @@ export const navItems: {
     icon: FaHome,
   },
   {
-    title: "Giới thiệu",
-    link: linkConstants.introduce,
-    icon: FaInfoCircle,
-  },
-  {
     title: "Sản phẩm",
     link: linkConstants.quote,
     isParent: true,
-  },
-  {
-    title: "Trạm sạc & Bảo hành",
-    link: "/test",
-    isParent: true,
-  },
-  {
-    title: "Khuyến mãi",
-    link: linkConstants.news,
   },
   {
     title: "Đăng ký lái thử",
@@ -75,9 +60,13 @@ export const navItems: {
     icon: FaBlog,
   },
   {
-    title: "Tin tức",
+    title: "Tin tức & Khuyến mãi",
     link: linkConstants.news,
-    icon: FaBlog,
+  },
+  {
+    title: "Trạm sạc & Bảo hành",
+    link: "/test",
+    isParent: true,
   },
   {
     title: "Liên hệ",
@@ -119,7 +108,7 @@ type navCarItemType = {
 export const navCarMenu: navCarItemType[] = [
   {
     img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1748923603/An%20Giang%20Vinfast/hq3pgiavb4nt9rhtofkv.webp",
-    logo: "/images/logo/VF3.png",
+    logo: "/images/logo/minio.webp",
     name: "VinFast EC Van",
     price: "285",
     link: "ec-van",
@@ -252,6 +241,7 @@ export const footerCol2: footerItemType[] = [
 ];
 
 export const footerCol3: footerItemType[] = [
+  { title: "Về chúng tôi", link: linkConstants.introduce },
   { title: "Bảng giá chi tiết", link: linkConstants.quote },
   { title: "Tính phí lăn bánh", link: linkConstants.finalPrice },
   { title: "Thủ tục trả góp", link: linkConstants.installment },

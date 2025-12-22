@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { BsHeadset } from "react-icons/bs";
+import { BiPhone } from "react-icons/bi";
 
 const common =
   "relative w-12 h-12 md:w-16 md:h-16 rounded-full grid place-items-center group relative z-[49] transition-all duration-300";
@@ -59,7 +59,7 @@ const ContactBtns = () => {
         aria-label="Hotline button"
         onClick={handlePhoneClick}
       >
-        <BsHeadset className="z-30 text-white w-6 h-6 md:w-8 md:h-8" />
+        <BiPhone className="z-30 text-white w-6 h-6 md:w-8 md:h-8" />
         <span className={`${tooltipCommon} bg-red-700 min-w-[170px]`}>
           0938.295.905
         </span>

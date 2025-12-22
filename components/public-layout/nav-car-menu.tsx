@@ -29,13 +29,13 @@ const NavCarMenu: FC<Props> = ({
   const serviceCars = navCarMenu.slice(0, 5);
   const electricCars = navCarMenu.slice(5);
 
-  const renderCarItem = (car: any, index: number) => (
+  const renderCarItem = (car: any, index: number, logoWidth: string) => (
     <div
       key={index}
       className="text-center cursor-pointer hover:bg-gray-50 hover:-translate-y-2 duration-500 p-2 rounded-lg transition-all group"
       onClick={() => onClickChild(car.link)}
     >
-      <div className="relative h-4 md:h-5 mb-2 mx-auto w-[40%]">
+      <div className={`relative h-4 md:h-5 mb-2 mx-auto ${logoWidth}`}>
         <Image
           src={car.logo}
           alt={`Logo ${car.name}`}
@@ -68,22 +68,26 @@ const NavCarMenu: FC<Props> = ({
       }`}
     >
       {/* Electric Cars Section (Left) */}
-      <div className="flex-1 p-4 md:p-6 lg:border-r border-gray-100 bg-white">
-        <p className="cal-price-title mb-5 !text-gray-500 !text-[17px] !border-gray-300">
+      <div className="w-1/2 p-4 md:p-6 lg:border-r border-gray-100 bg-white">
+        <p className="cal-price-title mb-5 !text-gray-500 !text-[17px] !border-gray-200">
           Dòng xe điện VinFast
         </p>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-x-2 gap-y-6">
-          {electricCars.map((car, index) => renderCarItem(car, index))}
+          {electricCars.map((car, index) =>
+            renderCarItem(car, index, "w-[20%]")
+          )}
         </div>
       </div>
 
       {/* Service Cars Section (Right) */}
-      <div className="flex-1 p-4 md:p-6 bg-gray-50/50">
-        <p className="cal-price-title mb-5 !text-gray-500 !text-[17px] !border-gray-300">
+      <div className="flex-1 p-4 md:p-6">
+        <p className="cal-price-title mb-5 !text-gray-500 !text-[17px] !border-gray-200">
           Dòng xe dịch vụ VinFast
         </p>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-x-2 gap-y-6">
-          {serviceCars.map((car, index) => renderCarItem(car, index))}
+          {serviceCars.map((car, index) =>
+            renderCarItem(car, index, "w-[60%]")
+          )}
         </div>
       </div>
 
