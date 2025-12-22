@@ -37,7 +37,7 @@ const FormInput: FC<Props> = ({
       <Component
         id={id}
         type={type || "text"}
-        className="w-full outline-none border bg-[#f5f5f5] rounded-sm py-[10px] px-4"
+        className="focus:border-primary focus:bg-white transition duration-300 w-full outline-none border bg-gray-200/20 rounded-md py-[10px] px-4"
         rows={rows}
         placeholder={placeholder}
         {...register}

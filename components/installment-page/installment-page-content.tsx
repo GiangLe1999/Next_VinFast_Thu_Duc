@@ -1,6 +1,5 @@
 import FirstBanner from "../first-banner";
 
-import { FaLayerGroup, FaAtlassian, FaUser } from "react-icons/fa";
 import { FC } from "react";
 import CarPriceSection from "../car-page/CarPriceSectionForInstallmentPage1";
 
@@ -20,12 +19,14 @@ const InstallmentPageContent: FC<Props> = ({ carNameArr }) => {
 
       <div className="container py-12 space-y-12">
         <div>
-          <h2 className="post-heading-2">
-            <span>Thủ tục trả góp</span>
+          <h2 className="font-black text-center text-2xl mb-4 text-primary">
+            Thủ tục trả góp
           </h2>
           <div className="grid grid-cols-2 gap-8 max-[920px]:grid-cols-1">
             <div className="installment-block">
-              <h3>I. ĐỐI VỚI CÁ NHÂN</h3>
+              <h3 className="font-bold text-xl ml-2 mb-3">
+                I. Đối với cá nhân
+              </h3>
               <ol>
                 <li>Chứng Minh Nhân Dân và Hộ khẩu.</li>
                 <li>
@@ -60,7 +61,9 @@ const InstallmentPageContent: FC<Props> = ({ carNameArr }) => {
             </div>
 
             <div className="installment-block">
-              <h3>II. ĐỐI VỚI DOANH NGHIỆP</h3>
+              <h3 className="font-bold text-xl ml-2 mb-3">
+                II. Đối với doanh nghiệp
+              </h3>
               <ol>
                 <li>Giấy phép kinh doanh.</li>
                 <li>Mã số thuế.</li>
@@ -76,15 +79,14 @@ const InstallmentPageContent: FC<Props> = ({ carNameArr }) => {
         </div>
 
         <div>
-          <h2 className="post-heading-2">
-            <span>3 điểm cần lưu ý</span>
+          <h2 className="font-black text-center text-2xl mb-4 text-primary">
+            3 điểm cần lưu ý
           </h2>
           <div className="grid grid-cols-3 gap-8 max-[1029px]:grid-cols-1">
             <div className="installment-block-sm">
-              <p>
-                <FaAtlassian size={30} color="#025eda" />
-              </p>
-              <h3>Lợi ích khi mua xe trả góp</h3>
+              <h3 className="font-bold text-xl ml-2 mb-3">
+                I. Lợi ích khi mua xe trả góp
+              </h3>
               <ol>
                 <li>Số tiền vay lên đến 90% giá trị xe.</li>
                 <li>Thời gian vay lên đến 7 năm.</li>
@@ -101,10 +103,9 @@ const InstallmentPageContent: FC<Props> = ({ carNameArr }) => {
             </div>
 
             <div className="installment-block-sm">
-              <p>
-                <FaLayerGroup size={30} color="#025eda" />
-              </p>
-              <h3>Điều kiện mua xe trả góp</h3>
+              <h3 className="font-bold text-xl ml-2 mb-3">
+                II. Điều kiện mua xe trả góp
+              </h3>
               <ol>
                 <li>Cá nhân từ 18 tuổi trở lên.</li>
                 <li>Doanh nghiệp thành lập trên 6 tháng.</li>
@@ -118,10 +119,9 @@ const InstallmentPageContent: FC<Props> = ({ carNameArr }) => {
             </div>
 
             <div className="installment-block-sm">
-              <p>
-                <FaUser size={30} color="#025eda" />
-              </p>
-              <h3>Đối tượng thích hợp nhất</h3>
+              <h3 className="font-bold text-xl ml-2 mb-3">
+                III. Đối tượng thích hợp nhất
+              </h3>
               <ol>
                 <li>
                   Doanh nhân, doanh nghiệp: những người có khả năng sử dụng tiền
@@ -138,12 +138,7 @@ const InstallmentPageContent: FC<Props> = ({ carNameArr }) => {
           </div>
         </div>
 
-        <div>
-          <h2 className="post-heading-2">
-            <span>Bảng tính lãi vay mua xe trả góp</span>
-          </h2>
-          <CarPriceSection carNameArr={carNameArr} isInstallmentPage />
-        </div>
+        <CarPriceSection carNameArr={carNameArr} isInstallmentPage />
       </div>
     </div>
   );

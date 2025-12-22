@@ -87,10 +87,6 @@ const FooterForm = () => {
       className="w-full bg-gray-50 p-6 rounded-2xl border border-gray-200 shadow-lg space-y-4"
       onSubmit={submitHandler}
     >
-      <h3 className="text-secondary font-bold text-lg text-center uppercase mb-2">
-        Đăng ký nhận báo giá
-      </h3>
-
       <div>
         <label htmlFor="footer-name" className={labelClasses}>
           Họ tên <span className="text-red-400">*</span>

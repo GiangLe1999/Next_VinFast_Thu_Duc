@@ -3,7 +3,6 @@ import ArticleCardSkeleton from "./article-card-skeleton";
 import ArticleCard from "./article-card";
 import BigArticleCardSkeleton from "./big-article-card-skeleton";
 import BigArticleCard from "./big-article-card";
-import SubscribeCard from "./subscribe-card";
 
 interface Props {
   articles: any[];
@@ -61,10 +60,6 @@ const ArticleList: FC<Props> = ({ articles, isLoading }) => {
               ))}
           </>
         )}
-      </div>
-
-      <div className="mt-14">
-        <SubscribeCard />
       </div>
 
       <div className="mt-14 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">

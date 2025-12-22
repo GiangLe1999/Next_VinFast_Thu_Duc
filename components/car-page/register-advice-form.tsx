@@ -101,7 +101,7 @@ const RegisterAdviceForm = () => {
   return (
     <section className="py-16 bg-white" id="register-advice">
       <div className="container mx-auto max-w-4xl px-4">
-        <h2 className="text-3xl font-bold text-center mb-8 uppercase text-primary">
+        <h2 className="cal-price-title mb-6 !text-3xl !font-black text-left">
           NHẬN BÁO GIÁ
         </h2>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
@@ -208,7 +208,7 @@ const RegisterAdviceForm = () => {
             <button
               type="submit"
               disabled={isLoading}
-              className="bg-primary text-white font-bold py-3 px-12 rounded hover:opacity-90 transition-opacity disabled:opacity-50 min-w-[200px]"
+              className="bg-primary text-white font-bold py-3 px-12 rounded hover:opacity-90 transition-opacity disabled:opacity-50 min-w-[200px] rounded-lg"
             >
               {isLoading ? (
                 <div className="flex items-center justify-center gap-2">

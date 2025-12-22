@@ -3,6 +3,7 @@
 import { FC, useState } from "react";
 import { FaDownload } from "react-icons/fa";
 import HtmlParser from "../html-parser";
+import Link from "next/link";
 
 interface Props {
   content: string;
@@ -53,19 +54,6 @@ const ContentSection: FC<Props> = ({
             {tab.label}
           </button>
         ))}
-
-        {brochure && (
-          <div className="w-full md:w-auto md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 flex justify-center mt-2 md:mt-0">
-            <a
-              href={brochure}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-primary text-white px-4 py-2 rounded-md hover:bg-tertiary transition-all text-sm font-bold shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
-            >
-              <FaDownload size={14} /> Tải Brochure
-            </a>
-          </div>
-        )}
       </div>
 
       {/* Tab Content */}
@@ -74,6 +62,18 @@ const ContentSection: FC<Props> = ({
         id="car-content"
         className="prose overflow-hidden max-w-none animate-fadeIn !mt-0"
       >
+        {brochure && activeTab === "specifications" && (
+          <div className="mt-8">
+            <Link
+              href={brochure}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="no-underline bg-primary hover:bg-primary/90 duration-300 w-fit text-white font-semibold px-4 py-2 flex items-center justify-center gap-x-1 rounded-md transition border border-transparent"
+            >
+              <FaDownload size={14} /> Tải Brochure
+            </Link>
+          </div>
+        )}
         <HtmlParser
           content={tabs.find((tab) => tab.id === activeTab)?.content || ""}
         />

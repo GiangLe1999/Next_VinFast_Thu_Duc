@@ -1,5 +1,5 @@
 import React, { FC, useEffect, useState } from "react";
-import { FaFacebookSquare, FaRssSquare } from "react-icons/fa";
+// import { FaFacebookSquare, FaRssSquare } from "react-icons/fa";
 import { HiMiniMagnifyingGlass } from "react-icons/hi2";
 import FilterSearch from "./filter-search";
 
@@ -19,10 +19,10 @@ const categories = [
     title: "Sự kiện",
     id: "Sự kiện",
   },
-  {
-    title: "Thông tin xe",
-    id: "Thông tin xe",
-  },
+  // {
+  //   title: "Thông tin xe",
+  //   id: "Thông tin xe",
+  // },
 ];
 
 const FilterBar: FC<Props> = ({
@@ -90,7 +90,7 @@ const FilterBar: FC<Props> = ({
 
           <div className="lg:mt-0 mt-6">
             <div className="flex items-center gap-x-5">
-              <span className="text-gray-600 hidden sm:block text-sm font-bold">
+              {/* <span className="text-gray-600 hidden sm:block text-sm font-bold">
                 Theo dõi để cập nhật liên tục:
               </span>
 
@@ -110,7 +110,7 @@ const FilterBar: FC<Props> = ({
                 <FaRssSquare className="w-[22px] h-[22px] text-gray-600 transition-color duration-200 hover:text-primary" />
               </a>
 
-              <div className="h-[18px] bg-gray-400 w-[1px] mx-2"></div>
+              <div className="h-[18px] bg-gray-400 w-[1px] mx-2"></div> */}
 
               <button
                 onClick={() => setShowSearchBar(true)}
