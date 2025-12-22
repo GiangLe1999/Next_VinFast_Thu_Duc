@@ -2,8 +2,8 @@ import { FC } from "react";
 
 import { FaEdit } from "react-icons/fa";
 import { linkConstants } from "@/data/constants";
-import parse from "html-react-parser";
 import BtnWithIcon from "../btn-with-icon";
+import HtmlParser from "../html-parser";
 
 interface Props {
   content: string;
@@ -19,7 +19,7 @@ const PromotionSection: FC<Props> = ({ content, name }) => {
       </h1>
 
       <div className="prose prose-ul:space-y-1 prose-strong:text-red-700 text-[15px]">
-        {parse(content)}
+        <HtmlParser content={content} />
       </div>
 
       <div>

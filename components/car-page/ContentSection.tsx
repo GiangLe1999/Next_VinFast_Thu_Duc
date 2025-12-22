@@ -1,8 +1,8 @@
 "use client";
 
 import { FC, useState } from "react";
-import parse from "html-react-parser";
 import { FaDownload } from "react-icons/fa";
+import HtmlParser from "../html-parser";
 
 interface Props {
   content: string;
@@ -72,9 +72,11 @@ const ContentSection: FC<Props> = ({
       <div
         key={activeTab} // Trigger animation on tab change
         id="car-content"
-        className="prose overflow-hidden max-w-none animate-fadeIn pt-4"
+        className="prose overflow-hidden max-w-none animate-fadeIn !mt-0"
       >
-        {parse(tabs.find((tab) => tab.id === activeTab)?.content || "")}
+        <HtmlParser
+          content={tabs.find((tab) => tab.id === activeTab)?.content || ""}
+        />
       </div>
     </div>
   );

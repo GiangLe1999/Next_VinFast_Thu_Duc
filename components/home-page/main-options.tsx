@@ -1,8 +1,8 @@
 import { homeOptions } from "@/data";
 import Link from "next/link";
-import parse from "html-react-parser";
 import { MdArrowForward } from "react-icons/md";
 import BtnWithIcon from "../btn-with-icon";
+import HtmlParser from "../html-parser";
 
 const MainOptions = () => {
   return (
@@ -19,7 +19,7 @@ const MainOptions = () => {
               {option.title}
             </p>
             <p className="text-center text-[13px] leading-6 my-2">
-              {parse(option.des)}
+              <HtmlParser content={option.des} />
             </p>
             <BtnWithIcon
               customClasses="bg-primary text-sm text-white"
