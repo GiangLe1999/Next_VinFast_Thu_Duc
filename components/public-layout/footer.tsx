@@ -6,7 +6,7 @@ import {
   footerCol4,
 } from "@/data";
 import Link from "next/link";
-import NextImage from "../next-image";
+// import NextImage from "../next-image";
 import FooterForm from "./footer-form";
 
 const Footer = () => {
@@ -38,7 +38,7 @@ const Footer = () => {
               </li>
             ))}
           </ul>
-          <div className="flex item-center gap-2 my-3">
+          {/* <div className="flex item-center gap-2 my-3">
             <a
               href="https://www.facebook.com/profile.php?id=61564349647261#"
               target="_blank"
@@ -64,7 +64,7 @@ const Footer = () => {
                 />
               </div>
             </Link>
-            {/* 
+            
             <Link
               href="https://www.tiktok.com/@tran..viet"
               target="_blank"
@@ -76,8 +76,8 @@ const Footer = () => {
                   alt="VinFast Hồ Chí Minh TikTok"
                 />
               </div>
-            </Link> */}
-          </div>
+            </Link>
+          </div> */}
         </div>
 
         {/* Column2 */}

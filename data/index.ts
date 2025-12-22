@@ -17,24 +17,39 @@ import { linkConstants } from "./constants";
 
 export const homeBanners = [
   {
-    title: "VinFast VF8",
-    link: "/vf8",
-    image: "/images/home/banners/vf8-banner.webp",
+    title: "Ưu đãi VF6, VF7 Eco và Limo Green",
+    link: "",
+    image: "/images/home/banners/vf67eco_d.webp",
   },
   {
-    title: "VinFast VF9",
-    link: "/vf9",
-    image: "/images/home/banners/vf9-banner.webp",
-  },
-  {
-    title: "VinFast VF-e34",
+    title: "Ưu đãi 40% đến hết 31/12/2025",
     link: "/",
-    image: "/images/home/banners/vf-e34-banner.webp",
+    image: "/images/home/banners/mlttvn_3_d.webp",
   },
   {
-    title: "VinFast VF6",
-    link: "/vf6",
-    image: "/images/home/banners/vf6-banner.webp",
+    title: "Ưu đãi 266 triệu",
+    link: "/",
+    image: "/images/home/banners/banner_vf3_d.webp",
+  },
+  {
+    title: "Lăn bánh tiết kiệm với combo ưu đãi",
+    link: "/",
+    image: "/images/home/banners/banner_vf5_d.webp",
+  },
+  {
+    title: "Chuyển đổi xanh rinh ngay VF7",
+    link: "/",
+    image: "/images/home/banners/banner_luckydraw_d.webp",
+  },
+  {
+    title: "Mua VF8, VF9 để nhận Voucher nghỉ dưỡng VinPearl",
+    link: "/",
+    image: "/images/home/banners/banner_vf8_d.webp",
+  },
+  {
+    title: "Lái thử xe Vinfast tại nhà",
+    link: "/",
+    image: "/images/home/banners/kv-28_10.webp",
   },
 ];
 
@@ -222,7 +237,7 @@ export const homeOptions: homeOptionType[] = [
 export const footerCol1: string[] = [
   "Chuyên cung cấp dòng xe VinFast các loại",
   "Xe 4 chỗ VinFast VF 5, 5 chỗ VinFast VF 6 và VF 7, 5 chỗ gầm cao VinFast VF 8, 7 chỗ VinFast VF 9",
-  "Địa chỉ : 70 Lương Định Của, Phường An Khánh, Thủ Đức, TP. Hồ Chí Minh, Việt Nam",
+  // "Địa chỉ : 70 Lương Định Của, Phường An Khánh, Thủ Đức, TP. Hồ Chí Minh, Việt Nam",
 ];
 
 type footerItemType = { title: string; link: string };
