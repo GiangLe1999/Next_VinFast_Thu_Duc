@@ -396,21 +396,21 @@ const EditCarFrom: FC<Props> = ({ car }) => {
           <label className="admin-form-input-label !mb-1 block">
             Ngoại thất
           </label>
-          <div className="mb-6">
+          <div className="small-text-editor mb-6">
             <TextEditor content={exterior} setContent={setExterior} />
           </div>
 
           <label className="admin-form-input-label !mb-1 block">
             Nội thất
           </label>
-          <div className="mb-6">
+          <div className="small-text-editor mb-6">
             <TextEditor content={interior} setContent={setInterior} />
           </div>
 
           <label className="admin-form-input-label !mb-1 block">
             Thông số kỹ thuật
           </label>
-          <div className="mb-6">
+          <div className="small-text-editor mb-6">
             <TextEditor content={specifications} setContent={setSpecifications} />
           </div>
 
