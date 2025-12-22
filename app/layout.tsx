@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Providers from "@/components/contexts/providers";
 import { pageConstants } from "@/data/constants";
-import Script from "next/script";
+// import Script from "next/script";
 import JsonLd from "@/components/jsonld";
 import { orgSchema } from "@/lib/orgSchema";
 
@@ -75,8 +75,7 @@ export default function RootLayout({
         <JsonLd data={orgSchema} />
       </head>
       <body className="font-sans antialiased">
-        {/* Google Tag Manager */}
-        <Script
+        {/* <Script
           id="gtm-script"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
@@ -86,15 +85,13 @@ export default function RootLayout({
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','GTM-WCLN98R8');`,
           }}
-        />
-        {/* End Google Tag Manager */}
-        {/* Google Tag Manager - noscript */}
-        <noscript
+        /> */}
+        {/* <noscript
           dangerouslySetInnerHTML={{
             __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCLN98R8"
             height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
           }}
-        />
+        /> */}
         <Providers>{children}</Providers>
       </body>
     </html>

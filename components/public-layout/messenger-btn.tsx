@@ -23,7 +23,7 @@ const MessengerBtn = () => {
   return (
     <div className="fixed bottom-4 right-3 md:right-4 flex flex-col gap-2 z-50">
       <a
-        href="https://www.facebook.com/profile.php?id=61564349647261#"
+        href="https://m.me/431288450062782"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Messenger contact button"

@@ -3,9 +3,9 @@ import Header from "@/components/public-layout/header";
 import dynamic from "next/dynamic";
 
 const Footer = dynamic(() => import("@/components/public-layout/footer"));
-// const MessengerBtn = dynamic(
-//   () => import("@/components/public-layout/messenger-btn")
-// );
+const MessengerBtn = dynamic(
+  () => import("@/components/public-layout/messenger-btn")
+);
 const ContactBtns = dynamic(
   () => import("@/components/public-layout/contact-btns")
 );
@@ -20,7 +20,7 @@ const PulbicPagesLayout = ({ children }: Props) => {
       <Header />
       {children}
       <ContactBtns />
-      {/* <MessengerBtn /> */}
+      <MessengerBtn />
       <Footer />
     </>
   );
