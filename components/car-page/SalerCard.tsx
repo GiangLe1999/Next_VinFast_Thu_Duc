@@ -6,7 +6,7 @@ import BtnWithIcon from "../btn-with-icon";
 const SalerCard = () => {
   return (
     <div className="w-[20%] sticky top-14 max-h-screen max-[1100px]:w-0">
-      <div className="rounded-lg overflow-hidden border shadow-md">
+      <div className="rounded-lg overflow-hidden max-[1100px]:border-none max-[1100px]:shadow-none border shadow-md">
         <div className="w-full aspect-square relative">
           <NextImage
             src="/images/gioi-thieu/saler-card-vinfast-an-giang.png"

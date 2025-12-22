@@ -274,22 +274,28 @@ html {
   aspect-ratio: 22 / 10;
 }
 
+.carousel .thumbs-wrapper {
+  @apply !m-0 !mt-6;
+}
+
 .carousel .thumbs {
-  text-align: center;
-  white-space: normal;
+  @apply flex justify-center items-center gap-4 !p-0 !m-0;
 }
 
 .carousel .thumb {
-  @apply !w-[50px] h-[30px] rounded;
+  @apply !w-8 !h-8 rounded-full !border-none !p-0 !m-0 transition-all duration-300 cursor-pointer overflow-visible !bg-transparent;
 }
 
-.carousel .thumb:hover,
+.carousel .thumb:hover {
+  @apply !border-none;
+}
+
 .carousel .thumb.selected {
-  @apply !border-2 !border-[#aaa];
+  @apply ring-2 ring-primary ring-offset-2 !border-none;
 }
 
-.carousel .thumb {
-  @apply !border !border-[#ccc];
+.carousel .thumb div {
+  @apply w-full h-full rounded-full overflow-hidden;
 }
 
 .carousel-status {
