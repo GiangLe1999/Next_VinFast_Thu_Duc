@@ -144,68 +144,6 @@ const InstallmentPageContent: FC<Props> = ({ carNameArr }) => {
           </h2>
           <CarPriceSection carNameArr={carNameArr} isInstallmentPage />
         </div>
-
-        <div>
-          <h2 className="post-heading-2">
-            <span>Minh họa cách tính</span>
-          </h2>
-          <div className="space-y-4">
-            <p>
-              Trả góp hiểu đơn giản là trả trước một phần tiền mua xe, phần còn
-              thiếu sẽ vay ngân hàng rồi hàng tháng trả dần cho ngân hàng cả gốc
-              và lãi theo phuơng thức trừ lùi trong suốt thời gian trả góp. Ví
-              dụ:
-            </p>
-            <table className="price-table w-full">
-              <thead>
-                <tr>
-                  <td>
-                    <strong>Tên xe</strong>
-                  </td>
-                  <td>
-                    <strong>VinFast VF3 (Thuê pin) 2025</strong>
-                  </td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Giá niêm yết</td>
-                  <td>240.000.000₫</td>
-                </tr>
-                <tr>
-                  <td>Giá lăn bánh tại TP. HCM</td>
-                  <td>262.380.700₫</td>
-                </tr>
-                <tr>
-                  <td>Giá lăn bánh tại Hà Nội</td>
-                  <td>262.380.700₫</td>
-                </tr>
-                <tr>
-                  <td>Giá lăn bánh tại các tỉnh khác</td>
-                  <td>243.380.700₫</td>
-                </tr>
-                <tr>
-                  <td>Thanh toán trước từ 20%</td>
-                  <td>48.676.140₫</td>
-                </tr>
-                <tr>
-                  <td>Số tiền còn lại</td>
-                  <td>194.704.560₫</td>
-                </tr>
-                <tr>
-                  <td>Số tiền trả mỗi tháng (7 năm)</td>
-                  <td>2.314.340₫</td>
-                </tr>
-              </tbody>
-            </table>
-            <p>
-              Hỗ trợ tư vẫn mua xe VinFast trả góp tới 90% giá trị xe, thời gian
-              vay tối đa 7 năm. Thủ tục đơn giản nhanh gọn, thời gian thẩm duyệt
-              trong vòng 24h, kể cả khách hàng ở tỉnh, bao đậu hồ sơ khó. Vui
-              lòng liên hệ để được tư vấn chính xác.
-            </p>
-          </div>
-        </div>
       </div>
     </div>
   );
