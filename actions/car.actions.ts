@@ -4,6 +4,7 @@ import { editCloudinaryImage } from "@/lib/cloudinary";
 import dbConnect from "@/lib/db";
 import Car from "@/model/Car";
 import cloudinary from "cloudinary";
+import { revalidatePath } from "next/cache";
 
 export const createCar = async (data: any) => {
   try {
@@ -42,6 +43,10 @@ export const createCar = async (data: any) => {
       avatar: savedAvatar,
       colors: processedColors,
     });
+
+    // Làm mới cache cho trang chủ và trang bảng giá
+    revalidatePath("/");
+    revalidatePath("/bang-gia-xe");
 
     return true;
   } catch (error) {
@@ -124,6 +129,14 @@ export const updateCar = async (data: any) => {
     // Lưu xe đã cập nhật
     const updatedCar = await car.save();
 
+    // Làm mới cache:
+    // 1. Trang chủ (nơi có list xe)
+    revalidatePath("/");
+    // 2. Trang bảng giá
+    revalidatePath("/bang-gia-xe");
+    // 3. Trang chi tiết của chính xe đó
+    revalidatePath(`/${updatedCar.slug}`);
+
     return JSON.parse(JSON.stringify(updatedCar));
   } catch (error) {
     console.error("Lỗi khi cập nhật xe:", error);
@@ -173,6 +186,11 @@ export const deleteCar = async (id: string) => {
 
     // Xóa xe khỏi database
     await Car.findByIdAndDelete(id);
+
+    // Làm mới cache sau khi xóa
+    revalidatePath("/");
+    revalidatePath("/bang-gia-xe");
+    revalidatePath(`/${car.slug}`); // Xóa cache trang chi tiết cũ (dù trang đó sẽ 404)
 
     return true;
   } catch (error) {
