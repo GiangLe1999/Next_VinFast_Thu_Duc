@@ -17,14 +17,14 @@ export const generateMetadata = () => {
 const titleClasses = "text-primary uppercase font-bold text-2xl mb-3";
 
 const infos = [
+  // {
+  //   title: "Địa chỉ",
+  //   content: "70 Lương Định Của, Phường An Khánh, Thủ Đức, TP. Hồ Chí Minh",
+  // },
   {
-    title: "Địa chỉ",
-    content: "70 Lương Định Của, Phường An Khánh, Thủ Đức, TP. Hồ Chí Minh",
-  },
-  {
-    title: "Số điện thoại",
+    title: "Hotline",
     link: "tel:0938295905",
-    content: "0938 295 905",
+    content: "0938 295 905 (Hỗ trợ 24/7)",
   },
   {
     title: "Email",
@@ -71,7 +71,7 @@ const ContactPage = () => {
               </ul>
             </div>
 
-            <div>
+            {/* <div>
               <h2 className={titleClasses}>Thời gian hoạt động</h2>
               <div className="contact-table">
                 <table className="w-full text-left">
@@ -95,7 +95,7 @@ const ContactPage = () => {
                   </tbody>
                 </table>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div>

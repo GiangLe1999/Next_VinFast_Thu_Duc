@@ -33,21 +33,18 @@ const CarQuickConsultModal: FC<Props> = ({ carSlug }) => {
     setLoading(false);
   };
 
-  function handleScroll() {
-    const supportBuyersSection = document.getElementById("car-content");
+  useEffect(() => {
+    const isModalShown = sessionStorage.getItem("carPageQuickConsultModalShown");
 
-    if (!supportBuyersSection) return;
+    if (!isModalShown) {
+      const timer = setTimeout(() => {
+        setShow(true);
+        sessionStorage.setItem("carPageQuickConsultModalShown", "true");
+      }, 15000);
 
-    const supportBuyersPosition =
-      supportBuyersSection.getBoundingClientRect().top;
-    const isScrolledToSupportBuyers =
-      supportBuyersPosition < window.innerHeight;
-
-    if (isScrolledToSupportBuyers) {
-      setShow(true);
-      window.removeEventListener("scroll", handleScroll);
+      return () => clearTimeout(timer);
     }
-  }
+  }, []);
 
   const submitHandler = async (e: FormEvent) => {
     e.preventDefault();
@@ -84,8 +81,8 @@ const CarQuickConsultModal: FC<Props> = ({ carSlug }) => {
         text: "Chúng tôi sẽ liên hê đến Anh (Chị) trong thời gian sớm nhất.",
         confirmButtonColor: "green",
       });
-      window.removeEventListener("scroll", handleScroll);
       resetFormHandler();
+      setShow(false);
     } catch (error: any) {
       console.log(error);
       Swal.fire({
@@ -98,14 +95,6 @@ const CarQuickConsultModal: FC<Props> = ({ carSlug }) => {
       setLoading(false);
     }
   };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   useEffect(() => {
     if (cars && cars?.length) {

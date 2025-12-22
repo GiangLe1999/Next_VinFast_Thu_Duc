@@ -11,9 +11,9 @@ const SalerCard = dynamicImport(
 const ContentSection = dynamicImport(
   () => import("@/components/car-page/ContentSection")
 );
-// const CarQuickConsultModal = dynamicImport(
-//   () => import("@/components/car-quick-consult-modal")
-// );
+const CarQuickConsultModal = dynamicImport(
+  () => import("@/components/car-quick-consult-modal")
+);
 const RegisterAdviceForm = dynamicImport(
   () => import("@/components/car-page/register-advice-form")
 );
@@ -109,7 +109,7 @@ export default async function Page({
         </div>
       </div>
       <RegisterAdviceForm />
-      {/* <CarQuickConsultModal carSlug={slug} /> */}
+      <CarQuickConsultModal carSlug={slug} />
     </>
   );
 }

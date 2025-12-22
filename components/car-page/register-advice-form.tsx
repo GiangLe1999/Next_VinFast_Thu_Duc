@@ -61,9 +61,9 @@ const RegisterAdviceForm = () => {
     setIsLoading(true);
     try {
       // Combine selected cars into a string for the backend
-      const choseCar = `${data.customerType} - Quan tâm: ${data.interestedCars.join(
-        ", "
-      )}`;
+      const choseCar = `${
+        data.customerType
+      } - Quan tâm: ${data.interestedCars.join(", ")}`;
 
       const response = await createQuickConsult({
         name: data.name,
@@ -102,7 +102,7 @@ const RegisterAdviceForm = () => {
     <section className="py-16 bg-white" id="register-advice">
       <div className="container mx-auto max-w-4xl px-4">
         <h2 className="text-3xl font-bold text-center mb-8 uppercase text-primary">
-          NHẬN TƯ VẤN
+          NHẬN BÁO GIÁ
         </h2>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
           <FormInput
@@ -200,9 +200,7 @@ const RegisterAdviceForm = () => {
               </span>
             </label>
             {errors.agreement && (
-              <p className="text-xs text-red-700">
-                {errors.agreement.message}
-              </p>
+              <p className="text-xs text-red-700">{errors.agreement.message}</p>
             )}
           </div>
 

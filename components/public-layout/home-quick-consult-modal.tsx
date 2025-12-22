@@ -32,25 +32,17 @@ const HomeQuickConsultModal = () => {
     setLoading(false);
   };
 
-  const handleScroll = () => {
-    const supportBuyersSection = document.getElementById("why-choose-us");
-
-    if (!supportBuyersSection) return;
-
-    const supportBuyersPosition =
-      supportBuyersSection.getBoundingClientRect().top;
-    const isScrolledToSupportBuyers =
-      supportBuyersPosition < window.innerHeight;
-
-    if (isScrolledToSupportBuyers) {
-      setShow(true);
-      window.removeEventListener("scroll", handleScroll);
-    }
-  };
-
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const isModalShown = sessionStorage.getItem("homeQuickConsultModalShown");
+
+    if (!isModalShown) {
+      const timer = setTimeout(() => {
+        setShow(true);
+        sessionStorage.setItem("homeQuickConsultModalShown", "true");
+      }, 15000);
+
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   const submitHandler = async (e: FormEvent) => {
@@ -84,7 +76,6 @@ const HomeQuickConsultModal = () => {
           confirmButtonColor: "green",
         });
 
-        window.removeEventListener("scroll", handleScroll);
         resetFormHandler();
         setShow(false);
       } else {
