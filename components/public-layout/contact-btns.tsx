@@ -34,7 +34,7 @@ const handlePhoneClick = (): void => {
 
 const ContactBtns = () => {
   return (
-    <div className="fixed bottom-4 right-3 md:right-4 flex flex-col gap-3 z-50">
+    <div className="fixed bottom-4 left-3 md:left-4 flex flex-col gap-3 z-50">
       <div className={`${common} bg-tertiary shadow-lg shadow-tertiary/30`}>
         <a
           href="https://zalo.me/0938295905"
