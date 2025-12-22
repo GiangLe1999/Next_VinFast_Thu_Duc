@@ -34,6 +34,7 @@ interface FormValues {
   priceFrom: number;
   installmentPrice: number;
   registration: number;
+  brochure: string;
   colors: { color: string; colorImg: string }[];
   carLines: { name: string; price: number; tax: string }[];
 }
@@ -44,6 +45,9 @@ const CreateCarForm = () => {
 
   const [content, setContent] = useState("");
   const [saleContent, setSaleContent] = useState("");
+  const [exterior, setExterior] = useState("");
+  const [interior, setInterior] = useState("");
+  const [specifications, setSpecifications] = useState("");
 
   const form = useForm<FormValues>({
     defaultValues: {
@@ -53,6 +57,7 @@ const CreateCarForm = () => {
       priceFrom: 0,
       installmentPrice: 0,
       registration: 0,
+      brochure: "",
       colors: [],
       carLines: [],
     },
@@ -123,6 +128,9 @@ const CreateCarForm = () => {
       ...formData,
       content,
       saleContent,
+      exterior,
+      interior,
+      specifications,
     };
 
     setIsLoading(true);
@@ -225,6 +233,13 @@ const CreateCarForm = () => {
                 label="Phần trăm phí trước bạ"
                 register={register("registration", { valueAsNumber: true })}
                 errorMsg={errors.registration?.message}
+              />
+
+              <AdminFormInput
+                id="brochure"
+                label="Link Brochure"
+                register={register("brochure")}
+                placeholder="VD: https://vinfast.vn/brochure/vf3.pdf"
               />
             </div>
           </div>
@@ -365,6 +380,27 @@ const CreateCarForm = () => {
           </label>
           <div className="small-text-editor mb-6">
             <TextEditor content={saleContent} setContent={setSaleContent} />
+          </div>
+
+          <label className="admin-form-input-label !mb-1 block">
+            Ngoại thất
+          </label>
+          <div className="mb-6">
+            <TextEditor content={exterior} setContent={setExterior} />
+          </div>
+
+          <label className="admin-form-input-label !mb-1 block">
+            Nội thất
+          </label>
+          <div className="mb-6">
+            <TextEditor content={interior} setContent={setInterior} />
+          </div>
+
+          <label className="admin-form-input-label !mb-1 block">
+            Thông số kỹ thuật
+          </label>
+          <div className="mb-6">
+            <TextEditor content={specifications} setContent={setSpecifications} />
           </div>
 
           <label className="admin-form-input-label !mb-1 block">

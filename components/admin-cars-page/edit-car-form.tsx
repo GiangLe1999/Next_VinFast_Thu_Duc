@@ -34,6 +34,7 @@ interface FormValues {
   priceFrom: number;
   installmentPrice: number;
   registration: number;
+  brochure: string;
   colors: { color: string; colorImg: string }[];
   carLines: { name: string; price: number; tax: string }[];
 }
@@ -47,6 +48,9 @@ const EditCarFrom: FC<Props> = ({ car }) => {
 
   const [content, setContent] = useState(car?.content || "");
   const [saleContent, setSaleContent] = useState(car?.saleContent || "");
+  const [exterior, setExterior] = useState(car?.exterior || "");
+  const [interior, setInterior] = useState(car?.interior || "");
+  const [specifications, setSpecifications] = useState(car?.specifications || "");
 
   const [isLoading, setIsLoading] = useState(false);
 
@@ -58,6 +62,7 @@ const EditCarFrom: FC<Props> = ({ car }) => {
       priceFrom: car?.priceFrom || 0,
       installmentPrice: car?.installmentPrice || 0,
       registration: car?.registration || 0,
+      brochure: car?.brochure || "",
       colors: car?.colors?.map((color: any) => ({
         ...color,
         colorImg: color?.colorImg?.url || "",
@@ -136,6 +141,9 @@ const EditCarFrom: FC<Props> = ({ car }) => {
         id: car._id,
         content,
         saleContent,
+        exterior,
+        interior,
+        specifications,
       };
 
       // Gọi API cập nhật xe
@@ -236,6 +244,13 @@ const EditCarFrom: FC<Props> = ({ car }) => {
                 label="Registration"
                 register={register("registration", { valueAsNumber: true })}
                 errorMsg={errors.registration?.message}
+              />
+
+              <AdminFormInput
+                id="brochure"
+                label="Link Brochure"
+                register={register("brochure")}
+                placeholder="VD: https://vinfast.vn/brochure/vf3.pdf"
               />
             </div>
           </div>
@@ -376,6 +391,27 @@ const EditCarFrom: FC<Props> = ({ car }) => {
           </label>
           <div className="small-text-editor mb-6">
             <TextEditor content={saleContent} setContent={setSaleContent} />
+          </div>
+
+          <label className="admin-form-input-label !mb-1 block">
+            Ngoại thất
+          </label>
+          <div className="mb-6">
+            <TextEditor content={exterior} setContent={setExterior} />
+          </div>
+
+          <label className="admin-form-input-label !mb-1 block">
+            Nội thất
+          </label>
+          <div className="mb-6">
+            <TextEditor content={interior} setContent={setInterior} />
+          </div>
+
+          <label className="admin-form-input-label !mb-1 block">
+            Thông số kỹ thuật
+          </label>
+          <div className="mb-6">
+            <TextEditor content={specifications} setContent={setSpecifications} />
           </div>
 
           <label className="admin-form-input-label !mb-1 block">

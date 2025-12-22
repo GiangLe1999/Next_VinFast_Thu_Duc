@@ -53,6 +53,14 @@ const CarSchema = new Schema(
 
     saleContent: { type: String, required: true },
 
+    exterior: { type: String, default: "" },
+
+    interior: { type: String, default: "" },
+
+    specifications: { type: String, default: "" },
+
+    brochure: { type: String, default: "" },
+
     content: { type: String, required: true },
   },
   { timestamps: true }

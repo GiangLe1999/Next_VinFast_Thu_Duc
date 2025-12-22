@@ -101,7 +101,13 @@ export default async function Page({
                 registration={car.registration}
               />
 
-              <ContentSection content={car.content} />
+              <ContentSection
+                content={car.content}
+                exterior={car.exterior}
+                interior={car.interior}
+                specifications={car.specifications}
+                brochure={car.brochure}
+              />
             </div>
 
             <SalerCard />
