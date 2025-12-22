@@ -11,12 +11,12 @@ import FooterForm from "./footer-form";
 
 const Footer = () => {
   return (
-    <footer className="bg-secondary border-t">
+    <footer className="bg-white border-t">
       <div className="container flex flex-wrap gap-1 py-10 max-[1017px]:gap-3">
         {/* Column1 */}
         <div className="w-1/3 pr-3 max-[1017px]:w-[50%] max-[717px]:w-full">
           {/* General info */}
-          <p className="footer-title">VinFast Quận 2</p>
+          <p className="footer-title">VinFast Hồ Chí Minh</p>
           <ul>
             {footerCol1.map((item, index) => (
               <li className="footer-item hover:font-normal" key={index}>
@@ -47,7 +47,7 @@ const Footer = () => {
               <div className="footer-icon">
                 <NextImage
                   src="/images/home/facebook.jpg"
-                  alt="VinFast Quận 2 Facebook"
+                  alt="VinFast Hồ Chí Minh Facebook"
                 />
               </div>
             </a>
@@ -60,7 +60,7 @@ const Footer = () => {
               <div className="footer-icon">
                 <NextImage
                   src="/images/home/youtube.png"
-                  alt="VinFast Quận 2 Youtube"
+                  alt="VinFast Hồ Chí Minh Youtube"
                 />
               </div>
             </Link>
@@ -73,7 +73,7 @@ const Footer = () => {
               <div className="footer-icon">
                 <NextImage
                   src="/images/home/tiktok.png"
-                  alt="VinFast Quận 2 TikTok"
+                  alt="VinFast Hồ Chí Minh TikTok"
                 />
               </div>
             </Link> */}
@@ -120,10 +120,11 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="border-t border-gray-700/70 py-1">
-        <div className="container text-[#999999] text-xs flex items-center justify-center">
+      <div className="border-t border-gray-200 py-1">
+        <div className="container text-gray-500 text-xs flex items-center justify-center">
           <span className="my-2 text-center">
-            © {new Date().getFullYear()} VinFast Quận 2 - All rights reserved
+            © {new Date().getFullYear()} VinFast Hồ Chí Minh - All rights
+            reserved
           </span>
 
           {/* <span>
@@ -132,7 +133,7 @@ const Footer = () => {
               href="https://github.com/GiangLe1999"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white font-bold underline"
+              className="text-secondary font-bold underline"
             >
               Giang Le
             </a>

@@ -214,7 +214,7 @@ export const homeOptions: homeOptionType[] = [
     title: "tính phí lăn bánh",
     link: linkConstants.finalPrice,
     icon: FaCalculator,
-    des: "Giá các phiên bản xe VinFast cùng các khoản phí chi tiết tại <strong>VinFast Quận 2</strong>",
+    des: "Giá các phiên bản xe VinFast cùng các khoản phí chi tiết tại <strong>VinFast Hồ Chí Minh</strong>",
   },
   {
     title: "mua xe trả góp",
@@ -226,7 +226,7 @@ export const homeOptions: homeOptionType[] = [
     title: "đăng ký lái thử",
     link: linkConstants.testDrive,
     icon: FaCarAlt,
-    des: "Đến với <strong>VinFast Quận 2</strong> để được lái thử những mẫu xe VinFast mới nhất",
+    des: "Đến với <strong>VinFast Hồ Chí Minh</strong> để được lái thử những mẫu xe VinFast mới nhất",
   },
 ];
 
@@ -275,8 +275,8 @@ export const footerCol32: footerItemType[] = [
 export const footerCol4: { title: string; link: string; icon: IconType }[] = [
   { title: "Hotline: 0938 295 905", link: "tel:0938295905", icon: MdPhone },
   {
-    title: "yennhi96.le@gmail.com",
-    link: "mailto:yennhi96.le@gmail.com",
+    title: "kinhdoanh@vinfastautohcm.vn",
+    link: "mailto:kinhdoanh@vinfastautohcm.vn",
     icon: MdMail,
   },
 ];

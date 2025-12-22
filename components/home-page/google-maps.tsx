@@ -6,7 +6,7 @@ const GoogleMaps = () => {
       loading="lazy"
       allowFullScreen
       referrerPolicy="no-referrer-when-downgrade"
-      title="Vị trí VinFast Quận 2"
+      title="Vị trí VinFast Hồ Chí Minh"
     ></iframe>
   );
 };

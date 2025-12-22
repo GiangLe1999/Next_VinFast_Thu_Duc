@@ -13,11 +13,11 @@ export const metadata: Metadata = {
   },
   description: pageConstants.siteDescription,
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_BASE_URL || "https://vinfastquan2.com.vn"
+    process.env.NEXT_PUBLIC_BASE_URL || "https://vinfastautohcm.vn"
   ),
   keywords: [
     "VinFast",
-    "VinFast Quận 2",
+    "VinFast Hồ Chí Minh",
     "VinFast Thủ Đức",
     "Giá xe VinFast",
     "Ô tô điện VinFast",
@@ -33,13 +33,13 @@ export const metadata: Metadata = {
     title: pageConstants.siteTitle,
     description: pageConstants.siteDescription,
     url: process.env.NEXT_PUBLIC_BASE_URL,
-    siteName: "VinFast Quận 2",
+    siteName: "VinFast Hồ Chí Minh",
     images: [
       {
         url: "/images/share-link-wide.webp", // Ensure this image exists or use a generic one
         width: 1200,
         height: 630,
-        alt: "VinFast Quận 2",
+        alt: "VinFast Hồ Chí Minh",
       },
     ],
     locale: "vi_VN",

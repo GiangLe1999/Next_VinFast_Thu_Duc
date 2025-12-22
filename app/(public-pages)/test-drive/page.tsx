@@ -6,9 +6,9 @@ import { getAllCarLines } from "@/queries/car.query";
 
 export const generateMetadata = () => {
   return {
-    title: "Đăng Ký Lái Thử Xe VinFast - Trải Nghiệm Tại VinFast Quận 2",
+    title: "Đăng Ký Lái Thử Xe VinFast - Trải Nghiệm Tại VinFast Hồ Chí Minh",
     description:
-      "Đăng ký lái thử xe VinFast tại VinFast Quận 2 để trải nghiệm thực tế các dòng xe điện hiện đại. Hỗ trợ đăng ký nhanh chóng, hoàn toàn miễn phí.",
+      "Đăng ký lái thử xe VinFast tại VinFast Hồ Chí Minh để trải nghiệm thực tế các dòng xe điện hiện đại. Hỗ trợ đăng ký nhanh chóng, hoàn toàn miễn phí.",
     alternates: {
       canonical: `${process.env.NEXT_PUBLIC_BASE_URL}${linkConstants.testDrive}`,
     },

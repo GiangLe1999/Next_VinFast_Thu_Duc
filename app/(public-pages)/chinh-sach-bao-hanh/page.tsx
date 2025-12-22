@@ -7,7 +7,7 @@ export const generateMetadata = () => {
   return {
     title: "Chính Sách Bảo Hành Xe VinFast 2025 - Cập Nhật Mới Nhất",
     description:
-      "Tìm hiểu chi tiết chính sách bảo hành xe VinFast 2025: VinFast VF e34, VF 5, VF 6, VF 7, VF 8, VF 9,... tại VinFast Quận 2. Thông tin đầy đủ, chính xác và mới nhất.",
+      "Tìm hiểu chi tiết chính sách bảo hành xe VinFast 2025: VinFast VF e34, VF 5, VF 6, VF 7, VF 8, VF 9,... tại VinFast Hồ Chí Minh. Thông tin đầy đủ, chính xác và mới nhất.",
     alternates: {
       canonical: `${process.env.NEXT_PUBLIC_BASE_URL}${linkConstants.warranty}`,
     },

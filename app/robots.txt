@@ -1,4 +1,4 @@
 User-Agent: *
 Allow: /
 
-Sitemap: https://vinfastquan2.com.vn/sitemap.xml
+Sitemap: https://vinfastautohcm.vn/sitemap.xml

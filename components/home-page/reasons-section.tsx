@@ -10,34 +10,37 @@ const ReasonsSection = () => {
       <p className="text-textColor text-center font-bold text-sm mb-2">
         TẠI SAO NÊN MUA XE TẠI
       </p>
-      <SectionTitle title="VinFast Quận 2" />
+      <SectionTitle title="VinFast Hồ Chí Minh" />
 
       <div className="grid grid-cols-2 mt-8 md:mt-12 gap-8 max-[1100px]:grid-cols-1">
         <ul className="space-y-6 text-sm leading-7">
           <li>
             <p className="flex items-center gap-2 text-primary font-bold text-base md:text-lg mb-1">
-              <BsTagsFill size={18} className="shrink-0" /> Giá cả ưu đãi - Giao xe sớm
+              <BsTagsFill size={18} className="shrink-0" /> Giá cả ưu đãi - Giao
+              xe sớm
             </p>
             <p className="text-gray-600">
-              VinFast Quận 2 luôn cam kết mang lại mức giá ưu đãi nhất cho quý
-              khách với thời gian giao xe nhanh nhất trong 1 ngày.
+              VinFast Hồ Chí Minh luôn cam kết mang lại mức giá ưu đãi nhất cho
+              quý khách với thời gian giao xe nhanh nhất trong 1 ngày.
             </p>
           </li>
 
           <li>
             <p className="flex items-center gap-2 text-primary font-bold text-base md:text-lg mb-1">
-              <SiAdguard size={18} className="shrink-0" /> Bảo hành theo tiêu chuẩn toàn quốc
+              <SiAdguard size={18} className="shrink-0" /> Bảo hành theo tiêu
+              chuẩn toàn quốc
             </p>
             <p className="text-gray-600">
-              Anh chị sẽ yên tâm khi mua xe tại VinFast Quận 2, vì chúng tôi
-              luôn bảo hành, bảo dưỡng và sửa chữa theo tiêu chuẩn chất lượng
-              của VinFast trên toàn quốc. BẢO HÀNH ĐẾN 5 NĂM.
+              Anh chị sẽ yên tâm khi mua xe tại VinFast Hồ Chí Minh, vì chúng
+              tôi luôn bảo hành, bảo dưỡng và sửa chữa theo tiêu chuẩn chất
+              lượng của VinFast trên toàn quốc. BẢO HÀNH ĐẾN 5 NĂM.
             </p>
           </li>
 
           <li>
             <p className="flex items-center gap-2 text-primary font-bold text-base md:text-lg mb-1">
-              <BsFillGiftFill size={18} className="shrink-0" /> Khuyến mãi nhiều nhất
+              <BsFillGiftFill size={18} className="shrink-0" /> Khuyến mãi nhiều
+              nhất
             </p>
             <p className="text-gray-600">
               Với hoạt động bán hàng sôi nổi, chúng tôi luôn cập nhật sớm nhất
@@ -47,7 +50,8 @@ const ReasonsSection = () => {
 
           <li>
             <p className="flex items-center gap-2 text-primary font-bold text-base md:text-lg mb-1">
-              <BsChatHeartFill size={18} className="shrink-0" /> Hết lòng vì khác hàng
+              <BsChatHeartFill size={18} className="shrink-0" /> Hết lòng vì
+              khác hàng
             </p>
             <p className="text-gray-600">
               Đội ngũ tư vấn bán hàng luôn sẵn lòng giúp tư vấn để tìm ra chiếc

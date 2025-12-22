@@ -81,7 +81,7 @@ const Header = () => {
           </div>
 
           <h2 className="text-xl font-bold hidden lg:block">
-            <Link href="/">VinFast Quận 2</Link>
+            <Link href="/">VinFast Hồ Chí Minh</Link>
           </h2>
 
           <a

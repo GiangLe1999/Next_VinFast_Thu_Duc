@@ -79,15 +79,15 @@ const FooterForm = () => {
   };
 
   const inputClasses =
-    "w-full px-4 py-2.5 text-sm text-gray-800 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:border-transparent transition-all placeholder:text-gray-400";
-  const labelClasses = "block text-white text-sm font-medium mb-1.5 ml-1";
+    "w-full px-4 py-2.5 text-sm text-gray-800 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all placeholder:text-gray-400";
+  const labelClasses = "block text-gray-700 text-sm font-medium mb-1.5 ml-1";
 
   return (
     <form
-      className="w-full bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 shadow-xl space-y-4"
+      className="w-full bg-gray-50 p-6 rounded-2xl border border-gray-200 shadow-lg space-y-4"
       onSubmit={submitHandler}
     >
-      <h3 className="text-white font-bold text-lg text-center uppercase mb-2">
+      <h3 className="text-secondary font-bold text-lg text-center uppercase mb-2">
         Đăng ký nhận báo giá
       </h3>
 

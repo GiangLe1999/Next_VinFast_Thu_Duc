@@ -5,9 +5,10 @@ import { deliveryData } from "@/data/delivery";
 
 export const generateMetadata = () => {
   return {
-    title: "Chính Sách Giao Nhận & Vận Chuyển Xe VinFast Tại VinFast Quận 2",
+    title:
+      "Chính Sách Giao Nhận & Vận Chuyển Xe VinFast Tại VinFast Hồ Chí Minh",
     description:
-      "Tìm hiểu chính sách giao nhận và vận chuyển xe VinFast tại VinFast Quận 2. Hỗ trợ giao xe tận nơi, nhanh chóng, an toàn và đảm bảo đúng hẹn.",
+      "Tìm hiểu chính sách giao nhận và vận chuyển xe VinFast tại VinFast Hồ Chí Minh. Hỗ trợ giao xe tận nơi, nhanh chóng, an toàn và đảm bảo đúng hẹn.",
     alternates: {
       canonical: `${process.env.NEXT_PUBLIC_BASE_URL}${linkConstants.deliveryPolicy}`,
     },
@@ -19,7 +20,7 @@ const Page = () => {
     <div>
       <FirstBanner
         heading="CHÍNH SÁCH GIAO NHẬN - VẬN CHUYỂN"
-        subHeading="Thông tin chi tiết về chính sách Giao nhận - Vận chuyển tại VinFast Quận 2."
+        subHeading="Thông tin chi tiết về chính sách Giao nhận - Vận chuyển tại VinFast Hồ Chí Minh."
         bgImg="/images/first-banners/bang-gia-xe-vinfast.webp"
         bgClasses="!bg-cover"
       />

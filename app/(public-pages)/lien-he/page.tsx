@@ -5,9 +5,9 @@ import { BsDot } from "react-icons/bs";
 
 export const generateMetadata = () => {
   return {
-    title: "Liên Hệ VinFast Quận 2 - Hỗ Trợ Tư Vấn Nhanh Chóng",
+    title: "Liên Hệ VinFast Hồ Chí Minh - Hỗ Trợ Tư Vấn Nhanh Chóng",
     description:
-      "Liên hệ ngay với VinFast Quận 2 để được tư vấn chi tiết về các dòng xe, chính sách mua bán, bảo hành, bảo dưỡng và các chương trình ưu đãi mới nhất.",
+      "Liên hệ ngay với VinFast Hồ Chí Minh để được tư vấn chi tiết về các dòng xe, chính sách mua bán, bảo hành, bảo dưỡng và các chương trình ưu đãi mới nhất.",
     alternates: {
       canonical: `${process.env.NEXT_PUBLIC_BASE_URL}${linkConstants.contact}`,
     },
@@ -28,13 +28,13 @@ const infos = [
   },
   {
     title: "Email",
-    link: "mailto:yennhi96.le@gmail.com",
-    content: "yennhi96.le@gmail.com",
+    link: "mailto:kinhdoanh@vinfastautohcm.vn",
+    content: "kinhdoanh@vinfastautohcm.vn",
   },
   {
     title: "Website",
-    link: "https://vinfastquan2.com.vn",
-    content: "https://vinfastquan2.com.vn",
+    link: "https://vinfastautohcm.vn",
+    content: "https://vinfastautohcm.vn",
   },
 ];
 
@@ -43,7 +43,7 @@ const ContactPage = () => {
     <div className="text-textColor">
       <FirstBanner
         heading="LIÊN HỆ CHÚNG TÔI"
-        subHeading="Hoặc ghé thăm trực tiếp đại lý VinFast Quận 2"
+        subHeading="Hoặc ghé thăm trực tiếp đại lý VinFast Hồ Chí Minh"
         bgImg="/images/first-banners/bang-gia-xe-vinfast.webp"
         bgClasses="!bg-[50%_50%] !bg-cover"
       />
@@ -51,7 +51,7 @@ const ContactPage = () => {
         <div className="grid grid-cols-2 gap-9 max-[846px]:grid-cols-1">
           <div className="space-y-11">
             <div>
-              <h1 className={titleClasses}>VinFast Quận 2</h1>
+              <h1 className={titleClasses}>VinFast Hồ Chí Minh</h1>
               <ul>
                 {infos.map((info, index) => (
                   <li key={index} className="flex items-center gap-2 py-2">

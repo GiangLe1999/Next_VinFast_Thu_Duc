@@ -118,7 +118,7 @@ const TestDriveForm: FC<Props> = ({ carLines }) => {
     <form className="p-6 rounded-r-md text-textColor bg-white">
       <p className="text-center font-bold leading-8 mt-4 mb-8 text-black">
         XIN VUI LÒNG ĐIỀN THÔNG TIN BÊN DƯỚI. <br />
-        <>VinFast Quận 2 SẼ LIÊN HỆ VỚI BẠN TRONG THỜI GIAN SỚM NHẤT</>
+        <>VinFast Hồ Chí Minh SẼ LIÊN HỆ VỚI BẠN TRONG THỜI GIAN SỚM NHẤT</>
       </p>
 
       <div className="space-y-6">
@@ -207,8 +207,8 @@ const TestDriveForm: FC<Props> = ({ carLines }) => {
               }}
             />
             <label htmlFor="confirm1" className="cursor-pointer">
-              Tôi xác nhận rằng VinFast Quận 2 có thể gửi cho tôi thêm thông tin
-              về các sản phẩm hoặc dịch vụ của VinFast. *
+              Tôi xác nhận rằng VinFast Hồ Chí Minh có thể gửi cho tôi thêm
+              thông tin về các sản phẩm hoặc dịch vụ của VinFast. *
             </label>
           </div>
           {submitted && !confirm1Checked && (

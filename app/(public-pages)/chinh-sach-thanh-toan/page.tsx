@@ -5,9 +5,9 @@ import { paymentData } from "@/data/payment";
 
 export const generateMetadata = () => {
   return {
-    title: "Chính Sách Thanh Toán Xe Tại VinFast Quận 2",
+    title: "Chính Sách Thanh Toán Xe Tại VinFast Hồ Chí Minh",
     description:
-      "Tìm hiểu chính sách thanh toán khi mua xe VinFast tại VinFast Quận 2. Hỗ trợ nhiều phương thức thanh toán linh hoạt, an toàn và tiện lợi.",
+      "Tìm hiểu chính sách thanh toán khi mua xe VinFast tại VinFast Hồ Chí Minh. Hỗ trợ nhiều phương thức thanh toán linh hoạt, an toàn và tiện lợi.",
     alternates: {
       canonical: `${process.env.NEXT_PUBLIC_BASE_URL}${linkConstants.paymentPolicy}`,
     },
@@ -19,7 +19,7 @@ const Page = () => {
     <div>
       <FirstBanner
         heading="CHÍNH SÁCH THANH TOÁN"
-        subHeading="Thông tin chi tiết về quy trình thanh toán tại VinFast Quận 2."
+        subHeading="Thông tin chi tiết về quy trình thanh toán tại VinFast Hồ Chí Minh."
         bgImg="/images/first-banners/bang-gia-xe-vinfast.webp"
         bgClasses="!bg-cover"
       />

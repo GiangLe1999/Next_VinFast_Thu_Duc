@@ -220,15 +220,15 @@ html {
 
 /* Footer */
 .footer-title {
-  @apply font-bold uppercase text-white mb-3;
+  @apply font-bold uppercase text-secondary mb-3;
 }
 
 .footer-item {
-  @apply text-[#999999] text-xs my-[10px] hover:font-bold leading-5;
+  @apply text-gray-600 text-xs my-[10px] hover:font-bold leading-5;
 }
 
 .footer-icon {
-  @apply relative w-7 h-7 rounded-full overflow-hidden;
+  @apply relative w-7 h-7 rounded-full overflow-hidden border border-gray-200;
 }
 
 /* Home Main Swiper */
