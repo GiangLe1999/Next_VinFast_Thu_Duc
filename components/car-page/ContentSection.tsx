@@ -63,12 +63,12 @@ const ContentSection: FC<Props> = ({
         className="prose overflow-hidden max-w-none animate-fadeIn !mt-0"
       >
         {brochure && activeTab === "specifications" && (
-          <div className="mt-8">
+          <div className="my-10">
             <Link
               href={brochure}
               target="_blank"
               rel="noopener noreferrer"
-              className="no-underline bg-primary hover:bg-primary/90 duration-300 w-fit text-white font-semibold px-4 py-2 flex items-center justify-center gap-x-1 rounded-md transition border border-transparent"
+              className="mx-auto no-underline bg-primary hover:bg-primary/90 duration-300 w-fit text-white font-semibold px-4 py-2 flex items-center justify-center gap-x-1 rounded-md transition border border-transparent"
             >
               <FaDownload size={14} /> Tải Brochure
             </Link>
