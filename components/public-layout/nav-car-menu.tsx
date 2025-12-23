@@ -5,14 +5,17 @@ import { FC, SetStateAction, Dispatch } from "react";
 import Image from "next/image";
 import { AiFillCloseSquare } from "react-icons/ai";
 import { useRouter } from "next/navigation";
+import { formatPrice } from "@/lib/formatData";
 
 interface Props {
+  cars: any[];
   showCarMenu: boolean;
   setShowCarMenu: Dispatch<SetStateAction<boolean>>;
   setShowServiceMenu: Dispatch<SetStateAction<boolean>>;
 }
 
 const NavCarMenu: FC<Props> = ({
+  cars,
   showCarMenu,
   setShowCarMenu,
   setShowServiceMenu,
@@ -26,34 +29,43 @@ const NavCarMenu: FC<Props> = ({
   };
 
   // Split data
-  const serviceCars = navCarMenu.slice(0, 5);
-  const electricCars = navCarMenu.slice(5);
+  const serviceCars = cars?.slice(0, 5) || [];
+  const electricCars = cars?.slice(5) || [];
+
+  const getLogo = (slug: string) => {
+    return navCarMenu.find((item) => item.link === slug)?.logo;
+  };
 
   const renderCarItem = (car: any, index: number, logoWidth: string) => (
     <div
       key={index}
       className="text-center cursor-pointer hover:bg-gray-50 hover:-translate-y-2 duration-500 p-2 rounded-lg transition-all group"
-      onClick={() => onClickChild(car.link)}
+      onClick={() => onClickChild(car.slug)}
     >
       <div className={`relative h-4 md:h-5 mb-2 mx-auto ${logoWidth}`}>
-        <Image
-          src={car.logo}
-          alt={`Logo ${car.name}`}
-          style={{ objectFit: "contain" }}
-          fill
-        />
+        {getLogo(car.slug) && (
+          <Image
+            src={getLogo(car.slug) as string}
+            alt={`Logo ${car.name}`}
+            style={{ objectFit: "contain" }}
+            fill
+          />
+        )}
       </div>
       <div className="relative w-full aspect-video mb-2 mx-auto">
         <Image
           style={{ objectFit: "contain" }}
           fill={true}
-          src={car.img}
+          src={car.avatar?.url}
           alt={car.name}
         />
       </div>
 
       <p className="text-xs md:text-sm font-semibold text-gray-800">
-        Từ <span className="font-bold text-primary">{car.price}.000.000</span>{" "}
+        Từ{" "}
+        <span className="font-bold text-primary">
+          {formatPrice(car.priceFrom)}
+        </span>{" "}
         VNĐ
       </p>
     </div>

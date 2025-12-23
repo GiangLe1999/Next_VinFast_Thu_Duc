@@ -17,7 +17,7 @@ const serviceTitle = "Trạm sạc & Bảo hành";
 const commonClasses =
   "relative font-semibold text-white px-4 py-2 hover:bg-white hover:text-primary rounded-md transition cursor-pointer select-none shrink-0 flex items-center h-full";
 
-const Header = () => {
+const Header = ({ cars }: { cars?: any[] }) => {
   const pathname = usePathname();
   const [showCarMenu, setShowCarMenu] = useState(false);
   const [showServiceMenu, setShowServiceMenu] = useState(false);
@@ -55,6 +55,7 @@ const Header = () => {
   return (
     <>
       <MobileMenu
+        cars={cars || []}
         isOpen={showMobileMenu}
         onClose={() => setShowMobileMenu(false)}
       />
@@ -164,6 +165,7 @@ const Header = () => {
           })}
 
           <NavCarMenu
+            cars={cars || []}
             showCarMenu={showCarMenu}
             setShowCarMenu={setShowCarMenu}
             setShowServiceMenu={setShowServiceMenu}

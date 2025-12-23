@@ -4,15 +4,17 @@ import { FC, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { AiOutlineClose, AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
-import { navItems, navCarMenu } from "@/data";
+import { navItems } from "@/data";
 import { linkConstants } from "@/data/constants";
+import { formatPrice } from "@/lib/formatData";
 
 interface Props {
+  cars: any[];
   isOpen: boolean;
   onClose: () => void;
 }
 
-const MobileMenu: FC<Props> = ({ isOpen, onClose }) => {
+const MobileMenu: FC<Props> = ({ cars, isOpen, onClose }) => {
   const [expandedItems, setExpandedItems] = useState<string[]>([]);
 
   const toggleExpand = (title: string) => {
@@ -89,16 +91,16 @@ const MobileMenu: FC<Props> = ({ isOpen, onClose }) => {
                         <div className="bg-gray-50 pb-2">
                           {item.title === "Sản phẩm" ? (
                             <div className="grid grid-cols-2 gap-2 p-2">
-                              {navCarMenu.map((car, carIndex) => (
+                              {cars.map((car, carIndex) => (
                                 <Link
                                   key={carIndex}
-                                  href={`/${car.link}`}
+                                  href={`/${car.slug}`}
                                   onClick={onClose}
                                   className="bg-white p-2 rounded border border-gray-100 flex flex-col items-center text-center shadow-sm"
                                 >
                                   <div className="relative w-full aspect-video mb-1">
                                     <Image
-                                      src={car.img}
+                                      src={car.avatar.url}
                                       alt={car.name}
                                       fill
                                       className="object-contain"
@@ -108,7 +110,7 @@ const MobileMenu: FC<Props> = ({ isOpen, onClose }) => {
                                     {car.name}
                                   </span>
                                   <span className="text-[10px] text-primary font-bold">
-                                    Từ {car.price}tr
+                                    Từ {formatPrice(car.priceFrom)}đ
                                   </span>
                                 </Link>
                               ))}
