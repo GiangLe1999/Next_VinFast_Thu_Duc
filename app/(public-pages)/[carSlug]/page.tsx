@@ -4,6 +4,7 @@ import CarPromotionSection from "@/components/car-page/CarPromotionSection";
 import CarImageGallery from "@/components/car-page/CarImageGallery";
 import { getAllCarsForAdmin, getCarBySlug } from "@/queries/car.query";
 import CarPriceSection from "@/components/car-page/CarPriceSection";
+import JsonLd from "@/components/jsonld";
 
 const SalerCard = dynamicImport(
   () => import("@/components/car-page/SalerCard")
@@ -77,8 +78,33 @@ export default async function Page({
 
   const car = (await getCarBySlug(slug)) as any;
 
+  const carSchema = {
+    "@context": "https://schema.org/",
+    "@type": "Car",
+    name: car?.name,
+    image: car?.avatar?.url,
+    description: `VinFast ${car?.name} có giá từ ${car?.priceFrom} VNĐ.`,
+    brand: {
+      "@type": "Brand",
+      name: "VinFast",
+    },
+    offers: {
+      "@type": "AggregateOffer",
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/${slug}`,
+      priceCurrency: "VND",
+      lowPrice: car?.priceFrom,
+      itemCondition: "https://schema.org/NewCondition",
+      availability: "https://schema.org/InStock",
+      seller: {
+        "@type": "Organization",
+        name: "VinFast Thủ Đức",
+      },
+    },
+  };
+
   return (
     <>
+      <JsonLd data={carSchema} />
       <div className="py-10">
         <div className="container">
           <div className="flex gap-10 max-[1100px]:gap-0">

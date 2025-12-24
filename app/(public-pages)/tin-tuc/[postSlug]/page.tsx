@@ -9,6 +9,7 @@ import {
   getArticleBySlugAndIncreaseViews,
 } from "@/queries/article.query";
 import RelatedArticles from "@/components/news-page/related-articles";
+import JsonLd from "@/components/jsonld";
 
 export async function generateStaticParams() {
   const articles = await getAllArticlesForAdmin();
@@ -73,8 +74,36 @@ export default async function Page({
 
   const data = (await getArticleBySlugAndIncreaseViews(slug)) as any;
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: data?.name,
+    description: data?.description,
+    image: data?.thumbnail?.url,
+    datePublished: data?.createdAt,
+    dateModified: data?.updatedAt || data?.createdAt,
+    author: {
+      "@type": "Person",
+      name: "Admin",
+      url: process.env.NEXT_PUBLIC_BASE_URL,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "VinFast Hồ Chí Minh",
+      logo: {
+        "@type": "ImageObject",
+        url: `${process.env.NEXT_PUBLIC_BASE_URL}/logo.png`, // Fallback or ensure exists
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${process.env.NEXT_PUBLIC_BASE_URL}${linkConstants.news}/${slug}`,
+    },
+  };
+
   return (
     <div className="container my-12 text-textColor">
+      <JsonLd data={articleSchema} />
       <Link
         href={linkConstants.news}
         className="flex items-center w-fit gap-1 mb-10 text-sm hover:text-primary hover:-translate-x-4 transition"

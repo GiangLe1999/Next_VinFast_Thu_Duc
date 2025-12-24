@@ -3,8 +3,6 @@ import "./globals.css";
 import Providers from "@/components/contexts/providers";
 import { pageConstants } from "@/data/constants";
 // import Script from "next/script";
-import JsonLd from "@/components/jsonld";
-import { orgSchema } from "@/lib/orgSchema";
 import GoogleTagManager from "@/components/google-analytics";
 
 export const metadata: Metadata = {
@@ -74,7 +72,6 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <GoogleTagManager />
-        <JsonLd data={orgSchema} />
       </head>
       <body className="font-sans antialiased">
         <noscript>

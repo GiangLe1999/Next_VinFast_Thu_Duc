@@ -4,6 +4,9 @@ import { getAllCarsForHomepage } from "@/queries/car.query";
 
 import dynamicImport from "next/dynamic";
 import PromotionSection from "@/components/home-page/promotion-section";
+import JsonLd from "@/components/jsonld";
+import { orgSchema } from "@/lib/orgSchema";
+
 const HomeQuickConsultModal = dynamicImport(
   () => import("@/components/public-layout/home-quick-consult-modal")
 );
@@ -49,6 +52,7 @@ export default async function Home() {
 
   return (
     <>
+      <JsonLd data={orgSchema} />
       <main>
         <MainSwiper />
 
