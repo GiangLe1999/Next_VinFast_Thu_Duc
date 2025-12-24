@@ -114,7 +114,7 @@ const RegisterAdviceForm = () => {
             <FormInput
               id="email"
               type="email"
-              label="Email *"
+              label="Email "
               register={register("email")}
               errorMsg={errors.email?.message}
               placeholder="Nhập email"

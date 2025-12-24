@@ -56,7 +56,6 @@ const TestDriveForm: FC<Props> = ({ carLines }) => {
     if (
       !enteredName?.trim() ||
       !enteredPhone?.trim() ||
-      !enteredEmail?.trim() ||
       !choseCarName ||
       !choseCarLine ||
       !confirm1Checked ||
@@ -146,7 +145,7 @@ const TestDriveForm: FC<Props> = ({ carLines }) => {
           />
           <TestDriveFormInput
             id="email"
-            label="Email *"
+            label="Email"
             type="email"
             error={!enteredEmail}
             submitted={submitted}
