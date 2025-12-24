@@ -97,7 +97,7 @@ export default async function Page({
       availability: "https://schema.org/InStock",
       seller: {
         "@type": "Organization",
-        name: "VinFast Thủ Đức",
+        name: "VinFast Hồ Chí Minh",
       },
     },
   };

@@ -197,12 +197,18 @@ const FinalPriceFrom: FC<Props> = ({
             </li>
           </ul>
 
-          <p className="flex-space-between my-3">
+          <div className="flex-space-between my-3">
             Tổng dự toán
-            <span className="text-xl font-bold text-tertiary block text-right">
-              {formatPrice(currentTotal)} VNĐ
-            </span>
-          </p>
+            <p>
+              <span className="text-xl font-bold text-tertiary block text-right">
+                {formatPrice(currentTotal)} VNĐ
+              </span>
+
+              <span className="text-xs italic text-right text-gray-400">
+                Giá trên chưa bao gồm ưu đãi
+              </span>
+            </p>
+          </div>
         </>
       ) : (
         <p className="text-sm italic">
