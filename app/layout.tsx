@@ -5,6 +5,7 @@ import { pageConstants } from "@/data/constants";
 // import Script from "next/script";
 import JsonLd from "@/components/jsonld";
 import { orgSchema } from "@/lib/orgSchema";
+import GoogleTagManager from "@/components/google-analytics";
 
 export const metadata: Metadata = {
   title: {
@@ -72,26 +73,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <GoogleTagManager />
         <JsonLd data={orgSchema} />
       </head>
       <body className="font-sans antialiased">
-        {/* <Script
-          id="gtm-script"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-WCLN98R8');`,
-          }}
-        /> */}
-        {/* <noscript
-          dangerouslySetInnerHTML={{
-            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCLN98R8"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
-          }}
-        /> */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-T9ZSPH3X"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
         <Providers>{children}</Providers>
       </body>
     </html>
