@@ -123,7 +123,7 @@ type navCarItemType = {
 export const navCarMenu: navCarItemType[] = [
   {
     img: "https://res.cloudinary.com/dfhheac8o/image/upload/v1748923603/An%20Giang%20Vinfast/hq3pgiavb4nt9rhtofkv.webp",
-    logo: "/images/logo/minio.webp",
+    logo: "/images/logo/ec-van.png",
     name: "VinFast EC Van",
     price: "285",
     link: "ec-van",
