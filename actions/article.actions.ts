@@ -5,6 +5,7 @@ import dbConnect from "@/lib/db";
 import Article from "@/model/Article";
 import User from "@/model/User";
 import cloudinary from "cloudinary";
+import { revalidatePath } from "next/cache";
 
 export const createArticle = async (data: any) => {
   try {
@@ -53,6 +54,9 @@ export const createArticle = async (data: any) => {
       throw new Error("Không tìm thấy user để cập nhật bài viết");
     }
 
+    revalidatePath("/tin-tuc");
+    revalidatePath("/");
+
     return true;
   } catch (error) {
     console.error("Lỗi khi tạo bài viết:", error);
@@ -99,6 +103,10 @@ export const editArticle = async (data: any) => {
       { new: true }
     );
 
+    revalidatePath("/tin-tuc");
+    revalidatePath(`/tin-tuc/${article.slug}`);
+    revalidatePath("/");
+
     return true;
   } catch (error) {
     console.error("Lỗi khi chỉnh sửa bài viết:", error);
@@ -137,6 +145,9 @@ export const deleteArticle = async (id: string) => {
 
     // Xóa bài viết khỏi database
     await Article.deleteOne({ _id: id });
+
+    revalidatePath("/tin-tuc");
+    revalidatePath("/");
 
     return true;
   } catch (error) {
