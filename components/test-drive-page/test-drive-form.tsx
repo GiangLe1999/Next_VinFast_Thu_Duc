@@ -232,8 +232,8 @@ const TestDriveForm: FC<Props> = ({ carLines }) => {
             />
 
             <label htmlFor="confirm2" className="cursor-pointer">
-              Tôi đã đọc và đồng ý với các quy định và chính sách của Vinfast An
-              Giang. *
+              Tôi đã đọc và đồng ý với các quy định và chính sách của Vinfast Hồ
+              Chí Minh*
             </label>
           </div>
           {submitted && !confirm2Checked && (
