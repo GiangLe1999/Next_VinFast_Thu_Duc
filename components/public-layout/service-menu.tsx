@@ -26,14 +26,6 @@ const ServiceMenu: FC<Props> = ({ showServiceMenu }) => {
       </li>
       <li>
         <Link
-          href={linkConstants.charge_motorbike}
-          className="block text-left py-3 px-3 hover:text-primary hover:bg-gray-50 rounded-sm border-t border-gray-100 transition duration-200"
-        >
-          Pin & Trạm sạc Xe máy điện
-        </Link>
-      </li>
-      <li>
-        <Link
           href={linkConstants.warranty}
           className="block text-left py-3 px-3 hover:text-primary hover:bg-gray-50 rounded-sm border-t border-gray-100 transition duration-200"
         >

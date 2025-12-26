@@ -129,15 +129,6 @@ const MobileMenu: FC<Props> = ({ cars, isOpen, onClose }) => {
                               </li>
                               <li>
                                 <Link
-                                  href={linkConstants.charge_motorbike}
-                                  onClick={onClose}
-                                  className="block px-4 py-2 text-sm text-gray-600 hover:text-primary border-l-2 border-transparent hover:border-primary transition-colors"
-                                >
-                                  Pin & Trạm sạc Xe máy
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
                                   href={linkConstants.warranty}
                                   onClick={onClose}
                                   className="block px-4 py-2 text-sm text-gray-600 hover:text-primary border-l-2 border-transparent hover:border-primary transition-colors"

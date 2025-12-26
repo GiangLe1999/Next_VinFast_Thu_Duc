@@ -47,6 +47,7 @@ const CarSchema = new Schema(
           name: String,
           price: Number,
           tax: String,
+          discount: { type: Number, default: 0 },
         },
       },
     ],

@@ -33,9 +33,15 @@ const config: Config = {
           "75%": { transform: "rotate(-17deg)" },
           "100%": { transform: "rotate(0)" },
         },
+        ring: {
+          "0%, 100%": { transform: "rotate(0deg)" },
+          "10%, 30%, 50%, 70%, 90%": { transform: "rotate(-10deg)" },
+          "20%, 40%, 60%, 80%": { transform: "rotate(10deg)" },
+        },
       },
       animation: {
         wiggle: "wiggle 1s ease-in-out infinite 1s",
+        ring: "ring 1s ease-in-out infinite",
       },
       aspectRatio: {
         "22 / 10": "22 / 10",

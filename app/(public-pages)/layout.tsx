@@ -4,9 +4,9 @@ import dynamic from "next/dynamic";
 import { getAllCarsForHomepage } from "@/queries/car.query";
 
 const Footer = dynamic(() => import("@/components/public-layout/footer"));
-const MessengerBtn = dynamic(
-  () => import("@/components/public-layout/messenger-btn")
-);
+// const MessengerBtn = dynamic(
+//   () => import("@/components/public-layout/messenger-btn")
+// );
 const ContactBtns = dynamic(
   () => import("@/components/public-layout/contact-btns")
 );
@@ -23,7 +23,7 @@ const PulbicPagesLayout = async ({ children }: Props) => {
       <Header cars={cars} />
       {children}
       <ContactBtns />
-      <MessengerBtn />
+      {/* <MessengerBtn /> */}
       <Footer />
     </>
   );

@@ -57,7 +57,7 @@ const ContactBtns = () => {
 
       <a
         href="tel:0938295905"
-        className={`${common} bg-red-700 shadow-lg shadow-red-700/30`}
+        className={`${common} bg-red-700 shadow-lg shadow-red-700/30 animate-ring hover:animate-none`}
         aria-label="Hotline button"
         onClick={handlePhoneClick}
       >

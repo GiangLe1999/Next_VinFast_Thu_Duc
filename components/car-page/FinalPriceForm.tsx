@@ -24,7 +24,6 @@ const FinalPriceFrom: FC<Props> = ({
   setChoseCarLine,
   registration,
   currentListPrice,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   currentLine,
   carNameArr,
   isInstallmentPage,
@@ -40,13 +39,16 @@ const FinalPriceFrom: FC<Props> = ({
   const phiDkyBienso =
     choseProvince === "hn" || choseProvince === "hcm" ? 20000000 : 1000000;
 
+  const currentDiscount = currentLine?.discount || 0;
+
   const currentTotal =
     currentListPrice +
     currentRegistrationFee +
     phiDkiem +
     phiDkyBienso +
     phiDuongbo +
-    bhTNDS;
+    bhTNDS -
+    currentDiscount;
 
   return (
     <div className={`${isProductPage ? "" : "cal-price-wrapper"} h-fit`}>
@@ -195,6 +197,10 @@ const FinalPriceFrom: FC<Props> = ({
             <li>
               Bảo hiểm TNDS (1 năm) :<span>{formatPrice(bhTNDS)} VNĐ</span>
             </li>
+
+            <li>
+              Ưu đãi :<span>- {formatPrice(currentDiscount)} VNĐ</span>
+            </li>
           </ul>
 
           <div className="flex-space-between my-3">
@@ -202,10 +208,6 @@ const FinalPriceFrom: FC<Props> = ({
             <p>
               <span className="text-xl font-bold text-tertiary block text-right">
                 {formatPrice(currentTotal)} VNĐ
-              </span>
-
-              <span className="text-xs italic text-right text-gray-400">
-                Giá trên chưa bao gồm ưu đãi
               </span>
             </p>
           </div>

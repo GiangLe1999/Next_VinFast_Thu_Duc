@@ -36,7 +36,7 @@ interface FormValues {
   registration: number;
   brochure: string;
   colors: { color: string; colorImg: string }[];
-  carLines: { name: string; price: number; tax: string }[];
+  carLines: { name: string; price: number; tax: string; discount: number }[];
 }
 
 interface Props {
@@ -300,13 +300,22 @@ const EditCarFrom: FC<Props> = ({ car }) => {
                       })}
                       placeholder={`VD: 35.9, 40.9, ...`}
                     />
+
+                    <AdminFormInput
+                      id={`carLine_${index}_discount`}
+                      label={`Ưu đãi dòng xe ${index + 1}`}
+                      register={register(`carLines.${index}.discount` as const, {
+                        valueAsNumber: true,
+                      })}
+                      placeholder={`VD: 0, 10000000, ...`}
+                    />
                   </div>
                 </div>
               ))}
               <button
                 type="button"
                 className="font-bold flex items-center gap-1 mb-4 text-xs admin-main-gradient text-white rounded-md shadow-md w-fit p-2 mt-4"
-                onClick={() => append({ name: "", price: 0, tax: "" })}
+                onClick={() => append({ name: "", price: 0, tax: "", discount: 0 })}
               >
                 <BiPlusCircle /> Thêm dòng xe
               </button>
