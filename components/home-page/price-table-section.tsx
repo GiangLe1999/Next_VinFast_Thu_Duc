@@ -26,9 +26,9 @@ const PriceTableSection: FC<Props> = ({ cars }) => {
             <div className="col-span-3 md:col-span-4 text-center">
               Giá <span className="hidden md:inline">Niêm Yết</span>
             </div>
-            <div className="col-span-4 md:col-span-4 text-right pr-1 md:pr-4">
+            {/* <div className="col-span-4 md:col-span-4 text-right pr-1 md:pr-4">
               Trả Góp <span className="hidden md:inline">Từ</span>
-            </div>
+            </div> */}
           </div>
 
           {/* Scrollable Content */}
@@ -76,10 +76,9 @@ const PriceTableSection: FC<Props> = ({ cars }) => {
                   </div>
 
                   {/* Installment Column */}
-                  <div className="col-span-4 md:col-span-4 flex flex-col justify-center items-end pr-1 md:pr-4">
+                  {/* <div className="col-span-4 md:col-span-4 flex flex-col justify-center items-end pr-1 md:pr-4">
                     <div className="text-right">
                       <div className="flex flex-col md:flex-row items-end md:items-center justify-end gap-1 text-red-600 font-bold text-xs md:text-base">
-                        {/* <FaRegCreditCard className="text-primary/50 text-[10px] md:hidden mb-0.5 md:mb-0" /> */}
                         <div className="flex flex-col items-end md:block">
                           <span>{formatPrice(car?.installmentPrice)}</span>
                           <span className="text-[10px] md:text-xs underline align-top md:ml-0.5">
@@ -91,7 +90,7 @@ const PriceTableSection: FC<Props> = ({ cars }) => {
                         /tháng
                       </span>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               ))}
             </div>

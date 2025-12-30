@@ -33,7 +33,7 @@ const ReasonsSection = () => {
             <p className="text-gray-600">
               Anh chị sẽ yên tâm khi mua xe tại VinFast Hồ Chí Minh, vì chúng
               tôi luôn bảo hành, bảo dưỡng và sửa chữa theo tiêu chuẩn chất
-              lượng của VinFast trên toàn quốc. BẢO HÀNH ĐẾN 5 NĂM.
+              lượng của VinFast trên toàn quốc. BẢO HÀNH ĐẾN 10 NĂM.
             </p>
           </li>
 
