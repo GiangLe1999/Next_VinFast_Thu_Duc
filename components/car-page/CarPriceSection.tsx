@@ -4,6 +4,7 @@ import { FC, useEffect, useState } from "react";
 import FinalPriceForm from "./FinalPriceForm";
 import { formatPrice } from "@/lib/formatData";
 import { getCarRegistrationData } from "@/queries/car.query";
+import { useFetchCarLines } from "@/hooks/useFetchCarLines";
 
 interface Props {
   lines?: any[];
@@ -20,12 +21,22 @@ const CarPriceSection: FC<Props> = ({
 }) => {
   const [choseCarLine, setChoseCarLine] = useState("");
   const [choseCarName, setChoseCarName] = useState("");
-  const [, setChoseCarData] = useState({
+  const [choseCarData, setChoseCarData] = useState({
     registration: 0,
   });
   const [choseProvince, setChoseProvince] = useState("hcm");
 
-  const currentLine = lines?.find((line) => line.name === choseCarLine) as any;
+  const allCarLines = useFetchCarLines();
+  let carLines = [] as any[];
+
+  let currentLine = lines?.find((line) => line.name === choseCarLine) as any;
+
+  if (isInstallmentPage && choseCarName) {
+    carLines =
+      allCarLines.find((item: any) => item.name === choseCarName)?.carLines ||
+      [];
+    currentLine = carLines?.find((line) => line.name === choseCarLine) as any;
+  }
 
   const currentListPrice = currentLine?.price;
 
@@ -36,8 +47,10 @@ const CarPriceSection: FC<Props> = ({
   };
 
   useEffect(() => {
-    fetchCarDataByName();
-    setChoseCarLine("");
+    if (isInstallmentPage && choseCarName) {
+      fetchCarDataByName();
+      setChoseCarLine("");
+    }
   }, [choseCarName]);
 
   return (
@@ -80,10 +93,14 @@ const CarPriceSection: FC<Props> = ({
         {/* Calculation Form Section */}
         <div className="bg-white">
           <FinalPriceForm
-            lines={lines}
+            lines={isInstallmentPage ? carLines : lines}
             choseCarLine={choseCarLine}
             setChoseCarLine={setChoseCarLine}
-            registration={registration as number}
+            registration={
+              isInstallmentPage
+                ? (choseCarData?.registration as number)
+                : (registration as number)
+            }
             currentLine={currentLine}
             currentListPrice={currentListPrice}
             carNameArr={carNameArr}
@@ -91,7 +108,8 @@ const CarPriceSection: FC<Props> = ({
             setChoseCarName={setChoseCarName}
             choseProvince={choseProvince}
             setChoseProvince={setChoseProvince}
-            isProductPage
+            isInstallmentPage={isInstallmentPage}
+            isProductPage={!isInstallmentPage}
           />
         </div>
       </div>

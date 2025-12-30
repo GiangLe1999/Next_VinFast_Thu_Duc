@@ -18,7 +18,7 @@ interface Props {
   isProductPage?: boolean;
 }
 
-const FinalPriceFrom: FC<Props> = ({
+const FinalPriceForm: FC<Props> = ({
   lines,
   choseCarLine,
   setChoseCarLine,
@@ -31,7 +31,6 @@ const FinalPriceFrom: FC<Props> = ({
   setChoseCarName,
   choseProvince,
   setChoseProvince,
-  isProductPage,
 }) => {
   const currentRegistrationFee = (registration * currentListPrice) / 100;
 
@@ -51,7 +50,7 @@ const FinalPriceFrom: FC<Props> = ({
     currentDiscount;
 
   return (
-    <div className={`${isProductPage ? "" : "cal-price-wrapper"} h-fit`}>
+    <div className="h-fit">
       <h4 className="cal-price-title mb-3">TÍNH PHÍ LĂN BÁNH</h4>
 
       <form className="pt-4 pb-2 text-textColor">
@@ -221,4 +220,4 @@ const FinalPriceFrom: FC<Props> = ({
   );
 };
 
-export default FinalPriceFrom;
+export default FinalPriceForm;

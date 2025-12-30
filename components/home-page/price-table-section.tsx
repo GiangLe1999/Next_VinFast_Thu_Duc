@@ -22,8 +22,8 @@ const PriceTableSection: FC<Props> = ({ cars }) => {
         <div className="mt-4 md:mt-8 flex-1 bg-white rounded-lg shadow-lg border border-gray-100 overflow-hidden flex flex-col">
           {/* Table Header - Fixed/Sticky Feel */}
           <div className="bg-primary text-white grid grid-cols-12 py-3 md:py-4 px-2 md:px-4 text-[10px] md:text-sm font-bold uppercase tracking-wider items-center">
-            <div className="col-span-5 md:col-span-4 pl-1 md:pl-2">Dòng Xe</div>
-            <div className="col-span-3 md:col-span-4 text-center">
+            <div className="col-span-6 pl-1 md:pl-2">Dòng Xe</div>
+            <div className="col-span-6 text-center">
               Giá <span className="hidden md:inline">Niêm Yết</span>
             </div>
             {/* <div className="col-span-4 md:col-span-4 text-right pr-1 md:pr-4">
@@ -40,7 +40,7 @@ const PriceTableSection: FC<Props> = ({ cars }) => {
                   className="grid grid-cols-12 items-center p-2 md:p-4 hover:bg-gray-50 transition-colors duration-200 group"
                 >
                   {/* Car Info Column */}
-                  <div className="col-span-5 md:col-span-4 flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-3">
+                  <div className="col-span-6 flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-3">
                     <Link
                       href={`/${car.slug}`}
                       className="block relative w-14 h-8 md:w-28 md:h-16 shrink-0 rounded md:rounded-lg overflow-hidden border border-gray-100 bg-white"
@@ -61,7 +61,7 @@ const PriceTableSection: FC<Props> = ({ cars }) => {
                   </div>
 
                   {/* Price Column */}
-                  <div className="col-span-3 md:col-span-4 flex flex-col justify-center items-center px-1">
+                  <div className="col-span-6 flex flex-col justify-center items-center px-1">
                     <div className="flex flex-col md:flex-row items-center gap-1 text-gray-700 font-semibold text-xs md:text-base">
                       {/* <FaTag className="text-gray-400 text-[10px] md:hidden mb-0.5 md:mb-0" /> */}
                       <div className="text-center">
